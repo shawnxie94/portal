@@ -26,48 +26,48 @@ tag:
 
 代码托管云服务网站，帮助开发者存储和管理其项目源代码。在本文中充当**免费图床**作用。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231816214.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231816214.png)
 
 - **[PicGo](https://molunerfinn.com/PicGo/)**
 
 一个用于快速上传图片并获取图片 URL 链接的工具。在本文中提供**图片上传+管理**功能。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231814767.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231814767.png)
 
 - **[jsDelivr](https://www.jsdelivr.com/)**
 
 国外的优秀公共 CDN 服务提供商，也是首个打通中国大陆与海外的免费 CDN 服务。在本文中用来**加速 Github 仓库的图片链接访问速度**。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231817239.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231817239.png)
 
 - **[Obsidian](https://obsidian.md/)**
 
 一款强大的知识管理和笔记软件，以Markdown编辑器为基础，支持双向链接和图谱视图，帮助用户构建知识网络。在本文中配合插件[image-auto-upload](https://github.com/renmu123/obsidian-image-auto-upload-plugin)实现文章**图片自动管理**。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231819700.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231819700.png)
 ## 详细方案
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231847843.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231847843.png)
 上图为各工具交互示意图，黑色箭头表示图片上传过程，红色箭头表示图片访问过程，下面将介绍详细配置步骤：
 ### 第一步：配置GitHub免费图床
 #### ① 创建公共仓库
 在Github中[创建](https://github.com/new)一个公共仓库，用于存放上传的图片。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231928488.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231928488.png)
 #### ② 生成Github访问token
 - 在[开发设置](https://github.com/settings/tokens)中选择生成新token
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231930473.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231930473.png)
 - 选择永不过期，并按照下图设置访问权限
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231931131.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231931131.png)
 - 拉到最下面，点击 `Generate token`，生成并复制（一定要保存好token，只会在创建时显示一次）
 ### 第二步：安装PicGo并配置图床
 - 访问[releases](https://github.com/Molunerfinn/PicGo/releases)找到对应操作系统安装包下载并安装
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231937398.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231937398.png)
 - 打开PicGo，在图床设置中配置好GitHub设置（token即为第一步中申请值）
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231940672.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231940672.png)
 ### 第三步：配置图片链接CDN加速
 按照下述格式配置图片链接即可享有jsdelivr提供的加速能力。
 ```
@@ -75,23 +75,23 @@ https://cdn.jsdelivr.net/gh/{github账号名}/{仓库名}/{图片路径}
 ```
 在PicGo中GitHub设置中设定自定义域名，即可自动生成加速后图片链接。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231949714.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231949714.png)
 ### 第四步：Obsidian图片自动上传配置
 - 在Obsidian的偏好“第三方插件”配置中关闭安全模式，之后浏览插件市场安装image-auto-upload并开启插件
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231951700.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231951700.png)
 - 插件设置中已经默认配好了PicGo相关参数，如有需要也可以自行调整
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411231953924.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231953924.png)
 - 按上述配置好后，即可开启丝滑的写作体验
 
 将图片粘贴到文章中，将自动上传并展示。Markdown图文内容变成了**纯静态数据**，想粘贴就粘贴。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411232002552.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411232002552.png)
 ## 结语
 文章写好后再结合之前推荐的[doocs/md](https://mp.weixin.qq.com/s/4Du8pyhz9357lxkG0Z8gpQ)公众号排版工具，只需**点点点**（粘贴markdown到md，粘贴排版后内容到公众号，再点击发布），一篇规整的公众号文章就发出来啦！
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411232018369.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411232018369.png)
 
 图片存储还有很多其他方案（专业图床），有兴趣的朋友可以自行检索一下。如果图片链接可以顺畅访问则不需要配置cdn加速，例如使用Gitee作为图床。另外PicGo还提供了大量插件，如果有特殊的需求不妨看看。
 
@@ -100,4 +100,4 @@ https://cdn.jsdelivr.net/gh/{github账号名}/{仓库名}/{图片路径}
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

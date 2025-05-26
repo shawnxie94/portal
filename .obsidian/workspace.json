@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/tools/read-flow.md",
+                "file": "src/blogs/notes/how-llm-know-mcp-params.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "read-flow"
+              "title": "how-llm-know-mcp-params"
             }
           }
         ]
@@ -164,7 +164,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 458.5
+    "width": 458.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,21 +175,23 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5a50613090f66d59",
+  "active": "167cdf74b3844e3f",
   "lastOpenFiles": [
+    "src/blogs/notes/README.md",
+    "src/blogs/notes/how-llm-know-mcp-params.md",
+    "src/blogs/notes/tcp-fast-open.md",
+    "src/blogs/notes/tcp-fast-open copy.md",
     "src/blogs/tools/read-flow.md",
     "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md",
     "Excalidraw",
     "src/blogs/tools/picture-manage.md",
     "src/blogs/tools/one-cmd-web-to-app.md",
-    "src/blogs/notes/tcp-fast-open.md",
     "src/blogs/notes/wireshark.png",
     "src/blogs/notes/second.png",
-    "src/blogs/notes/README.md",
     "src/blogs/notes/h3.png",
     "src/blogs/notes/first.png",
     "src/blogs/notes/2.png",
@@ -213,8 +216,6 @@
     "src/blogs/code-visualization/1.gif",
     "src/blogs/ai/README.md",
     "src/blogs/talk/README.md",
-    "2024-09-12.md",
-    "src/blogs/history/code-funny.md",
     "src/blogs/code-visualization",
     "article/image.png",
     "article/image-8.png",

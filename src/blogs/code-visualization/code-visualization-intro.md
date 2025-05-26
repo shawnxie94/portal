@@ -26,19 +26,19 @@ star: true
 ### 场景1：代码逻辑理解困难
 项目代码量很大且需求迭代快，每次梳理的文档很快就过时了。新同学入手困难苦不堪言，老手也很难对项目整体的业务逻辑有一个全面的认知，常常需要重新梳理逻辑。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251311287.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311287.png)
 
 
 ### 场景2：代码改动影响面难以评估
 需求的诉求是修改A页面的逻辑，但由于后端代码很多公用逻辑且调用层级很深，上线才后发现影响了B页面的逻辑，造成了线上事故。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251311465.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311465.png)
 
 
 ### 场景3：遗留项目重构缺少抓手
 老旧遗留项目经过长时间迭代和多次更换团队，导致内部代码逻辑十分混乱且没人能完全讲明白所有逻辑。但新的业务迭代需求源源不断，在原有项目上修改成本越来越高，亟需重构以获得更高地研发效率。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251311868.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311868.png)
 
 
 **其他场景**：代码改动影响面评估不准导致自动化case编写困难，回归也常常覆盖不到关联逻辑；线上问题排查困难，难以快速定位到出错代码......
@@ -61,7 +61,7 @@ star: true
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">
 
 
 

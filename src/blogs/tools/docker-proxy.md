@@ -14,7 +14,7 @@ Docker Hub 是一个容器注册表，专为开发人员和开源贡献者构建
 
 <!-- more -->
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017430.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017430.png)
 
 好景不长，今年6月份各大高校和容器技术社区由于一些不可抗因素，纷纷关闭了镜像加速站点，这极大地影响了工作效率和开发进度。
 
@@ -24,40 +24,40 @@ Docker Hub 是一个容器注册表，专为开发人员和开源贡献者构建
 ### fork仓库 CF-Workers-docker.io
 将 [CF-Workers-docker.io](https://github.com/cmliu/CF-Workers-docker.io) fork到自己仓库。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017433.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017433.png)
 
 ### 部署到Cloudflare的pages中
 - 创建pages应用
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017434.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017434.png)
 
 - 连接GitHub
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017435.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017435.png)
 
 - 选择存储库部署
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017436.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017436.png)
 
 - 等待部署完成
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017437.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017437.png)
 
 - 获取镜像代理域名
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017438.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017438.png)
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017439.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017439.png)
 
 - 自定义域名（可选）
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017440.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017440.png)
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017441.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017441.png)
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017442.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017442.png)
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270017443.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017443.png)
 
 ## 如何配置镜像加速
 ### 官方镜像路径前加域名
@@ -90,4 +90,4 @@ Registry Mirrors:
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

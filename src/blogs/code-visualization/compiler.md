@@ -14,7 +14,7 @@ tag:
 
 编译程序以高级程序源代码作为输入，以汇编语言或机器语言表示的目标程序作为输出。目标程序会在机器上运行，得到所需的结果。编译器可能执行以下操作：预处理、词法分析、语法分析、语义分析、中间代码生成、代码优化和目标代码生成。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251345967.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251345967.png)
 
 编译器前端和中端理论知识与代码可视化的实现最为相关，后端部分和目标机器代码、特定机器架构相关一般很少用到可视化中。
 
@@ -26,7 +26,7 @@ tag:
 
 **token:<种别码，属性值>**
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251347371.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251347371.png)
 
 词法分析器的核心逻辑基于[有限自动机](https://zh.wikipedia.org/wiki/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA)（Finite Automata），可以理解为有限个状态的自动执行机器，用来将扫描得到的字符映射到有限个的可能性上。类型包括：
 - **不确定性有限自动机（NFA）**：在某状态和输入符号下可能存在多个可能的转移状态；
@@ -34,7 +34,7 @@ tag:
 
 整个自动构造过程见下图，大致了解一下即可，如果想深入学习各种算法细节可自行查阅资料。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251347654.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251347654.png)
 
 #### 使用Antlr词法分析
 接下来我们练练手，使用Antlr对Java源码进行词法分析。[Antlr](https://www.antlr.org/)是一个开源工具，支持根据规则文件生成词法分析器和语法分析器，它自身是用 Java 实现的，Mac上可以使用Homebrew安装或者直接使用idea插件[antlr-v4](https://plugins.jetbrains.com/plugin/7358-antlr-v4)。同时[grammars-v4](https://github.com/antlr/grammars-v4)上提供了很多供参考的规则，我们这里也直接使用其中针对Java8定义的词法分析规则练手。
@@ -75,12 +75,12 @@ javac Java8Lexer.java
 grun Java8Lexer tokens -tokens ./examples/helloworld.java 
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251348903.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251348903.png)
 
 ### 语法分析（Syntactic Analysis, or Parsing）
 语法分析又称解析（parsing），它在词法分析后执行。将tokens组织成语法结构，通常是一棵抽象语法树（Abstract Syntax Tree, AST），这棵树表示了源代码的语法结构。语法分析器需要根据一组预定义的语法规则来分析词法单元序列。这些规则通常以上[下文无关文法](https://zh.wikipedia.org/wiki/%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95)（Context-Free Grammar, CFG）的形式定义，其中每个规则定义了语言中的一个结构如何由其他结构组成。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251348344.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251348344.png)
 
 这里先简单说一下CFG，如果想深入学习可以再查查资料。一个上下文无关文法由以下四个部分组成：
 - ① **非终结符（Non-terminals）**：这些是文法的变量，表示一组字符串的集合。它们通常用大写字母表示，如A,B,Expr等；
@@ -160,7 +160,7 @@ age + 10 * 2 + 10
 ^D
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251349858.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251349858.png)
 
 ### 语义分析（Semantic Analysis）
 语义分析器(semantic analyzer)使用语法树和符号表中的信息来检查源程序是否和语言定义的语义一致。它同时也收集类型信息，并把这些信息存放在语法树或符号表中，以便在随后的中间代码生成过程中使用。语义规则一般包括但不限于：
@@ -174,7 +174,7 @@ age + 10 * 2 + 10
 #### 浅析javac语义分析
 由于不同语言的语义分析实现差异较大，没有通用的语义分析器生成工具。因此我们直接来阅读一下Java编译器中的相关源码，了解一下实现逻辑。javac中语义分析的源码位于com.sun.tools.javac.code和com.sun.tools.javac.comp包中。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251350396.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251350396.png)
 
 以下列举了一些用于语义分析的类，源码就不贴了，可以在[langtools](https://hg.openjdk.org/jdk8/jdk8/langtools/)下载阅读：
 - **Symbol**：表示所有的语言符号，包括变量、方法、类等。这些符号在编译过程中被创建并填充到符号表中；
@@ -193,19 +193,19 @@ age + 10 * 2 + 10
 ### 为什么需要中间代码？
 编译器很难通过一次处理就得到最优的目标代码，实际的编译器大多组织为一连串的处理趟，每一趟处理的结果又作为下一趟的输入持续的运行。随着编译器不断推导有关被编译代码的知识，它必须将这些信息从一趟传递到另一趟。因此，这些**能推导出有关程序全部事实的信息**需要一种表示方式，称之为中间代码或**中间表示**(intermediate representation)，简称IR。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251350206.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251350206.png)
 
 广义上可以将源码到目标代码之间的表达形式都称之为中间代码。其目的是为了解耦编译器前端和后端部分，作为高级语言和目标机器语言之间的桥梁，不依赖于特定的源语言或目标机器使得一些代码优化动作能够复用。与高级语言相比，IR 丢弃了大部分高级语言的语法特征和语义特征，比如循环语句、if 语句、作用域、面向对象等等，它更像高层次的汇编语言；而相比真正的汇编语言，它又不会有那么多琐碎的、与具体硬件相关的细节。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251350845.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251350845.png)
 
 如果源语言语法结构较为简单，编译器可能会用唯一的IR，但如果源语言语法结构比较复杂，则在转换为目标语言的过程中可能会使用了一系列的IR，并通过转换进行大量的优化操作。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251351358.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351358.png)
 
 由于不同语言编译器中IR差异较大，本文后续内容对于概念部分只做点到即止的阐述，但增加了LLVM的中间代码实操用来加深理解。LLVM 是一个开源的编译器基础设施项目，主要聚焦于编译器的后端功能（代码生成、代码优化、JIT……），其在业界被广泛应用，很多语言都是基于它实现的，更多信息可以查看[官网](https://llvm.org/)。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251351888.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351888.png)
 ### 中间代码分类
 按照与源代码接近的程度可以分为：
 - **高级IR**：更接近源代码，保留了更多的源代码层面的信息，如数据类型、控制结构等。通常用于编译器前端的语义分析和初步优化阶段。例如：AST等；
@@ -227,13 +227,13 @@ a=(-b+c*d)+c*d
 
 通过编译器前端生成的抽象语法树也算是高级IR和图IR，它保留了源代码的语法结构，如表达式、语句、函数定义等。这里就不再赘述生成过程，如果忘记了相关知识可以再复习一下前文。表达式A对应的AST为：    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251351840.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351840.png)
 
 **② 有向无环图（Directed Acyclic Graph，DAG）**
 
 有向无环图是在树结构的基础上，消除了冗余的子树。其结点可以有多个父结点，相同子树可以被重用，可以理解为是一种具有共享机制的AST。表达式A对应的DAG为：    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251352225.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251352225.png)
 
 **③ 三地址代码（Three-Address Code, TAC）**
 
@@ -262,19 +262,19 @@ a=(-b+c*d)+c*d
 
 表达式A对应的TAC为（可以通过遍历AST生成TAC）：    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251353135.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251353135.png)
 
 **④ 静态单赋值形式（Static Single Assignment, SSA）**
 
 静态单赋值形式也是一种线性IR，它和三地址代码的主要区别在所有赋值指令都是对不同名字的变量的赋值。每个变量很确定地只会被定义一次，然后可以多次使用。这种特点使得基于SSA更容易做数据流分析，而数据流分析又是很多代码优化技术的基础，所以几乎所有语言的编译器、解释器或虚拟机中都使用了SSA。下图展示了两种表示方式的区别：    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251353194.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251353194.png)
 
 另外，表达式A生成的TAC和SSA是一样的，大家不妨验证一下是否符合SSA的特性😁。
 
 除了上述中间表示形式外还有CFG、CallGraph等更复杂的IR这里就不展开说了，有兴趣的同学可以自行查阅资料。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251355106.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251355106.png)
 
 #### 生成LLVM中间代码
 LLVM IR是一种基于静态单赋值（SSA）的表示法，提供了类型安全、底层操作、灵活性以及简洁地表示 高级语言的能力。它实际上有三种不同的表示方式，它们在功能上是等价的，但用途和表现形式各有不同。这三种表示分别是：
@@ -313,13 +313,13 @@ clang -emit-llvm -S fun1.c -o fun1.ll
 clang -emit-llvm -c fun1.c -o fun1.bc
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251356111.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251356111.png)
 
 **④ IR转换**    
 
 两种中间代码可以互相转换，我们将前面生成的.ll转换为.bc。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251356620.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251356620.png)
 
 ```Bash
 # 转换命令
@@ -328,7 +328,7 @@ llvm-as fun1.ll -o fun1.bc
 hexdump -C fun1.bc
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251356032.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251356032.png)
 
 
 ### 中间代码优化
@@ -477,7 +477,7 @@ opt -O2 fun1.bc -o fun1-O2.bc
 opt -S -O2 fun1.ll -o fun1-O2.ll
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251358720.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358720.png)
 
 在 LLVM 内部，优化工作是通过一个个的 Pass（遍）来实现的，它支持三种类型的 Pass：
 - 分析型的 Pass（Analysis Passes），只是做分析，产生一些分析结果用于后序操作；
@@ -486,11 +486,11 @@ opt -S -O2 fun1.ll -o fun1-O2.ll
 
 个人也可以实现[自定义Pass](https://llvm.org/docs/WritingAnLLVMPass.html)做一些扩展操作，更多Pass相关内容请阅读[LLVM’s Analysis and Transform Passes](https://llvm.org/docs/Passes.html)。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251358769.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358769.png)
 
 对于前面生成的fun1.ll再执行代码优化操作，查看优化结果可以发现进行了“常量折叠”（执行优化命令前需要将fun1.ll 文件中的“optnone”这个属性去掉，它的意思是不进行代码优化）。    
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251358622.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358622.png)
 
 ## 扩展阅读
 - 《[龙书](https://book.douban.com/subject/3296317/)》
@@ -504,4 +504,4 @@ opt -S -O2 fun1.ll -o fun1-O2.ll
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

@@ -11,7 +11,7 @@ export default hopeTheme({
   },
   favicon: "/image.png",
   logo: "/image.png",
-  repo: "Xiaoxie1994/suibi",
+  repo: "shawnxie94/suibi",
   docsDir: "src",
   // 导航栏
   navbar,
@@ -27,8 +27,8 @@ export default hopeTheme({
     description: "后端大头兵，喜欢阅读写作。",
     timeline:"未完待续...",
     medias: {
-      GitHub: "https://github.com/Xiaoxie1994",
-      Wechat: "https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png",
+      GitHub: "https://github.com/shawnxie94",
+      Wechat: "https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png",
       Rss: "https://shawnxie.top/rss.xml",
       Gmail: "mailto:xiexiao064@gmail.com",
     },
@@ -118,7 +118,7 @@ export default hopeTheme({
     },
     comment: {
       provider: "Giscus",
-      repo: "Xiaoxie1994/suibi",
+      repo: "shawnxie94/suibi",
       repoId: "R_kgDOMsmo_w",
       category: "Announcements",
       categoryId: "DIC_kwDOMsmo_84CmWI9",

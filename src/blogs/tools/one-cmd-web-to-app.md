@@ -22,28 +22,28 @@ tag:
 
 举个例子，笔者写公众号使用的排版工具[**doocs/md**](https://doocs.github.io/md/)，官方提供了网站，也可以自己本地部署，但页面用起来体验始终不如本地APP，并且自己部署也会存在新功能难以快速同步的问题。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030266.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030266.png)
 
 ## PWA很好，但不通用
 
 使用Chrome浏览器打开网页时，细心地小伙伴能发现导航栏有时会有这样的小图标。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030267.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030267.png)
 
 点击一下，就能将网页下载到本地。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030268.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030268.png)
 
 这种能下载的网页叫**渐进式Web应用**（Progressive Web App，**PWA**），可以直接通过浏览器安装，像原生APP一样在线或离线使用。但想让一个网站成为PWA是有前提的，需要在网站开发的时候就按照规定的方式编写代码（具体的要求这里就不详述了，有兴趣的朋友可以自行查一下）。
 
 对于一些不是PWA的网站，如前文提到的doocs/md，还有没有其他办法将其变成桌面软件呢？
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030270.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030270.png)
 
 ## 将任意网页变为桌面应用
 是的，有，刚好有这么一个便利的工具——[**Pake**](https://github.com/tw93/Pake)。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030271.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030271.png)
 
 Pake是国内一个前端大佬做的开源工具，能够将**任何网页**转换成桌面应用程序。它支持Mac、Windows和Linux系统，并且相较于Electron打包的应用程序体积更小、速度更快。Pake提供了命令行工具来简化打包流程，并允许用户自定义开发。
 
@@ -52,7 +52,7 @@ Pake是国内一个前端大佬做的开源工具，能够将**任何网页**转
 ### 常用包下载
 提供了一些常用网站的包，进行一些定制优化，可以去仓库[Release](https://github.com/tw93/Pake/releases)下载安装使用。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030272.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030272.png)
 
 ### 命令行一键打包
 对于未提供的网站，可以使用下面命令一键打包。
@@ -84,11 +84,11 @@ pake https://doocs.github.io/md --name Wechat-MD --icon ./Markdown.icns
 
 省略命令执行过程，得到一个安装包。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030273.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030273.png)
 
 安装之后我们就能像本地APP一样使用doocs/md网站啦，大功告成！
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030274.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030274.png)
 
 ### 定制开发
 针对爱折腾的用户，也提供了「定制开发」方式，可深度二次开发定制功能。笔者刚好前端和Rust都不会，直接Pass。
@@ -105,11 +105,11 @@ npm run build
 ### 原理浅析
 前面提到Pake底层使用了[Tauri](https://tauri.app/zh-cn/)，它是一款应用构建的工具包，能够为使用Web技术的所有主流桌面操作系统构建软件。Tauri的核心是用Rust构建的，CLI（命令行界面）则利用了Node.js。相较于其他同类型工具，Tauri拥有诸多优点。奈何笔者前端和Rust都不太懂，就不进一步探究啦，感兴趣的小伙伴可以自行查查资料。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202411270030275.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030275.png)
 
 <div style="text-align: center;"> —— 完 —— </div>
 
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

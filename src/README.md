@@ -6,7 +6,7 @@ title: 主页
 heroText: 肖恩聊技术
 heroFullScreen: false
 tagline: 持续提供有价值的技术内容
-bgImage: https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501271436145.png
+bgImage: https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501271436145.png
 projects:
   - icon: newspaper
     name: 肖恩技术周刊

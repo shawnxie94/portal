@@ -14,19 +14,19 @@ star: true
 
 <!-- more -->
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251247185.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251247185.png)
 
 我在MT、JD等互联网公司干了5年后端开发，磨炼了设计和实现复杂业务系统的能力。大规模互联网项目的经验不仅提高了我的技术洞察力，也丰富了我对互联网应用多样性的理解。但大公司同样也对我的发展有了一些限制，我不愿意走业务架构或者技术管理的路线，领导给我的规划却往往是这样，因为大多数的场景还是更重业务属性，这条路会容易些。但**与其还没有挣扎就接受命运，我更愿意尝试后死的明明白白**。
 
 俗话说“**种一棵树最好是十年前其次是现在**”，做个人IP更多是想探索自我的可能性。如果职业生涯一眼就能望到头（还有35岁这道坎），通过阅读、学习、分享和交流拓宽认知边界，是否可以走出一条不同的路？我在"**[工作五年小结 | 面对不确定性快速上升的外部环境，我们该如何寻求突破？](https://mp.weixin.qq.com/s?__biz=MzkwODY0ODQzOQ==&mid=2247484279&idx=1&sn=be672baa85c0179e61ff0af5a42c54cd&scene=21#wechat_redirect "工作五年小结 | 面对不确定性快速上升的外部环境，我们该如何寻求突破？")**"一文中提到在这个复杂性快速上升的21世纪，面对不确定性上升的外部环境，我们该如何寻求突破呢？我的答案是：**持续学习，制造正反馈，相信复利效应**。因此做个人IP没有风险，这只是践行理论的一种方式，相信只要坚持就会有回报，只是多少的差异而已（**再食饼**🤡）。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251158351.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158351.png)
 
 ## 搞什么内容？
 
 说服自己只是第一步，肚子里没墨水也白瞎。其实去年我就萌生了这个想法，并于10月开始写技术博文，并把日常见闻和点滴想法进行记录。同时进行了高强度检索，了解其他个人IP都在干什么，哪些有借鉴意义。最近得到一个结论“**要在擅长的、感兴趣的和能满足大众需求的交集里做文章**”，这是完美副业的样子。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251248675.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251248675.png)
 
 
 内容首先得从“**擅长**”出发，因为擅长才更容易出良品，好的内容是个人IP的核心竞争力。接着是“**感兴趣**”，只有做起来有乐趣的事情才容易长久，这是保证持续精进的原动力。最后是“**能满足大众需求**”，这一点决定了IP的价值，不能满足大众的需求则永远都是自娱自乐。
@@ -43,14 +43,14 @@ star: true
 
 合集查看**👉🏻** [肖恩技术周刊](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkwODY0ODQzOQ==&action=getalbum&album_id=3492416248238096386#wechat_redirect "肖恩技术周刊")
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202412302324792.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202412302324792.png)
 ### 主题二：技术提效
 
 **懒惰**是程序员的美德，背后体现了对效率极致的追求，大模型的出现进一步为提效提供了更多可能性。这个主题会持续收集**提效工具和方法**，并提供详细的使用说明，将技术用到实处。
 
 合集查看👉🏻 [提效专题](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkwODY0ODQzOQ==&action=getalbum&album_id=3508413914134659081#wechat_redirect "提效专题")
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251249875.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251249875.png)
 
 ### 主题三：技术专栏
 
@@ -60,7 +60,7 @@ star: true
 
 产出有一本未写完的GitBook《[**Code Visualization**](https://code-visualization.shawnxie.top/)》，感兴趣的朋友可以先睹为快，提提建议。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501232304347.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304347.png)
 
 ## 未来规划
 
@@ -70,19 +70,19 @@ star: true
 
 收集了很多学习资料，这部分后面分类汇总好了再分享给大家（很多朋友更想要这种干干的东西吧😏，**关注并私信**我可以提前获取）。但只是把资料发出来估计大家收藏后就吃灰了，也会挑选一些个人觉得不错的点弄一个“**知识点++**”小主题。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251250614.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251250614.png)
 
 ### IT历史考究
 
 不知道大家对IT的历史是否感兴趣，比如世界上著名的程序员都有哪些，他们的**生平事迹**，给IT界的发展带来了哪些实质性的贡献。或者一些我们使用的**产品**是如何诞生的，一些重要的**语言**是怎么发明出来的，背后是否有一段不为人知的故事。亦或是某些**八卦**🐶。猜一猜下图这位是谁？
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251250530.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251250530.png)
 
 ### 个人见解
 
 聊一些**个人经验、成长经历**和哪些事比较有意义。一些工作生活中的见解和观点，尽量就事论事，不悯天忧人和发无谓的牢骚。内容类似于“[工作五年小结 | 面对不确定性快速上升的外部环境，我们该如何寻求突破？](https://mp.weixin.qq.com/s?__biz=MzkwODY0ODQzOQ==&mid=2247484279&idx=1&sn=be672baa85c0179e61ff0af5a42c54cd&scene=21#wechat_redirect "工作五年小结 | 面对不确定性快速上升的外部环境，我们该如何寻求突破？")”这篇文章。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251250682.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251250682.png)
 
 ## 广结善缘
 
@@ -94,4 +94,4 @@ star: true
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

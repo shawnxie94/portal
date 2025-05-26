@@ -21,12 +21,12 @@ tag:
 ### 简介
 [regex-vis](https://github.com/Bowen7/regex-vis)是一个辅助学习、编写和验证正则的工具，输入一个正则表达式后，会生成它的可视化图形。然后可以点选或框选图形中的单个或多个节点，再在右侧操作面板对其进行操作，具体操作取决于节点的类型，比如在其右侧插入空节点、为节点编组、为节点增加量词等。项目开源，可以拉取代码到本地编译执行，也可以直接在[regex-vis.com](https://regex-vis.com/)体验它的功能。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251322057.gif)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251322057.gif)
 
 ### 原理
 通过词法分析和语法分析将一个正则表达式转换为 AST(Abstract Syntax Tree)。其中词法分析将正则字符串转为 Tokens，Tokens 再通过语法分析转为 AST。实现源码参考[Parser](https://github.com/Bowen7/regex-vis/tree/master/src/parser)。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251319865.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251319865.png)
 
 
 ### 举例
@@ -37,28 +37,28 @@ tag:
 ^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251319181.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251319181.png)
 
 #### ② [域名](https://regex-vis.com/?r=%5E%28%28http%3A%5C%2F%5C%2F%29%7C%28https%3A%5C%2F%5C%2F%29%29%3F%28%5Ba-zA-Z0-9%5D%28%5Ba-zA-Z0-9%5C-%5D%7B0%2C61%7D%5Ba-zA-Z0-9%5D%29%3F%5C.%29%2B%5Ba-zA-Z%5D%7B2%2C6%7D%28%5C%2F%29&e=0)
 ```
 ^((http:\/\/)|(https:\/\/))?([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}(\/)
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251320148.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251320148.png)
 
 #### ③ [IP](https://regex-vis.com/?r=%28%28%3F%3A%28%3F%3A25%5B0-5%5D%7C2%5B0-4%5D%5Cd%7C%5B01%5D%3F%5Cd%3F%5Cd%29%5C.%29%7B3%7D%28%3F%3A25%5B0-5%5D%7C2%5B0-4%5D%5Cd%7C%5B01%5D%3F%5Cd%3F%5Cd%29%29&e=0)
 ```
 ((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251320467.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251320467.png)
 
 #### ④ [URL](https://regex-vis.com/?r=%5Ehttps%3F%3A%5C%2F%5C%2F%28www%5C.%29%3F%5B-a-zA-Z0-9%40%3A%25._%5C%2B%7E%23%3D%5D%7B2%2C256%7D%5C.%5Ba-z%5D%7B2%2C6%7D%5Cb%28%5B-a-zA-Z0-9%40%3A%25_%5C%2B.%7E%23%28%29%3F%26%2F%2F%3D%5D*%29%24&e=0)
 ```
 ^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)$
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251321241.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251321241.png)
 
 #### ⑤ [HTML标签](https://regex-vis.com/?r=%5E%3C%28%5Ba-z%5D%2B%29%28%5B%5E%3C%5D%2B%29*%28%3F%3A%3E%28.*%29%3C%5C%2F%5C1%3E%7C%5Cs%2B%5C%2F%3E%29%24&e=0)
 ```
@@ -66,7 +66,7 @@ tag:
 
 ```
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251321250.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251321250.png)
 
 ## 扩展阅读
 - [正则表达式30分钟入门教程](https://deerchao.cn/tutorials/regex/regex.htm)
@@ -79,4 +79,4 @@ tag:
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

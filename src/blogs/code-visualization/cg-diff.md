@@ -16,13 +16,13 @@ star: true
 
 - **场景1**：修改了方法①逻辑，以为只会影响入口A便只回归了相关的场景，上线后发现影响了入口B的逻辑，造成了线上事故;
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501261143252.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261143252.png)
 ﻿
 <!-- more -->
 
 - **场景2**：修改了方法②逻辑，并回归了所有已知的流量入口，但上线一段时间后出现了大量异常告警，原来是影响了定时任务和MQ消费逻辑；
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501261144371.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261144371.png)
 
 ﻿﻿
 “代码变更影响分析”具体的可以描述为：**如何感知代码改动造成功能逻辑变化的影响范围，具体到影响了哪些类、方法、入口以及调用拓扑。**
@@ -30,11 +30,11 @@ star: true
 ## 实现方案
 针对上述背景，将使用源码静态分析的方式生成CallGraph，并提供代码变更影响分析能力。基本思路为：
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/java-call-graph-diff/picture/impl.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/java-call-graph-diff/picture/impl.png)
 ﻿
 ## 关键代码
 
-下面阐述基于Java8的具体实现方案，完整源码获取：[java-call-graph-diff](https://github.com/Xiaoxie1994/java-call-graph-diff)﻿
+下面阐述基于Java8的具体实现方案，完整源码获取：[java-call-graph-diff](https://github.com/shawnxie94/java-call-graph-diff)﻿
 
 ### 方法调用拓扑生成
 
@@ -192,7 +192,7 @@ private AstEntity.MethodDeclareInfo parseMethod(MethodDeclaration methodDeclarat
 ```
 - **CallGraph生成**：选择起始节点，基于方法和调用关系生成方法调用拓扑图。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501261337339.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261337339.png)
 
 ### 代码变更影响分析
 
@@ -260,7 +260,7 @@ private static Set<String> findChangeMethods(Map<String, MethodDeclaration> oldM
 ```
 - **变更分析生成**：结合方法拓扑生成变更影响拓扑图
 
- ![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501261340508.png)
+ ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261340508.png)
 
 ## 总结
 
@@ -277,4 +277,4 @@ private static Set<String> findChangeMethods(Map<String, MethodDeclaration> oldM
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

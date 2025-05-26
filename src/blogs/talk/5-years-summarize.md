@@ -15,13 +15,13 @@ star: true
 
 <!-- more -->
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251156351.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251156351.png)
 
 英国物理学家霍金曾说“**21世纪将是复杂性的世纪**”，科学的事我不懂，但我的直观感受是各行各业的复杂性都在持续的上涨且很快。就程序员这个职业来说，面试的难度是越来越大，当然面试可能存在一定的造火箭行为，但工作整体的难度确实是在逐年上涨。举个例子，之前业务开发主要工作是完成需求编码，而且由于很多都是新开业务也不存在太多历史债务，工作的条线和职责比较清晰。但随着业务进入成熟期，增长变缓导致更多的运维负担和质量问题开始凸显，开发不仅要完成基本的编码，也需要参与到更多**运维监控和质量保障**工作中，这使得工作的内容变得复杂多样，认知负载极速增加。而且就算是基本的编码工作，为了保证能适应未来发展趋势也会在前期投入更多精力进行方案设计，越来越考验开发的知识储备和架构思维。
 
 同时新的技术在不断地出现并对我们的工作造成实际的影响，从2022年12月OpenAi发布**ChatGPT**至今不到两年时间里，大模型已经侵入到了生活中的方方面面。哪个程序员敢说自己完全没有用过大模型，基于大模型衍生的编码辅助、智能问答、内容&图片生成等工具真真切切的影响到了我们工作的方式。开发已然变成了一个**复合型职业**，对个人能力提出了更高要求。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251157081.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251157081.png)
 
 
 外部环境的走向不是个人能够左右的，因此我不聊公司或城市的差异，也不聊如何和生活琐事对线，仅仅聊一下“**个人成长**”，因为这个话题的主动权掌握在我们自己手上，最好的投资就是投资自己（想到A股😭）。那么在这个复杂性快速上升的21世纪，面对不确定性上升的外部环境，我们该如何寻求突破呢？我当前的答案是：**持续学习，制造正反馈，相信复利效应。**
@@ -40,7 +40,7 @@ star: true
 - **⑤ 业务串讲**：将总结的内容分享出来，并收集熟悉业务听众的反馈（收集反馈很重要，老同事能够指出难以发现的细枝末节并分享一些历史原因导致的设计缺陷）；
 - **⑥ 认知迭代**：基于新的输入重新迭代自己的业务认知。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251157679.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251157679.png)
 
 
 #### 熟悉代码
@@ -51,7 +51,7 @@ star: true
 
 - **② 阅读代码工具**：[想提高阅读代码的效率？试试这些工具吧！](https://www.shawnxie.top/archives/1716733748336)
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251158633.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158633.png)
 
 
 不过工具和方法永远不是最重要的，**去读**，并在遇到困难的时候，看不明白的时候，咬牙坚持下去，抽丝剥茧，逐个击破。
@@ -60,12 +60,12 @@ star: true
 
 技术能力是开发的立足之本，因此前言中提到的寻求突破更多指的是技术能力上的突破，提升的方法我采取三步走：**持续学习，制造正反馈，相信复利效应。**
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251158351.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158351.png)
 
 
 #### 持续学习
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251158538.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158538.png)
 
 
 为什么需要持续学习，说白了是为了适应社会发展和保持个人竞争力，只出不进，我们将很快达到能力瓶颈。
@@ -102,31 +102,31 @@ star: true
 
 写周刊的目的是提高知识的留存率，当然也能带来各种正反馈😁。目前已经坚持了两个月，虽然会牺牲周末半天时间且发布后也没啥阅读量😭，但基本的目的达成了，希望能保持下去。感兴趣的同学可搜索公众号“肖恩杂谈”订阅一下🥺，历史文章查看：[技术周刊合集](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkwODY0ODQzOQ==&action=getalbum&album_id=3492416248238096386#wechat_redirect)。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202412302324792.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202412302324792.png)
 
 #### 相信复利效应
 
 “**复利是世界第八大奇迹**”，谣传是爱因斯坦所说，但无据可查。不过不管是谁说的，复利本身带来的效果是可观的，下面是一个简单的复利公式（F为收益，P为本金，i为利率，n为时间）。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251202624.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251202624.png)
 
 
 根据公式我们只需要每天比昨天的自己进步**0.1%**，那么一年后的个人能力将比一年前的自己提升**44.03%**（1*(1+0.001)^365-1），虽然这是理想数据，但足以说明持续学习的效果是可观的。
 
 我也在用实际的行动验证，24年初立了个Flag🚩：写一本关于“代码可视化”的GitBook，目前[《Code Visualization》](https://xiexiao064.gitbook.io/code-visualization)在持续施工中，希望有生之年能写完吧😁，感兴趣的朋友可以先睹为快，提提建议。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501232304347.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304347.png)
 
 
 ## 未来展望
 
 按照前文的思路进行积累，可能会出现知识储备了很多但工作中实际用到很少，导致一些割裂感。出现这种情况不能武断的认为学的东西没有用，很可能只是在当前的场景下暂时还用不上。知识的储备和应用就像树木地下和地上部分，根系越深越广，躯干部分才能茁壮成长。对于未来，我将继续践行自己的成长理论，并逐渐在工作中运用新学到的知识，产生价值。
 
-![](https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/202501251203901.png)
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251203901.png)
 
 <div style="text-align: center;"> —— 完 —— </div>
 
 ---
 关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
 
-<img src="https://cdn.jsdelivr.net/gh/Xiaoxie1994/images/images/20241103221454.png" alt="公众号二维码" width="300">
+<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

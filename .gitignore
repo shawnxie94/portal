@@ -39,3 +39,8 @@ pnpm-lock.yaml
 
 # TypeScript cache
 *.tsbuildinfo
+
+### VS Code ###
+.vscode/
+/.joycode/
+/agent/

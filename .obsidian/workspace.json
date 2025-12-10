@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/notes/how-llm-know-mcp-params.md",
+                "file": "src/blogs/ai/ai-unit-test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how-llm-know-mcp-params"
+              "title": "ai-unit-test"
             }
           }
         ]
@@ -169,20 +169,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "167cdf74b3844e3f",
   "lastOpenFiles": [
-    "src/blogs/notes/README.md",
+    "README.md",
+    "src/README.md",
+    "src/blogs/ai/README.md",
+    "src/blogs/ai/kimi.md",
+    "src/blogs/ai/ai-unit-test.md",
+    "src/blogs/ai/ai-search.md",
+    "src/blogs/ai/ai-agent.md",
+    "src/blogs/ai/ai-hotspot.md",
     "src/blogs/notes/how-llm-know-mcp-params.md",
+    "src/blogs/talk/README.md",
+    "src/blogs/talk/ip-exploration.md",
+    "src/blogs/talk/5-years-summarize.md",
+    "src/blogs/talk/2024-end.md",
+    "src/blogs/notes/README.md",
     "src/blogs/notes/tcp-fast-open.md",
     "src/blogs/notes/tcp-fast-open copy.md",
     "src/blogs/tools/read-flow.md",
@@ -197,25 +210,13 @@
     "src/blogs/notes/2.png",
     "src/blogs/notes/first.png.sb-9485e2e0-Yq0OAY",
     "src/blogs/notes/wireshark copy.png",
-    "src/blogs/talk/2024-end.md",
     "src/blogs/code-visualization/cg-diff.md",
     "src/blogs/code-visualization/code-visualization-intro.md",
     "src/blogs/code-visualization/compiler.md",
-    "src/blogs/talk/5-years-summarize.md",
-    "src/blogs/ai/ai-search.md",
     "src/blogs/code-visualization/read-code-tools.md",
-    "src/blogs/ai/ai-hotspot.md",
     "src/blogs/code-visualization/regex-vis.md",
     "src/blogs/tools/auto-lock.md",
-    "src/blogs/tools/docker-proxy.md",
-    "src/blogs/tools/mac-terminal.md",
-    "src/blogs/code-visualization/README.md",
-    "src/blogs/talk/ip-exploration.md",
-    "src/blogs/ai/kimi.md",
-    "src/blogs/ai/ai-agent.md",
     "src/blogs/code-visualization/1.gif",
-    "src/blogs/ai/README.md",
-    "src/blogs/talk/README.md",
     "src/blogs/code-visualization",
     "article/image.png",
     "article/image-8.png",

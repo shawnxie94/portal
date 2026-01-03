@@ -13,6 +13,15 @@ export default defineUserConfig({
     // 预连接 CDN，加速图片加载
     ["link", { rel: "preconnect", href: "https://cdn.jsdelivr.net" }],
     ["link", { rel: "dns-prefetch", href: "https://cdn.jsdelivr.net" }],
+    // Umami Analytics
+    [
+      "script",
+      {
+        defer: true,
+        src: "https://cloud.umami.is/script.js",
+        "data-website-id": "48024348-b9b8-4fe3-83da-3edeaaddbd5b",
+      },
+    ],
   ],
 
   theme,

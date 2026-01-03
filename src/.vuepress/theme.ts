@@ -159,5 +159,10 @@ export default hopeTheme({
         ],
       },
     },
+
+    // SEO 插件
+    seo: true,
+    // Sitemap 插件
+    sitemap: true,
   },
 });

@@ -56,14 +56,16 @@ LLM 相当于“**认知与决策中枢**”，负责理解、推理和决策。
 #### 1. 参数信息提取
 **`@mcp.tool()`** 是FastMCP提供的装饰器，用于将普通Python函数注册为MCP工具。装饰器在注册阶段自动解析函数签名、类型注解、docstring等，生成标准化的参数schema并纳入工具元数据库。
 ```python
-@mcp.tool(name="add_numbers", description="计算两个数的和") def add_numbers(a: int, b: int) -> int: return a + b
+@mcp.tool(name="add_numbers", description="计算两个数的和") 
+def add_numbers(a: int, b: int) -> int: 
+  return a + b
 ```
 提取的元信息包括：
 - 工具名（`name`）："add_numbers"
 - 描述（`description`）："计算两个数的和"
 - 参数（`parameters`）：a（int类型），b（int类型）
 - 返回值类型（`returns`）：int
-#### 2. 数结构的上下文注入与协议支持
+#### 2. 参数结构的上下文注入与协议支持
 - **Schema 自动生成与提示词注入**
 
 MCP框架会为每个工具自动生成符合OpenAPI, JSON Schema等规范的参数定义。在与LLM交互时，这些schema以结构化文本或协议数据作为上下文注入Prompt，使LLM“感知”工具能力边界。示例上下文片段：

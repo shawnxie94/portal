@@ -34,9 +34,6 @@ export default hopeTheme({
     },
   },
 
-  // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大的负面影响
-  hotReload: true,
-
   // 此处开启了很多功能用于演示，你应仅保留用到的功能。
   markdown: {
     align: true,
@@ -83,7 +80,7 @@ export default hopeTheme({
     // flowchart: true,
 
     // 在启用之前安装 mermaid
-    // mermaid: true,
+    mermaid: true,
 
     // playground: {
     //   presets: ["ts", "vue"],
@@ -106,8 +103,8 @@ export default hopeTheme({
     icon: {
       prefix: "fa6-solid:",
     },
+
     slimsearch: {
-      // 插件选项
       indexContent: true,
       suggestion: true,
       locales: {
@@ -116,12 +113,51 @@ export default hopeTheme({
         }
       },
     },
+
     comment: {
       provider: "Giscus",
       repo: "shawnxie94/suibi",
       repoId: "R_kgDOMsmo_w",
       category: "Announcements",
       categoryId: "DIC_kwDOMsmo_84CmWI9",
+    },
+
+    // PWA 插件配置
+    pwa: {
+      favicon: "/favicon.ico",
+      cacheHTML: true,
+      cacheImage: true,
+      appendBase: true,
+      apple: {
+        icon: "/assets/icon/apple-icon-152.png",
+        statusBarColor: "black",
+      },
+      manifest: {
+        icons: [
+          {
+            src: "/assets/icon/chrome-mask-512.png",
+            sizes: "512x512",
+            purpose: "maskable",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icon/chrome-mask-192.png",
+            sizes: "192x192",
+            purpose: "maskable",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icon/chrome-512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icon/chrome-192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+        ],
+      },
     },
   },
 });

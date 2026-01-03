@@ -30,9 +30,12 @@ yarn-error.log*
 *.sw?
 
 # Lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Obsidian
+.obsidian/workspace.json
 
 # Local env files
 .env*.local

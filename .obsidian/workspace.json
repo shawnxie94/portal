@@ -11,12 +11,14 @@
             "id": "8404e8f2ba744cb7",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md"
+                "file": "src/blogs/ai/ai-article-database.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-05-10 15.47.46.excalidraw"
+              "icon": "lucide-file",
+              "title": "ai-article-database"
             }
           }
         ]
@@ -178,12 +180,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "e0221d684224b46c",
+  "active": "8404e8f2ba744cb7",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md",
     "backup/todo/image.png",
     "Excalidraw/Drawing 2026-01-22 20.04.50.excalidraw.md",
     "Excalidraw/Drawing 2026-01-22 16.04.50.excalidraw.md",
-    "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md",
     "README.md",
     "未命名.base",
     "src/README.md",
@@ -201,7 +203,6 @@
     "src/blogs/ai/image-17.png",
     "Excalidraw/Drawing 2026-01-22 20.04.50.excalidraw 1.md",
     "Pasted Image 20260122201244_081.png",
-    "Pasted Image 20260122201208_901.png",
     "Excalidraw/Drawing 2026-01-22 20.10.57.excalidraw.md",
     "Excalidraw/Drawing 2026-01-20 13.12.02.excalidraw.md",
     "未命名.md",

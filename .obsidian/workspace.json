@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "824a50433f73b40a",
+        "id": "bb7577d46c013f24",
         "type": "tabs",
         "children": [
           {
-            "id": "167cdf74b3844e3f",
+            "id": "8404e8f2ba744cb7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "src/blogs/ai/ai-unit-test.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "ai-unit-test"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-05-10 15.47.46.excalidraw"
             }
           }
         ]
@@ -169,7 +167,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -180,16 +178,36 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "167cdf74b3844e3f",
+  "active": "e0221d684224b46c",
   "lastOpenFiles": [
+    "backup/todo/image.png",
+    "Excalidraw/Drawing 2026-01-22 20.04.50.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-22 16.04.50.excalidraw.md",
+    "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md",
     "README.md",
+    "未命名.base",
     "src/README.md",
+    "src/blogs/ai/ai-article-database.md",
+    "Pasted Image 20260122160529_181.png",
+    "src/blogs/ai/image.png",
+    "src/blogs/ai/ai-unit-test.md",
+    "src/blogs/ai/ai-hotspot.md",
+    "src/blogs/ai/ai-agent.md",
+    "src/blogs/ai/image-5.png",
+    "Pasted Image 20260123000137_993.png",
+    "Pasted Image 20260123000044_162.png",
+    "Pasted Image 20260122235653_133.png",
+    "src/blogs/ai/image-18.png",
+    "src/blogs/ai/image-17.png",
+    "Excalidraw/Drawing 2026-01-22 20.04.50.excalidraw 1.md",
+    "Pasted Image 20260122201244_081.png",
+    "Pasted Image 20260122201208_901.png",
+    "Excalidraw/Drawing 2026-01-22 20.10.57.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-20 13.12.02.excalidraw.md",
+    "未命名.md",
     "src/blogs/ai/README.md",
     "src/blogs/ai/kimi.md",
-    "src/blogs/ai/ai-unit-test.md",
     "src/blogs/ai/ai-search.md",
-    "src/blogs/ai/ai-agent.md",
-    "src/blogs/ai/ai-hotspot.md",
     "src/blogs/notes/how-llm-know-mcp-params.md",
     "src/blogs/talk/README.md",
     "src/blogs/talk/ip-exploration.md",
@@ -199,28 +217,9 @@
     "src/blogs/notes/tcp-fast-open.md",
     "src/blogs/notes/tcp-fast-open copy.md",
     "src/blogs/tools/read-flow.md",
-    "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md",
     "Excalidraw",
-    "src/blogs/tools/picture-manage.md",
-    "src/blogs/tools/one-cmd-web-to-app.md",
-    "src/blogs/notes/wireshark.png",
-    "src/blogs/notes/second.png",
-    "src/blogs/notes/h3.png",
-    "src/blogs/notes/first.png",
-    "src/blogs/notes/2.png",
     "src/blogs/notes/first.png.sb-9485e2e0-Yq0OAY",
-    "src/blogs/notes/wireshark copy.png",
-    "src/blogs/code-visualization/cg-diff.md",
-    "src/blogs/code-visualization/code-visualization-intro.md",
-    "src/blogs/code-visualization/compiler.md",
-    "src/blogs/code-visualization/read-code-tools.md",
-    "src/blogs/code-visualization/regex-vis.md",
-    "src/blogs/tools/auto-lock.md",
-    "src/blogs/code-visualization/1.gif",
     "src/blogs/code-visualization",
-    "article/image.png",
-    "article/image-8.png",
-    "article/image-15.png",
     "未命名文件夹",
     "article/picture-auto-manager"
   ]

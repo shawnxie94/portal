@@ -9,8 +9,8 @@ export default hopeTheme({
     name: "ShawnXie",
     url: "https://shawnxie.top",
   },
-  favicon: "/favicon-v2.ico",
-  logo: "/image.webp",
+  favicon: "/image.png",
+  logo: "/image.png",
   repo: "shawnxie94/suibi",
   docsDir: "src",
   // 导航栏
@@ -74,7 +74,7 @@ export default hopeTheme({
 
     // PWA 插件配置
     pwa: {
-      favicon: "/favicon-v2.ico",
+      favicon: "/image.png",
       cacheHTML: false,
       cacheImage: false,
       appendBase: true,

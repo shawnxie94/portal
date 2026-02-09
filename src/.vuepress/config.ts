@@ -33,8 +33,8 @@ export default defineUserConfig({
   }),
 
   head: [
-    ["link", { rel: "icon", type: "image/webp", href: "/image.webp?v=20260209" }],
-    ["link", { rel: "icon", type: "image/x-icon", href: "/favicon-v2.ico" }],
+    ["link", { rel: "icon", type: "image/png", href: "/image.png" }],
+    ["link", { rel: "shortcut icon", type: "image/png", href: "/image.png" }],
     // 预连接外部域名，减少 DNS/TLS 握手耗时
     ["link", { rel: "preconnect", href: "https://cdn.jsdelivr.net" }],
     ["link", { rel: "dns-prefetch", href: "https://cdn.jsdelivr.net" }],

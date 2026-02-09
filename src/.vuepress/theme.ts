@@ -51,7 +51,7 @@ export default hopeTheme({
     },
 
     slimsearch: {
-      indexContent: false,
+      indexContent: true,
       suggestion: false,
       queryHistoryCount: 0,
       resultHistoryCount: 0,

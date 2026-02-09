@@ -1,0 +1,23 @@
+# Replace example.com with your domain.
+example.com {
+  root * /var/www/suibi
+  file_server
+
+  encode zstd gzip
+
+  @immutable {
+    path /assets/*
+    path /fonts/*
+    path /slimsearch.worker.js
+    path /workbox-*.js
+  }
+  header @immutable Cache-Control "public, max-age=31536000, immutable"
+
+  @revalidate {
+    path /
+    path *.html
+    path /rss.xml
+    path /sitemap.xml
+  }
+  header @revalidate Cache-Control "public, max-age=0, must-revalidate"
+}

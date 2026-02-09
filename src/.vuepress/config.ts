@@ -1,3 +1,4 @@
+import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 
 import theme from "./theme.js";
@@ -9,10 +10,38 @@ export default defineUserConfig({
   title: "肖恩聊技术",
   description: "持续提供有价值的技术内容",
 
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        target: "es2020",
+        modulePreload: {
+          polyfill: false,
+        },
+      },
+      css: {
+        preprocessorOptions: {
+          scss: {
+            quietDeps: true,
+            silenceDeprecations: ["if-function"],
+          },
+        },
+      },
+      esbuild: {
+        legalComments: "none",
+      },
+    },
+  }),
+
   head: [
-    // 预连接 CDN，加速图片加载
+    ["link", { rel: "icon", type: "image/webp", href: "/image.webp?v=20260209" }],
+    ["link", { rel: "icon", type: "image/x-icon", href: "/favicon-v2.ico" }],
+    // 预连接外部域名，减少 DNS/TLS 握手耗时
     ["link", { rel: "preconnect", href: "https://cdn.jsdelivr.net" }],
     ["link", { rel: "dns-prefetch", href: "https://cdn.jsdelivr.net" }],
+    ["link", { rel: "preconnect", href: "https://cloud.umami.is" }],
+    ["link", { rel: "dns-prefetch", href: "https://cloud.umami.is" }],
+    ["link", { rel: "preconnect", href: "https://giscus.app" }],
+    ["link", { rel: "dns-prefetch", href: "https://giscus.app" }],
     // Umami Analytics
     [
       "script",

@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "ai-article-database"
             }
+          },
+          {
+            "id": "074c5adbebf3c1c0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,7 +193,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8404e8f2ba744cb7",
+  "active": "074c5adbebf3c1c0",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2025-05-10 15.47.46.excalidraw.md",
     "backup/todo/image.png",

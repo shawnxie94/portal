@@ -1,1 +1,16 @@
-// place your custom styles here
+@font-face {
+  font-family: "LXGWWenKaiMono";
+  src: url("/fonts/LXGWWenKaiMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --vp-font: "LXGWWenKaiMono", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --vp-font-heading: "LXGWWenKaiMono", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --vp-font-mono: "LXGWWenKaiMono", "SFMono-Regular", Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  --code-font-family: "LXGWWenKaiMono", "SFMono-Regular", Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+}

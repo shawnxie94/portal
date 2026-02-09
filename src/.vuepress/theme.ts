@@ -9,8 +9,8 @@ export default hopeTheme({
     name: "ShawnXie",
     url: "https://shawnxie.top",
   },
-  favicon: "/image.png",
-  logo: "/image.png",
+  favicon: "/favicon-v2.ico",
+  logo: "/image.webp",
   repo: "shawnxie94/suibi",
   docsDir: "src",
   // 导航栏
@@ -34,83 +34,32 @@ export default hopeTheme({
     },
   },
 
-  // 此处开启了很多功能用于演示，你应仅保留用到的功能。
+  // 精简 Markdown 增强功能，减少运行时体积
   markdown: {
-    align: true,
-    attrs: true,
-    codeTabs: true,
-    component: true,
-    demo: true,
-    figure: true,
     gfm: true,
     imgLazyload: true,
     imgSize: true,
-    include: true,
-    mark: true,
-    plantuml: true,
-    spoiler: true,
-    stylize: [
-      {
-        matcher: "Recommended",
-        replacer: ({ tag }) => {
-          if (tag === "em")
-            return {
-              tag: "Badge",
-              attrs: { type: "tip" },
-              content: "Recommended",
-            };
-        },
-      },
-    ],
-    sub: true,
-    sup: true,
-    tabs: true,
     tasklist: true,
-    vPre: true,
-
-    // 在启用之前安装 chart.js
-    // chartjs: true,
-
-    // insert component easily
-
-    // 在启用之前安装 echarts
-    // echarts: true,
-
-    // 在启用之前安装 flowchart.ts
-    // flowchart: true,
-
-    // 在启用之前安装 mermaid
-    mermaid: true,
-
-    // playground: {
-    //   presets: ["ts", "vue"],
-    // },
-
-    // 在启用之前安装 @vue/repl
-    // vuePlayground: true,
-
-    // 在启用之前安装 sandpack-vue3
-    // sandpack: true,
   },
 
   // 在这里配置主题提供的插件
   plugins: {
     blog: true,
     feed: true,
-    components: {
-      components: ["Badge", "VPCard"],
-    },
     icon: {
       prefix: "fa6-solid:",
     },
 
     slimsearch: {
-      indexContent: true,
-      suggestion: true,
+      indexContent: false,
+      suggestion: false,
+      queryHistoryCount: 0,
+      resultHistoryCount: 0,
+      hotKeys: [],
       locales: {
         '/': {
           placeholder: '搜索',
-        }
+        },
       },
     },
 
@@ -120,14 +69,48 @@ export default hopeTheme({
       repoId: "R_kgDOMsmo_w",
       category: "Announcements",
       categoryId: "DIC_kwDOMsmo_84CmWI9",
+      lazyLoading: true,
     },
 
     // PWA 插件配置
     pwa: {
-      favicon: "/favicon.ico",
-      cacheHTML: true,
-      cacheImage: true,
+      favicon: "/favicon-v2.ico",
+      cacheHTML: false,
+      cacheImage: false,
       appendBase: true,
+      update: "disable",
+      generateSWConfig: {
+        mode: "development",
+        maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
+        globIgnores: ["**/fonts/*.ttf", "**/assets/images/**"],
+        runtimeCaching: [
+          {
+            urlPattern: /\/fonts\/.*\.ttf$/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "local-fonts",
+              cacheableResponse: { statuses: [0, 200] },
+              expiration: {
+                maxEntries: 2,
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+              },
+            },
+          },
+          {
+            urlPattern:
+              /^https:\/\/cdn\.jsdelivr\.net\/gh\/shawnxie94\/images\/.*\.(?:png|jpe?g|gif|webp|svg)$/i,
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "cdn-images",
+              cacheableResponse: { statuses: [0, 200] },
+              expiration: {
+                maxEntries: 400,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+            },
+          },
+        ],
+      },
       apple: {
         icon: "/assets/icon/apple-icon-152.png",
         statusBarColor: "black",

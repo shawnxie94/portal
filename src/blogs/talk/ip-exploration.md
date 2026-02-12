@@ -6,7 +6,7 @@ category:
 tag:
   - 个人成长
   - 副业探索
-star: true
+star: false
 ---
 
 # 现在才开始探索个人IP是不是晚了？

@@ -7,7 +7,7 @@ tag:
   - 可视化
   - 静态分析
   - Git
-star: true
+star: false
 ---
 
 # 代码变更影响分析

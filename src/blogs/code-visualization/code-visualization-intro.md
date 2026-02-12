@@ -7,8 +7,8 @@ tag:
   - 可视化
   - 静态分析
   - 概念引言
-sticky: true
-star: true
+sticky: false
+star: false
 ---
 
 # 代码可视化(Code Visualization)

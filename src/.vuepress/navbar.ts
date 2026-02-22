@@ -9,6 +9,11 @@ export default navbar([
     link: "/timeline/",
   },
   {
+    text: "信息源",
+    icon: "rss",
+    link: "https://lumina.shawnxie.top/",
+  },
+  {
     text: "技术周刊",
     icon: "newspaper",
     link: "https://weekly.shawnxie.top/",

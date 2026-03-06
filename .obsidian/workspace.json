@@ -15,7 +15,7 @@
               "state": {
                 "file": "src/blogs/daily/2026-3-4.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "2026-3-4"
@@ -179,7 +179,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "e0221d684224b46c",
+  "active": "074c5adbebf3c1c0",
   "lastOpenFiles": [
     "src/blogs/daily/2026-3-3.md",
     "src/blogs/daily/image.png",

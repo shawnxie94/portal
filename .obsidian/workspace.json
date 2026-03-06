@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/daily/2026-3-4.md",
+                "file": "src/blogs/daily/2026-3-6.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-3-4"
+              "title": "2026-3-6"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 336.5,
+    "collapsed": true
   },
   "right": {
     "id": "50930687bb4f99d0",
@@ -181,10 +182,12 @@
   },
   "active": "074c5adbebf3c1c0",
   "lastOpenFiles": [
+    "src/blogs/daily/2026-3-4.md",
+    "src/blogs/daily/2026-3-6.md",
+    "src/blogs/daily/image-1.png",
     "src/blogs/daily/2026-3-3.md",
     "src/blogs/daily/image.png",
     "src/blogs/daily/image-2.png",
-    "src/blogs/daily/image-1.png",
     "src/blogs/talk/2025-end.md",
     "src/blogs/talk/image-2.jpeg",
     "src/blogs/talk/image-1.jpeg",
@@ -209,9 +212,6 @@
     "src/blogs/ai/README.md",
     "src/blogs/ai/kimi.md",
     "src/blogs/ai/ai-unit-test.md",
-    "src/blogs/ai/ai-search.md",
-    "src/blogs/ai/ai-hotspot.md",
-    "src/blogs/ai/ai-agent.md",
     "src/blogs/talk/image.png",
     "backup/todo/image.png",
     "未命名.base",

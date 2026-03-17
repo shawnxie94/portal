@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7dcd02f243fb689b",
+        "id": "15e8ee84cfb42b13",
         "type": "tabs",
         "children": [
           {
-            "id": "17e1cf37d316d130",
+            "id": "9a70ef8d90fd2250",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/daily/2026-3-16.md",
+                "file": "src/blogs/tools/read-flow-2026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-3-16"
+              "title": "read-flow-2026"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 336.5,
+    "collapsed": true
   },
   "right": {
     "id": "50930687bb4f99d0",
@@ -179,10 +180,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "17e1cf37d316d130",
+  "active": "9a70ef8d90fd2250",
   "lastOpenFiles": [
-    "src/blogs/daily/2026-3-6.md",
+    "src/blogs/tools/image-12.png",
+    "src/blogs/tools/read-flow-2026.md",
     "src/blogs/daily/2026-3-16.md",
+    "src/blogs/daily/2026-3-6.md",
     "未命名.base",
     "src/blogs/daily/2026-3-4.md",
     "src/blogs/daily/image-1.png",
@@ -211,8 +214,6 @@
     "src/blogs/code-visualization/code-visualization-intro.md",
     "src/blogs/code-visualization/cg-diff.md",
     "src/blogs/ai/README.md",
-    "src/blogs/ai/kimi.md",
-    "src/blogs/ai/ai-unit-test.md",
     "src/blogs/talk/image.png",
     "backup/todo/image.png",
     "Pasted Image 20260122160529_181.png",

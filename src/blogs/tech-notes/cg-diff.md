@@ -2,10 +2,11 @@
 icon: en-to-square
 date: 2023-11-10
 category:
-  - 代码可视化
+  - 技术随笔
+redirectFrom:
+  - /blogs/code-visualization/cg-diff.html
 tag:
   - 可视化
-  - 静态分析
   - Git
 star: false
 ---
@@ -17,21 +18,21 @@ star: false
 - **场景1**：修改了方法①逻辑，以为只会影响入口A便只回归了相关的场景，上线后发现影响了入口B的逻辑，造成了线上事故;
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261143252.png)
-﻿
+
 <!-- more -->
 
 - **场景2**：修改了方法②逻辑，并回归了所有已知的流量入口，但上线一段时间后出现了大量异常告警，原来是影响了定时任务和MQ消费逻辑；
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261144371.png)
 
-﻿﻿
+
 “代码变更影响分析”具体的可以描述为：**如何感知代码改动造成功能逻辑变化的影响范围，具体到影响了哪些类、方法、入口以及调用拓扑。**
 
 ## 实现方案
 针对上述背景，将使用源码静态分析的方式生成CallGraph，并提供代码变更影响分析能力。基本思路为：
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/java-call-graph-diff/picture/impl.png)
-﻿
+
 ## 关键代码
 
 下面阐述基于Java8的具体实现方案，完整源码获取：[java-call-graph-diff](https://github.com/shawnxie94/java-call-graph-diff)﻿
@@ -40,7 +41,7 @@ star: false
 
 变更影响判断基于CG，因此首先需要实现方法调用拓扑的可视化。
 
-生成CG的关键数据是方法和方法调用关系，由[编译器前端&中端基础知识](https://shawnxie.top/blogs/code-visualization/compiler.html)可知抽象语法树（AST）包含了完整的类、方法和方法调用相关的信息。因此整个方法调用拓扑的过程可以归纳为：**Code -> AST -> CallGraph**.
+生成CG的关键数据是方法和方法调用关系，由[编译器前端&中端基础知识](https://shawnxie.top/blogs/tech-notes/compiler.html)可知抽象语法树（AST）包含了完整的类、方法和方法调用相关的信息。因此整个方法调用拓扑的过程可以归纳为：**Code -> AST -> CallGraph**.
 
 - **Code获取**：使用JGit将远程仓库拉取到本地；
 ```Java
@@ -272,9 +273,3 @@ private static Set<String> findChangeMethods(Map<String, MethodDeclaration> oldM
 - [Graphviz](https://graphviz.org/)﻿
 - [Graphviz-Java](https://github.com/nidi3/graphviz-java)
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

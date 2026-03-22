@@ -89,9 +89,3 @@ star: false
 大家如果有不同的看法，对我提供的内容感兴趣，或有新的点子和建议都可以通过公众号私信我交流，广结善缘😘，哈哈。
 
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

@@ -4,7 +4,7 @@ title: 技术提效
 index: false
 article: false
 dir:
-  order: 3
+  order: 2
   link: true
 ---
 

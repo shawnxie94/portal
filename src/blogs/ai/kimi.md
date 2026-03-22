@@ -3,10 +3,8 @@ icon: en-to-square
 date: 2024-10-12
 category:
   - AI探索
-  - 技术提效
 tag:
   - AI
-  - 智能体
   - 技术调研
 ---
 
@@ -91,9 +89,3 @@ tag:
 
 最后也希望Kimi越来越好，能够杀出重围，持续提供更多真正好用的功能。
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

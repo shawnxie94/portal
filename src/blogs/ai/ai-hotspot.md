@@ -3,11 +3,10 @@ icon: en-to-square
 date: 2024-06-03
 category:
   - AI探索
-  - 技术提效
 tag:
   - AI
   - 智能体
-  - 开源项目
+  - 自动化
 ---
 
 # 没时间了解技术热点？让大模型帮你整理重点吧！
@@ -288,9 +287,3 @@ with open('./result/' + file_title + '.md', 'w', encoding="utf8") as file:
 - GPT-4o
 
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

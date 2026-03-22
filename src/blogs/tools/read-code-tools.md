@@ -2,11 +2,13 @@
 icon: en-to-square
 date: 2024-01-04
 category:
-  - 代码可视化
   - 技术提效
+redirectFrom:
+  - /blogs/tech-notes/read-code-tools.html
+  - /blogs/code-visualization/read-code-tools.html
 tag:
   - 可视化
-  - 阅读代码
+  - 阅读
 ---
 
 # 想提高阅读代码的效率？试试这些工具吧！
@@ -120,9 +122,3 @@ Sourcetrail是一款开源免费的跨平台源码分析工具，可在阅读源
 - [Code visualization: How to turn complex code into diagrams](https://www.lucidchart.com/blog/visualize-code-documentation)
 
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

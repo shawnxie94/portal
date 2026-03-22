@@ -3,10 +3,10 @@ icon: en-to-square
 date: 2026-01-23
 category:
   - AI探索
-  - 技术提效
 tag:
   - AI
   - 知识库
+  - 自动化
 ---
 
 # AI结对编程实战：打造智能文章知识库全记录（附9条心得）

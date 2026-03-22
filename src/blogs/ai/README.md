@@ -4,7 +4,7 @@ title: AI探索
 index: false
 article: false
 dir:
-  order: 2
+  order: 1
   link: true
 ---
 

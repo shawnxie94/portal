@@ -2,8 +2,9 @@
 icon: en-to-square
 date: 2024-03-26
 category:
-  - 代码可视化
-  - 基础理论
+  - 技术随笔
+redirectFrom:
+  - /blogs/code-visualization/compiler.html
 tag:
   - 编译原理
 ---
@@ -499,9 +500,3 @@ opt -S -O2 fun1.ll -o fun1-O2.ll
 - [CS143](https://web.stanford.edu/class/cs143/)
 
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

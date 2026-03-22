@@ -2,12 +2,12 @@
 icon: en-to-square
 date: 2025-05-26
 category:
-  - 知识点++
-  - 学习随笔
+  - 技术随笔
+redirectFrom:
+  - /blogs/notes/how-llm-know-mcp-params.html
 tag:
-  - MCP
-  - LLM
   - 智能体
+  - MCP
 ---
 # LLM为何能精确构建MCP服务入参？
 
@@ -96,9 +96,3 @@ MCP框架会为每个工具自动生成符合OpenAPI, JSON Schema等规范的参
 ## 结语
 LLLM对于MCP服务入参的“理解”来源于训练知识与运行时上下文推理。它**无法像程序一样动态读取接口定义，需依赖框架注入的schema和文档信息**。若要保证调用的准确性，需规范维护服务schema，并通过框架自动注入上下文，从而让LLM获取到最新、最准确的工具和参数定义。
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

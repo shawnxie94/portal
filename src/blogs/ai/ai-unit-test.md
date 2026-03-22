@@ -3,7 +3,6 @@ icon: en-to-square
 date: 2025-12-10
 category:
   - AI探索
-  - 技术提效
 tag:
   - AI
   - 单元测试
@@ -1085,9 +1084,3 @@ mvn jacoco:report
 - [单元测试实践](https://help.aliyun.com/zh/lingma/use-cases/unit-test-practice-of-tongyi-lingma)
 - [AI 驱动的智能化单元测试生成：字节跳动的实践与创新](https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651229615&idx=2&sn=1c135f2ad458a68c4398132b8fcb4e70&chksm=bc6ec40b4cdbd0d4671ecc67b2966808d7c702551484cd6d0022fa6d4bd658841f74108a18c1#rd)
 
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">

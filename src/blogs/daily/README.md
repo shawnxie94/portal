@@ -4,7 +4,7 @@ title: 今日观察
 index: false
 article: false
 dir:
-  order: 7
+  order: 4
   link: true
 ---
 

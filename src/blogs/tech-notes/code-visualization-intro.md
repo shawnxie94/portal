@@ -2,11 +2,12 @@
 icon: en-to-square
 date: 2023-10-11
 category:
-  - 代码可视化
+  - 技术随笔
+redirectFrom:
+  - /blogs/code-visualization/code-visualization-intro.html
 tag:
   - 可视化
   - 静态分析
-  - 概念引言
 sticky: false
 star: false
 ---
@@ -54,14 +55,6 @@ star: false
 - 也会罗列一些业界已知的实践方案供大家参考学习。  
 
 相关内容会逐步汇总到”代码可视化“书籍：[code-visualization-book](https://code-visualization.shawnxie.top/).
-
-
-<div style="text-align: center;"> —— 完 —— </div>
-
----
-关注“**肖恩聊技术**”公众号，原创技术文章第一时间推送~
-
-<img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png" alt="公众号二维码" width="300">
 
 
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/daily/2026-3-22.md",
+                "file": "src/blogs/daily/2026-3-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-3-22"
+              "title": "2026-3-24"
             }
           }
         ]
@@ -164,7 +164,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 458.5
+    "width": 458.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,11 +176,14 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "9a70ef8d90fd2250",
   "lastOpenFiles": [
+    "src/blogs/daily/2026-3-22.md",
+    "src/blogs/daily/2026-3-24.md",
     "src/blogs/daily/2026-3-17.md",
     "src/blogs/tools/read-flow-2026.md",
     "src/blogs/tools/image-12.png",
@@ -211,8 +215,6 @@
     "src/blogs/code-visualization/read-code-tools.md",
     "src/blogs/code-visualization/compiler.md",
     "src/blogs/code-visualization/code-visualization-intro.md",
-    "src/blogs/code-visualization/cg-diff.md",
-    "src/blogs/ai/README.md",
     "src/blogs/talk/image.png",
     "backup/todo/image.png",
     "Pasted Image 20260122160529_181.png",

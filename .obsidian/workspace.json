@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/daily/2026-3-24.md",
+                "file": "src/blogs/daily/2026-3-26.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-3-24"
+              "title": "2026-3-26"
             }
           }
         ]
@@ -182,8 +182,8 @@
   },
   "active": "9a70ef8d90fd2250",
   "lastOpenFiles": [
-    "src/blogs/daily/2026-3-22.md",
     "src/blogs/daily/2026-3-24.md",
+    "src/blogs/daily/2026-3-22.md",
     "src/blogs/daily/2026-3-17.md",
     "src/blogs/tools/read-flow-2026.md",
     "src/blogs/tools/image-12.png",

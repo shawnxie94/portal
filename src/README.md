@@ -16,6 +16,8 @@ projects:
     name: 信息源
     desc: 各种优质内容留档
     link: https://lumina.shawnxie.top/
-  
-# footer: 肖恩聊技术：持续提供有价值的技术内容
+  - icon: link
+    name: 订阅推荐
+    desc: 机场、中转站...
+    link: /blogs/aff/aff.html
 ---

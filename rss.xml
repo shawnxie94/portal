@@ -6,8 +6,8 @@
     <link>https://shawnxie.top/</link>
     <description>持续提供有价值的技术内容</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 30 Mar 2026 06:12:34 GMT</pubDate>
-    <lastBuildDate>Mon, 30 Mar 2026 06:12:34 GMT</lastBuildDate>
+    <pubDate>Thu, 02 Apr 2026 05:08:44 GMT</pubDate>
+    <lastBuildDate>Thu, 02 Apr 2026 05:08:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>AFF</category>
@@ -17,10 +17,10 @@
     <category>技术随笔</category>
     <category>技术提效</category>
     <item>
-      <title>自用订阅推荐（机场、中转站...）</title>
+      <title>自用订阅推荐（云服务、机场、中转站...）</title>
       <link>https://shawnxie.top/blogs/aff/aff.html</link>
       <guid>https://shawnxie.top/blogs/aff/aff.html</guid>
-      <source url="https://shawnxie.top/rss.xml">自用订阅推荐（机场、中转站...）</source>
+      <source url="https://shawnxie.top/rss.xml">自用订阅推荐（云服务、机场、中转站...）</source>
       <description>入选均为个人长期使用的订阅产品，持续更新中...</description>
       <category>AFF</category>
       <pubDate>Mon, 30 Mar 2026 00:00:00 GMT</pubDate>
@@ -28,16 +28,20 @@
 <p><img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140253028.png" alt="" loading="lazy"></p>
 <p>入选均为个人长期使用的订阅产品，持续更新中...</p>
 <!-- more -->
+<h2>云服务</h2>
+<h3><a class="header-anchor" href="#ucloud-中立云计算服务商"><span></span></a><a href="https://passport.ucloud.cn?cps_code=Ju1MpaR5js5EguUIMusTnF" target="_blank" rel="noopener noreferrer">UCloud：中立云计算服务商</a></h3>
+<p>使用一年多，蛮不错的云厂商，境外主机（特别是香港节点）性能非常出色，经常有特惠主机活动，适合个人开发者做一些小项目。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260402130707975.png" alt="" loading="lazy"></p>
 <h2>机场</h2>
 <h3><a class="header-anchor" href="#forest-个人使用两年的机场"><span></span></a><a href="https://forest788.com/#/register?code=YHfn0vvg" target="_blank" rel="noopener noreferrer">Forest：个人使用两年的机场</a></h3>
-<p>蛮不错的机场，个人已使用两年，整体来说连接稳定、平台支持完善且价格适宜（经常有促销，双十一、春节等）。</p>
+<p>蛮不错的机场，个人已使用两年，整体来说连接稳定、平台支持完善且价格适宜，经常有促销，双十一、春节等。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025740.png" alt="" loading="lazy"></p>
 <h3><a class="header-anchor" href="#宝可梦机场-每月送免费套餐"><span></span></a><a href="https://love.p6m6.com/#/register?code=a0htJG0v" target="_blank" rel="noopener noreferrer">宝可梦机场：每月送免费套餐</a></h3>
-<p>Linux DO佬友认证，每月都有免费套餐可领取（具体查看Linux DO帖子），付费套餐价格也算实惠，值得入手。</p>
+<p>使用半年，Linux DO佬友认证，每月都有免费套餐可领取（具体查看Linux DO帖子），付费套餐价格也算实惠，值得入手。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025742.png" alt="" loading="lazy"></p>
 <h2>大模型中转站</h2>
 <h3><a class="header-anchor" href="#right-code-企业级-ai-agent-中转平台"><span></span></a><a href="https://www.right.codes/register?aff=d9785f7f" target="_blank" rel="noopener noreferrer">Right Code：企业级 AI Agent 中转平台</a></h3>
-<p>Linux DO佬友认证，大模型中转平台，物美价廉（不时还有套餐发布），轻松接入各种工具（Codex、ClaudeCode、OpenCode、OpenClaw等）。</p>
+<p>使用俩月，Linux DO佬友认证，大模型中转平台，物美价廉不时还有套餐发布，轻松接入各种工具 Codex、ClaudeCode、OpenCode、OpenClaw等。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025743.png" alt="" loading="lazy"></p>
 <!-- article-outro -->
 <div class="article-outro-shell"><div class="article-outro-divider" aria-hidden="true"><span>完</span></div><section class="article-outro-card" aria-label="文章尾注"><div class="article-outro-copy"><p class="article-outro-eyebrow">感谢阅读</p><h2 class="article-outro-title">微信公众号「肖恩聊技术」</h2><p class="article-outro-desc">如果这篇文章对你有帮助，欢迎扫码关注，获取原创文章推送。</p></div><div class="article-outro-qr"><img src="https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260322212654277.jpg" alt="肖恩聊技术公众号二维码"><p class="article-outro-caption">扫码关注公众号</p></div></section></div>

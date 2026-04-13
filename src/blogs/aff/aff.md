@@ -27,7 +27,7 @@ star: true
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260402130707975.png)
 
 ## 机场
-### [Forest：个人使用两年的机场](https://forest788.com/#/register?code=YHfn0vvg)
+### [Forest：个人使用两年的机场](https://forest-01.net/register?code=YHfn0vvg)
 蛮不错的机场，个人已使用两年，整体来说连接稳定、平台支持完善且价格适宜，经常有促销，双十一、春节等。
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025740.png)

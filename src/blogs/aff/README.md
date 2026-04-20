@@ -1,6 +1,6 @@
 ---
 icon: ant-design:dollar-outlined
-title: 产品推广
+title: 资源推荐
 index: false
 article: false
 dir:

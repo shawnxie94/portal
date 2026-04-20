@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/blogs/aff/aff.md",
+                "file": "src/blogs/aff/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aff"
+              "title": "README"
             }
           }
         ],
@@ -197,6 +197,8 @@
   },
   "active": "f83f360b95c96f37",
   "lastOpenFiles": [
+    "src/blogs/aff/lumina.md",
+    "src/blogs/aff/aff.md",
     "src/blogs/daily/2026-3-24.md",
     "src/blogs/daily/2026-3-22.md",
     "src/blogs/daily/2026-3-17.md",
@@ -228,8 +230,6 @@
     "src/blogs/code-visualization/regex-vis.md",
     "src/blogs/code-visualization/README.md",
     "src/blogs/code-visualization/read-code-tools.md",
-    "src/blogs/code-visualization/compiler.md",
-    "src/blogs/code-visualization/code-visualization-intro.md",
     "src/blogs/talk/image.png",
     "backup/todo/image.png",
     "Pasted Image 20260122160529_181.png",

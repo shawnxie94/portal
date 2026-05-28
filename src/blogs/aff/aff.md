@@ -38,9 +38,16 @@ star: true
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025742.png)
 
-## 大模型中转站
+## 大模型服务
 ### [Right Code：企业级 AI Agent 中转平台](https://www.right.codes/register?aff=d9785f7f)
 
 使用俩月，Linux DO佬友认证，大模型中转平台，物美价廉不时还有套餐发布，轻松接入各种工具 Codex、ClaudeCode、OpenCode、OpenClaw等。
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025743.png)
+
+### [硅基流动：大模型云服务平台](https://cloud.siliconflow.cn/i/Rm6GsHNO)
+
+无需多言，国内最大的一站式大模型云服务平台，提供开箱即用的多模态 API（文本、语音、图像、视频），按量计费，部分小模型（如 Qwen2.5-7B 等）永久免费。
+
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260529000616189.jpg)
+

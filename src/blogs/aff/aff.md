@@ -39,9 +39,15 @@ star: true
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025742.png)
 
 ## 大模型服务
+### [Krill AI：性价比超高的中转站](https://www.krill-ai.com/register?invite=ZXI4DQ55V8)
+
+目前少有还提供套餐的平台，目前618大促中，折扣码Krill-LinuxDo-618，购买 Codex 套餐立享 66 折，叠加拼团最高可达 0.15*0.66=0.1倍率，即0.1元/刀！
+
+![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260618164842575.png)
+
 ### [Right Code：企业级 AI Agent 中转平台](https://www.right.codes/register?aff=d9785f7f)
 
-使用俩月，Linux DO佬友认证，大模型中转平台，物美价廉不时还有套餐发布，轻松接入各种工具 Codex、ClaudeCode、OpenCode、OpenClaw等。
+大模型中转平台，轻松接入各种工具 Codex、ClaudeCode、OpenCode、OpenClaw等。
 
 ![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260330140025743.png)
 

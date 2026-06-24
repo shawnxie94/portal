@@ -1,0 +1,38 @@
+---
+import Badge from "../../components/Badge.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { affDisclosure, affItems } from "../../data/aff";
+
+export function getStaticPaths() {
+  return affItems.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<BaseLayout title={item.name} description={item.description}>
+  <PageHeader eyebrow="Aff" title={item.name} description={item.description} />
+  <div class="shell">
+    <section class="section">
+      <article class="card">
+        <div class="badge-row">
+          <Badge tone={item.affiliate ? "warning" : "default"}>{item.label}</Badge>
+          {item.tags.map((tag) => <Badge>{tag}</Badge>)}
+        </div>
+        <h2>推荐理由</h2>
+        <p>{item.reason}</p>
+        <h2>风险或限制</h2>
+        <p>{item.risk}</p>
+        <p class="meta">信息更新时间：{item.updatedAt}</p>
+        <a class="button-link" href={item.url}>查看相关页面</a>
+      </article>
+    </section>
+    <section class="section">
+      <div class="notice">{affDisclosure}</div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="页面未找到" description="请求的页面不存在或已经移动。">
+  <section class="page-header">
+    <div class="shell">
+      <p class="eyebrow">404</p>
+      <h1 class="page-title">页面未找到</h1>
+      <p class="page-description">请求的页面不存在或已经移动。可以回到首页，或从博客归档继续查找内容。</p>
+      <div style="display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap;">
+        <a class="button-link" href="/">回到首页</a>
+        <a class="button-link secondary" href="/blog/">查看博客</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

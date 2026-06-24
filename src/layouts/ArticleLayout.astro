@@ -1,0 +1,40 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Badge from "../components/Badge.astro";
+import { formatDate } from "../lib/content";
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  category?: string;
+  tags?: string[];
+  originalPath?: string;
+}
+
+const { title, description, pubDate, updatedDate, category, tags = [], originalPath } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="article-shell">
+    <header class="article-header">
+      <div class="meta">
+        <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+        {updatedDate && <span>更新于 {formatDate(updatedDate)}</span>}
+        {category && <span>{category}</span>}
+      </div>
+      <h1>{title}</h1>
+      {description && <p class="page-description">{description}</p>}
+      {tags.length > 0 && (
+        <div class="badge-row" style="margin-top: 18px;">
+          {tags.map((tag) => <Badge>{tag}</Badge>)}
+        </div>
+      )}
+      {originalPath && <p class="meta" style="margin-top: 14px;">旧路径：{originalPath}</p>}
+    </header>
+    <div class="article-content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

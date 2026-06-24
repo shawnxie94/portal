@@ -1,0 +1,17 @@
+---
+import { channels } from "../data/channels";
+import { site } from "../data/profile";
+---
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div>
+      <strong>{site.name}</strong>
+      <p style="margin: 8px 0 0;">持续提供有价值的技术内容。</p>
+    </div>
+    <div class="footer-links" aria-label="页脚链接">
+      {channels.slice(0, 4).map((channel) => <a href={channel.url}>{channel.name}</a>)}
+      <a href="/rss.xml">RSS</a>
+    </div>
+  </div>
+</footer>

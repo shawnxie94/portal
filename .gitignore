@@ -3,6 +3,8 @@ node_modules
 .cache
 .temp
 dist
+.astro
+.playwright-mcp
 .vuepress/.temp
 .vuepress/.cache
 .vuepress/dist

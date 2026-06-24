@@ -1,0 +1,48 @@
+---
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { site } from "../data/profile";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  image = "/image.png",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).toString();
+const pageTitle = title === site.title ? title : `${title} | ${site.title}`;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/image.png" />
+    <link rel="alternate" type="application/rss+xml" title={site.title} href="/rss.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, site.url).toString()} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#f7f7f4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">跳到正文</a>
+    <SiteHeader />
+    <main id="content" class="page-main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

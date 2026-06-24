@@ -1,0 +1,10 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/rss.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
+/sitemap-index.xml
+  Content-Type: application/xml; charset=utf-8

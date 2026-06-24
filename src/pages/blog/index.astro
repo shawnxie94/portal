@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import ArticleCard from "../../components/ArticleCard.astro";
+import Badge from "../../components/Badge.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { entrySlug, groupBy, isPublished, sortByDate } from "../../lib/content";
+
+const posts = sortByDate((await getCollection("blog")).filter(isPublished));
+const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类").entries()];
+---
+
+<BaseLayout title="博客" description="技术文章、AI 实践、工具工作流和日常观察归档。">
+  <PageHeader eyebrow="Blog" title="文章归档" description="从旧站迁移而来的 Markdown 文章已经收敛到 Astro 内容集合，并保留旧 URL 重定向。" />
+  <div class="shell">
+    <section class="section">
+      <div class="badge-row">
+        {categories.map(([category, items]) => <Badge>{category} · {items.length}</Badge>)}
+      </div>
+    </section>
+    <section class="section">
+      <div class="article-list">
+        {posts.map((post) => (
+          <ArticleCard
+            href={`/blog/${entrySlug(post)}/`}
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.pubDate}
+            category={post.data.category}
+          />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

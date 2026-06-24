@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  note?: string;
+  href?: string;
+  linkLabel?: string;
+}
+
+const { title, note, href, linkLabel = "查看全部" } = Astro.props;
+---
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>{title}</h2>
+      {note && <p class="section-note">{note}</p>}
+    </div>
+    {href && <a class="button-link secondary" href={href}>{linkLabel}</a>}
+  </div>
+  <slot />
+</section>

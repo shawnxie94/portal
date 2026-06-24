@@ -1,0 +1,35 @@
+export const projects = [
+  {
+    name: "Lumina",
+    description: "一站式信息管理工作台，覆盖采集、解读、沉淀和复用的完整信息流。",
+    url: "https://lumina.shawnxie.top/",
+    repo: "https://github.com/shawnxie94/lumina",
+    status: "active",
+    tags: ["AI", "信息管理", "阅读"],
+    featured: true,
+  },
+  {
+    name: "肖恩技术周刊",
+    description: "围绕技术、AI、产品和内容创作的长期周刊输出。",
+    url: "https://weekly.shawnxie.top/",
+    status: "active",
+    tags: ["写作", "周刊", "技术观察"],
+    featured: true,
+  },
+  {
+    name: "代码可视化",
+    description: "用可视化方式解释代码结构、依赖关系和变更影响分析。",
+    url: "https://code-visualization.shawnxie.top/",
+    status: "active",
+    tags: ["代码理解", "可视化", "小册"],
+    featured: true,
+  },
+  {
+    name: "suibi",
+    description: "本站源码和文章归档，已经从 VuePress 迁移到 Astro 静态门户。",
+    url: "https://github.com/shawnxie94/suibi",
+    status: "active",
+    tags: ["Astro", "博客", "门户"],
+    featured: false,
+  },
+];

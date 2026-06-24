@@ -1,0 +1,34 @@
+---
+import Badge from "../components/Badge.astro";
+import LinkCard from "../components/LinkCard.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Section from "../components/Section.astro";
+import { channels } from "../data/channels";
+import { profile } from "../data/profile";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="关于" description={profile.bio}>
+  <PageHeader eyebrow="About" title="关于肖恩" description={profile.bio} />
+  <div class="shell">
+    <Section title="关注方向">
+      <div class="badge-row">
+        {profile.focus.map((item) => <Badge>{item}</Badge>)}
+      </div>
+    </Section>
+    <Section title="渠道入口" note="这里保留主要公开渠道，微信公众号二维码通过外链打开。">
+      <div class="grid three">
+        {channels.map((channel) => (
+          <LinkCard href={channel.url} title={channel.name} description={channel.description} meta={channel.type} />
+        ))}
+      </div>
+    </Section>
+    <Section title="联系方式">
+      <div class="card">
+        <h3>Email</h3>
+        <p>适合项目交流、文章反馈和合作沟通。</p>
+        <a class="button-link secondary" href={profile.email}>发送邮件</a>
+      </div>
+    </Section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import Badge from "../../components/Badge.astro";
+import ToolLayout from "../../layouts/ToolLayout.astro";
+import { tools } from "../../data/tools";
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({
+    params: { slug: tool.slug },
+    props: { tool },
+  }));
+}
+
+const { tool } = Astro.props;
+---
+
+<ToolLayout title={tool.name} description={tool.description}>
+  <section class="section">
+    <div class="card">
+      <div class="badge-row">
+        <Badge>{tool.priority}</Badge>
+        <Badge>{tool.category}</Badge>
+        <Badge tone={tool.status === "candidate" ? "warning" : "default"}>{tool.status}</Badge>
+        {tool.localOnly && <Badge>本地处理</Badge>}
+      </div>
+      <h2>规划中</h2>
+      <p>{tool.description}</p>
+      <p>该页面已经作为独立工具页框架生成。后续实现交互时，只在本页面加载对应组件或 Worker。</p>
+      <a class="button-link secondary" href="/tools/">返回工具集合</a>
+    </div>
+  </section>
+</ToolLayout>

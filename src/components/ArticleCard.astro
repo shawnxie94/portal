@@ -1,0 +1,24 @@
+---
+import { formatDate } from "../lib/content";
+
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  date: Date | string;
+  category?: string;
+}
+
+const { href, title, description, date, category } = Astro.props;
+---
+
+<a class="article-card" href={href}>
+  <div class="meta">
+    <time datetime={new Date(date).toISOString()}>{formatDate(date)}</time>
+    {category && <span>{category}</span>}
+  </div>
+  <div>
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+  </div>
+</a>

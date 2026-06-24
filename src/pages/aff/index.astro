@@ -1,0 +1,31 @@
+---
+import Badge from "../../components/Badge.astro";
+import LinkCard from "../../components/LinkCard.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { affDisclosure, affItems } from "../../data/aff";
+---
+
+<BaseLayout title="推广与推荐" description="推广、订阅推荐和返利说明。">
+  <PageHeader eyebrow="Aff" title="推广与推荐" description="只放长期可回看的推荐、使用记录和必要免责声明。" />
+  <div class="shell">
+    <section class="section">
+      <div class="notice">{affDisclosure}</div>
+    </section>
+    <section class="section grid three">
+      {affItems.map((item) => (
+        <a class="card" href={`/aff/${item.slug}/`}>
+          <div class="meta">
+            <span>{item.updatedAt}</span>
+            <Badge tone={item.affiliate ? "warning" : "default"}>{item.label}</Badge>
+          </div>
+          <h2>{item.name}</h2>
+          <p>{item.description}</p>
+          <div class="badge-row">
+            {item.tags.map((tag) => <Badge>{tag}</Badge>)}
+          </div>
+        </a>
+      ))}
+    </section>
+  </div>
+</BaseLayout>

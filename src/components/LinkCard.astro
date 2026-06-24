@@ -1,0 +1,18 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  meta?: string;
+  external?: boolean;
+}
+
+const { href, title, description, meta, external = href.startsWith("http") } = Astro.props;
+---
+
+<a class="card" href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>
+  {meta && <div class="meta">{meta}</div>}
+  <h3>{title}</h3>
+  {description && <p>{description}</p>}
+  <span class="meta">{external ? "外部链接" : "站内页面"}</span>
+</a>

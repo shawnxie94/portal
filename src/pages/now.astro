@@ -1,0 +1,31 @@
+---
+import PageHeader from "../components/PageHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { updates } from "../data/updates";
+---
+
+<BaseLayout title="最近动态" description="按时间倒序记录本站更新、文章发布和近期项目进展。">
+  <PageHeader eyebrow="Now" title="最近动态" description="按时间倒序记录本站更新、文章发布和近期项目进展。" />
+  <div class="shell">
+    <section class="section timeline-page">
+      {updates.map((item) => (
+        <article class="card">
+          <div class="meta">
+            <time datetime={item.date}>{item.date}</time>
+            <span>{item.type}</span>
+          </div>
+          <h2>{item.title}</h2>
+          <p>{item.description}</p>
+          <a class="button-link secondary" href={item.url}>查看详情</a>
+        </article>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .timeline-page {
+    display: grid;
+    gap: 14px;
+  }
+</style>

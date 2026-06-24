@@ -1,24 +1,22 @@
 {
-  "name": "blogs",
-  "description": "日常随笔",
+  "name": "suibi",
+  "description": "肖恩聊技术个人门户",
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress-vite build src",
-    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "docs:dev": "vuepress-vite dev src",
-    "docs:update-package": "npx vp-update"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "images:download": "node scripts/download-blog-images.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.15.5",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.26",
-    "@vuepress/plugin-feed": "2.0.0-rc.121",
-    "@vuepress/plugin-pwa": "^2.0.0-rc.121",
-    "@vuepress/plugin-slimsearch": "^2.0.0-rc.121",
-    "mermaid": "^11.12.2",
-    "sass-embedded": "^1.97.3",
-    "vue": "^3.5.26",
-    "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-hope": "2.0.0-rc.102"
+    "mermaid": "^11.12.2"
   }
 }

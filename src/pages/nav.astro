@@ -1,0 +1,30 @@
+---
+import Badge from "../components/Badge.astro";
+import LinkCard from "../components/LinkCard.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Section from "../components/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { navLinks } from "../data/nav-links";
+
+const groups = new Map<string, typeof navLinks>();
+for (const link of navLinks) {
+  const group = groups.get(link.category) ?? [];
+  group.push(link);
+  groups.set(link.category, group);
+}
+---
+
+<BaseLayout title="导航" description="常用资源、推荐链接和个人项目入口。">
+  <PageHeader eyebrow="Nav" title="导航资源" description="按分类整理常用资源、推荐链接和个人项目入口。" />
+  <div class="shell">
+    {[...groups.entries()].map(([category, items]) => (
+      <Section title={category}>
+        <div class="grid three">
+          {items.map((item) => (
+            <LinkCard href={item.url} title={item.title} description={item.description} meta={item.tags.join(" / ")} />
+          ))}
+        </div>
+      </Section>
+    ))}
+  </div>
+</BaseLayout>

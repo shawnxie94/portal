@@ -1,0 +1,9 @@
+---
+interface Props {
+  tone?: "default" | "warning";
+}
+
+const { tone = "default" } = Astro.props;
+---
+
+<span class:list={["badge", tone === "warning" && "warning"]}><slot /></span>

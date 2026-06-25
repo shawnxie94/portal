@@ -9,12 +9,14 @@ import { channels } from "../data/channels";
 import { profile, site } from "../data/profile";
 import { projects } from "../data/projects";
 import { tools } from "../data/tools";
-import { updates } from "../data/updates";
 import { blogCardDescription, entrySlug, isPublished, sortByDate } from "../lib/content";
+import { buildUpdates } from "../lib/updates";
 
-const posts = sortByDate((await getCollection("blog")).filter(isPublished)).slice(0, 5);
+const publishedPosts = (await getCollection("blog")).filter(isPublished);
+const posts = sortByDate([...publishedPosts]).slice(0, 5);
 const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
 const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
+const updates = buildUpdates(publishedPosts);
 ---
 
 <BaseLayout title={site.title} description={site.description}>
@@ -33,13 +35,12 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
       </div>
     </div>
     <aside class="hero-panel" aria-label="最近动态">
-      <h2>最近动态</h2>
+      <h2><a href="/now/">最近动态</a></h2>
       <div class="timeline-list">
         {updates.slice(0, 4).map((item) => (
           <a href={item.url}>
             <time datetime={item.date}>{item.date}</time>
             <strong>{item.title}</strong>
-            <span>{item.description}</span>
           </a>
         ))}
       </div>
@@ -104,6 +105,8 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
     font-size: clamp(3.2rem, 10vw, 7.2rem);
     line-height: 0.95;
     letter-spacing: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 0 0 rgba(0, 0, 0, 0.16), -2px 0 0 rgba(0, 0, 0, 0.08);
   }
 
   .hero-main p {
@@ -120,6 +123,11 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
     font-weight: 680;
   }
 
+  .hero-main .hero-headline::before {
+    content: "$ ";
+    color: var(--subtle);
+  }
+
   .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -130,14 +138,35 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
   .hero-panel {
     align-self: start;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+      var(--surface);
+    background-size: 100% 9px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
   }
 
   .hero-panel h2 {
     margin: 0 0 14px;
     font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  .hero-panel h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .hero-panel h2 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .hero-panel h2::before {
+    content: "tail -f ";
+    color: var(--subtle);
   }
 
   .timeline-list {
@@ -149,8 +178,15 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
     display: grid;
     gap: 5px;
     padding-left: 12px;
-    border-left: 2px solid var(--accent-soft);
+    border-left: 1px solid var(--border);
     text-decoration: none;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .timeline-list a:hover {
+    border-left-color: var(--accent);
+    transform: translateX(3px);
   }
 
   .timeline-list time {
@@ -158,10 +194,11 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
     font-size: 0.82rem;
   }
 
-  .timeline-list span {
-    color: var(--muted);
-    font-size: 0.94rem;
-    line-height: 1.55;
+  .timeline-list strong {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.45;
   }
 
   @media (max-width: 860px) {

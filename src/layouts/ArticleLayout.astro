@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import Badge from "../components/Badge.astro";
 import { formatDate } from "../lib/content";
 
 interface Props {
@@ -10,10 +9,9 @@ interface Props {
   updatedDate?: Date;
   category?: string;
   tags?: string[];
-  originalPath?: string;
 }
 
-const { title, description, pubDate, updatedDate, category, tags = [], originalPath } = Astro.props;
+const { title, description, pubDate, updatedDate, category, tags = [] } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -25,13 +23,11 @@ const { title, description, pubDate, updatedDate, category, tags = [], originalP
         {category && <span>{category}</span>}
       </div>
       <h1>{title}</h1>
-      {description && <p class="page-description">{description}</p>}
       {tags.length > 0 && (
         <div class="badge-row" style="margin-top: 18px;">
-          {tags.map((tag) => <Badge>{tag}</Badge>)}
+          {tags.map((tag) => <a class="badge" href={`/blog/?tag=${encodeURIComponent(tag)}`}>{tag}</a>)}
         </div>
       )}
-      {originalPath && <p class="meta" style="margin-top: 14px;">旧路径：{originalPath}</p>}
     </header>
     <div class="article-content">
       <slot />

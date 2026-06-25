@@ -14,13 +14,13 @@ originalPath: "/blogs/tech-notes/cg-diff.html"
 
 - **场景1**：修改了方法①逻辑，以为只会影响入口A便只回归了相关的场景，上线后发现影响了入口B的逻辑，造成了线上事故;
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261143252.png)
+![](/images/blog/cg-diff/202501261143252-6b5f9253.png)
 
 
 
 - **场景2**：修改了方法②逻辑，并回归了所有已知的流量入口，但上线一段时间后出现了大量异常告警，原来是影响了定时任务和MQ消费逻辑；
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261144371.png)
+![](/images/blog/cg-diff/202501261144371-26e52353.png)
 
 
 “代码变更影响分析”具体的可以描述为：**如何感知代码改动造成功能逻辑变化的影响范围，具体到影响了哪些类、方法、入口以及调用拓扑。**
@@ -28,7 +28,7 @@ originalPath: "/blogs/tech-notes/cg-diff.html"
 ## 实现方案
 针对上述背景，将使用源码静态分析的方式生成CallGraph，并提供代码变更影响分析能力。基本思路为：
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/java-call-graph-diff/picture/impl.png)
+![](/images/blog/cg-diff/impl-d2354840.png)
 
 ## 关键代码
 

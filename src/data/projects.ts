@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     name: "suibi",
-    description: "本站源码和文章归档，已经从 VuePress 迁移到 Astro 静态门户。",
+    description: "本站源码和文章内容，已经从 VuePress 迁移到 Astro 静态门户。",
     url: "https://github.com/shawnxie94/suibi",
     status: "active",
     tags: ["Astro", "博客", "门户"],

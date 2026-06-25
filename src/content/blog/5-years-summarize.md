@@ -40,7 +40,7 @@ originalPath: "/blogs/talk/5-years-summarize.html"
 - **⑤ 业务串讲**：将总结的内容分享出来，并收集熟悉业务听众的反馈（收集反馈很重要，老同事能够指出难以发现的细枝末节并分享一些历史原因导致的设计缺陷）；
 - **⑥ 认知迭代**：基于新的输入重新迭代自己的业务认知。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251157679.png)
+![](/images/blog/5-years-summarize/202501251157679-25d256a9.png)
 
 
 #### 熟悉代码
@@ -115,11 +115,11 @@ originalPath: "/blogs/talk/5-years-summarize.html"
 
 我也在用实际的行动验证，24年初立了个Flag🚩：写一本关于“代码可视化”的GitBook，目前[《Code Visualization》](https://xiexiao064.gitbook.io/code-visualization)在持续施工中，希望有生之年能写完吧😁，感兴趣的朋友可以先睹为快，提提建议。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304347.png)
+![](/images/blog/2024-end/202501232304347-531d7028.png)
 
 
 ## 未来展望
 
 按照前文的思路进行积累，可能会出现知识储备了很多但工作中实际用到很少，导致一些割裂感。出现这种情况不能武断的认为学的东西没有用，很可能只是在当前的场景下暂时还用不上。知识的储备和应用就像树木地下和地上部分，根系越深越广，躯干部分才能茁壮成长。对于未来，我将继续践行自己的成长理论，并逐渐在工作中运用新学到的知识，产生价值。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251203901.png)
+![](/images/blog/5-years-summarize/202501251203901-b871bf05.png)

@@ -7,12 +7,13 @@ interface Props {
   description?: string;
   date: Date | string;
   category?: string;
+  tags?: string[];
 }
 
-const { href, title, description, date, category } = Astro.props;
+const { href, title, description, date, category, tags = [] } = Astro.props;
 ---
 
-<a class="article-card" href={href}>
+<a class="article-card" href={href} data-category={category ?? ""} data-tags={JSON.stringify(tags)}>
   <div class="meta">
     <time datetime={new Date(date).toISOString()}>{formatDate(date)}</time>
     {category && <span>{category}</span>}

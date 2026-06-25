@@ -40,7 +40,7 @@ originalPath: "/blogs/ai/ai-search.html"
 
 **④ 通过模拟对话优化生成内容**
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270014100.png)
+![](/images/blog/ai-search/202411270014100-b83df836.png)
 
 **⑤ 展示生成内容**
 

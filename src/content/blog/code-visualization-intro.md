@@ -23,13 +23,13 @@ originalPath: "/blogs/tech-notes/code-visualization-intro.html"
 ### 场景1：代码逻辑理解困难
 项目代码量很大且需求迭代快，每次梳理的文档很快就过时了。新同学入手困难苦不堪言，老手也很难对项目整体的业务逻辑有一个全面的认知，常常需要重新梳理逻辑。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311287.png)
+![](/images/blog/code-visualization-intro/202501251311287-263d9fc6.png)
 
 
 ### 场景2：代码改动影响面难以评估
 需求的诉求是修改A页面的逻辑，但由于后端代码很多公用逻辑且调用层级很深，上线才后发现影响了B页面的逻辑，造成了线上事故。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311465.png)
+![](/images/blog/code-visualization-intro/202501251311465-942a667a.png)
 
 
 ### 场景3：遗留项目重构缺少抓手

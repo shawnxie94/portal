@@ -87,7 +87,7 @@ curl --location 'https://api.tophubdata.com/nodes/mproPpoq6O' --header 'Authoriz
 
 如果网站支持RSS，那么可以通过RSS源获取到页面最新的内容信息。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261129942.png)
+![](/images/blog/ai-hotspot/202501261129942-8723fff0.png)
 
 ![](/images/blog/ai-hotspot/202501261129552-f90b0786.png)
 

@@ -79,7 +79,7 @@ grun Java8Lexer tokens -tokens ./examples/helloworld.java
 ### 语法分析（Syntactic Analysis, or Parsing）
 语法分析又称解析（parsing），它在词法分析后执行。将tokens组织成语法结构，通常是一棵抽象语法树（Abstract Syntax Tree, AST），这棵树表示了源代码的语法结构。语法分析器需要根据一组预定义的语法规则来分析词法单元序列。这些规则通常以上[下文无关文法](https://zh.wikipedia.org/wiki/%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95)（Context-Free Grammar, CFG）的形式定义，其中每个规则定义了语言中的一个结构如何由其他结构组成。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251348344.png)
+![](/images/blog/compiler/202501251348344-449fe6df.png)
 
 这里先简单说一下CFG，如果想深入学习可以再查查资料。一个上下文无关文法由以下四个部分组成：
 - ① **非终结符（Non-terminals）**：这些是文法的变量，表示一组字符串的集合。它们通常用大写字母表示，如A,B,Expr等；
@@ -200,11 +200,11 @@ age + 10 * 2 + 10
 
 如果源语言语法结构较为简单，编译器可能会用唯一的IR，但如果源语言语法结构比较复杂，则在转换为目标语言的过程中可能会使用了一系列的IR，并通过转换进行大量的优化操作。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351358.png)
+![](/images/blog/compiler/202501251351358-31558866.png)
 
 由于不同语言编译器中IR差异较大，本文后续内容对于概念部分只做点到即止的阐述，但增加了LLVM的中间代码实操用来加深理解。LLVM 是一个开源的编译器基础设施项目，主要聚焦于编译器的后端功能（代码生成、代码优化、JIT……），其在业界被广泛应用，很多语言都是基于它实现的，更多信息可以查看[官网](https://llvm.org/)。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351888.png)
+![](/images/blog/compiler/202501251351888-9ccc1102.png)
 ### 中间代码分类
 按照与源代码接近的程度可以分为：
 - **高级IR**：更接近源代码，保留了更多的源代码层面的信息，如数据类型、控制结构等。通常用于编译器前端的语义分析和初步优化阶段。例如：AST等；
@@ -489,7 +489,7 @@ opt -S -O2 fun1.ll -o fun1-O2.ll
 
 对于前面生成的fun1.ll再执行代码优化操作，查看优化结果可以发现进行了“常量折叠”（执行优化命令前需要将fun1.ll 文件中的“optnone”这个属性去掉，它的意思是不进行代码优化）。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358622.png)
+![](/images/blog/compiler/202501251358622-c9bfbd1d.png)
 
 ## 扩展阅读
 - 《[龙书](https://book.douban.com/subject/3296317/)》

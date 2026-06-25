@@ -31,7 +31,7 @@ originalPath: "/blogs/tools/read-flow.html"
 - **信息阅读**：碎片化阅读，注重效率和体验；
 - **信息留存**：一键留存，扩充个人知识库。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101720464.png)
+![](/images/blog/read-flow/202505101720464-7c4481a3.png)
 ## 详细方案
 介绍一种具体的实现方案，大家可以自行折腾平替方案。
 ### 环境搭建
@@ -49,7 +49,7 @@ originalPath: "/blogs/tools/read-flow.html"
 
 - 云厂商一键安装宝塔面板
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101049740.png)
+![](/images/blog/read-flow/202505101049740-400b7968.png)
 
 - 手动安装宝塔面板
 
@@ -72,7 +72,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 - 环境安装完成后，点击“添加数据库”创建（具体创建参数在工具使用DB时说明）
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101109934.png)
+![](/images/blog/read-flow/202505101109934-58ed7e4e.png)
 
 ### 对接方式统一
 数据源对接方式采用[RSS](https://zh.wikipedia.org/wiki/RSS)，它是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。这个规范很久远了，已从曾经的互联网“宠儿”变成了如今的“弃子”。但针对本文场景却是一个不错的选择，确定了规范就能标准化对接方式，况且还有不少怀旧人士在使用和折腾RSS。
@@ -83,13 +83,13 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 一些网站提供了明显的RSS订阅链接：
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101131338.png)
+![](/images/blog/read-flow/202505101131338-e735f11f.png)
 
 如果网页没有明显的RSS订阅链接，可以通过油猴脚本快速查找：
 
 - 安装[篡改猴](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo)浏览器插件并配置[RSS+](https://greasyfork.org/zh-CN/scripts/373252-rss-show-site-all-rss)脚本
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101136358.png)
+![](/images/blog/read-flow/202505101136358-6593dba9.png)
 
 - 检索网页RSS订阅源
 
@@ -107,7 +107,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 - 配置MySQL数据库
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101201484.png)
+![](/images/blog/read-flow/202505101201484-1aee018c.png)
 
 - 新增Docker编排模版
 
@@ -139,7 +139,7 @@ services:
 ```
 - 添加Docker容器编排
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101206927.png)
+![](/images/blog/read-flow/202505101206927-c33917b8.png)
 
 - wewe-rss配置
 
@@ -151,11 +151,11 @@ a. 配置微信读书账号
 
 b. 添加公众号源
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101318012.png)
+![](/images/blog/read-flow/202505101318012-ef73d1d2.png)
 
 c. 获取RSS订阅源
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101319691.png)
+![](/images/blog/read-flow/202505101319691-17a72014.png)
 
 2. [RSSHub：万物皆可 RSS](https://github.com/DIYgod/RSSHub)
 
@@ -167,20 +167,20 @@ RSSHub 给各种奇奇怪怪的网站生成了 RSS 源，堪称“万物皆可 R
 
 在Docker应用商店搜索安装即可。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101341409.png)
+![](/images/blog/read-flow/202505101341409-3ea02a93.png)
 
 
 正常启动后，可在{服务器IP}:1200访问RSSHub服务。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101340524.png)
+![](/images/blog/read-flow/202505101340524-3caef617.png)
 
 - RssHub Radar 插件配置实例地址
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101343885.png)
+![](/images/blog/read-flow/202505101343885-6205a2a2.png)
 
 - 获取RSS订阅源
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101344308.png)
+![](/images/blog/read-flow/202505101344308-73aedf53.png)
 
 3. 自定义爬虫
 
@@ -191,11 +191,11 @@ RSSHub 给各种奇奇怪怪的网站生成了 RSS 源，堪称“万物皆可 R
 
 - 数据库配置
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101201684.png)
+![](/images/blog/read-flow/202505101201684-0c712c49.png)
 
 - 新增Docker编排模版
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101357126.png)
+![](/images/blog/read-flow/202505101357126-3e11c64d.png)
 
 模版内容填入：
 ```yaml
@@ -228,13 +228,13 @@ services:
 
 正常部署后就能在{服务器IP}:8900访问FreshRSS了，首次登录会有一些环境检查和配置，按照引导操作即可。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101403533.png)
+![](/images/blog/read-flow/202505101403533-0dc41ba2.png)
 
 a. 信息源导入
 
 在订阅管理”导入/导出“中导入事先整理好的RSS订阅源，之后返回主页刷新即可实现内容拉取。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101404498.png)
+![](/images/blog/read-flow/202505101404498-74f06d38.png)
 
 b. 自动刷新
 
@@ -251,12 +251,12 @@ c. API授权
 
 - 认证配置中开启”允许 API 访问“
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101409415.png)
+![](/images/blog/read-flow/202505101409415-2d4cb294.png)
 
 
 - 在账户配置”API“管理中设置密码并提交
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101411990.png)
+![](/images/blog/read-flow/202505101411990-d900e8aa.png)
 
 ### 多端阅读
 终于到了阅读时刻！为了实现随时随地像刷短视频一样阅读，需要在手机上安装[Readrops](https://github.com/readrops/Readrops)并连接到FreshRss。Readrops 是一款开源的多服务 RSS 客户端，适用于 Android 平台，它支持本地 RSS 解析、外部服务支持（集成FreshRSS）、分享等功能。
@@ -269,29 +269,29 @@ c. API授权
 
 在账号管理中添加FreshRSS账号，确认后返回主页刷新内容。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101421950.png)
+![](/images/blog/read-flow/202505101421950-e292b5e7.png)
 
 - 分享模版配置
 
 首选项最后一项可以设置分享文本模版，方便快速生成内容留存文案。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101424231.png)
+![](/images/blog/read-flow/202505101424231-030768a4.png)
 
 ### 碎片信息记录（素材化）
 [flomo](https://flomoapp.com/)（浮墨笔记）是一款全平台的卡片笔记工具，能帮助用户快速记录想法与灵感，并更好地回顾过往记录。通过Readrops分享到flomo，实现碎片素材快速记录，方便后续写作时寻找灵感。
 
 - 分享到flomo
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101435952.png)
+![](/images/blog/read-flow/202505101435952-33662063.png)
 
 - flomo回顾
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101434539.png)
+![](/images/blog/read-flow/202505101434539-500c2e1a.png)
 
 ## 结语
 如果不想折腾这套流程，市面上也有一些现成的产品，推荐网站 bestblogs.dev。提供了大量信息源内容汇总，且结合AI打分对内容进行了精选，每周也能整理精选内容形成周刊并通过邮件推送。网站的信息收集和处理流程已经十分完善，如果你没有太多个性化诉求，完全可以直接使用。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505100947286.png)
+![](/images/blog/read-flow/202505100947286-3664548f.png)
 
 
 但对笔者来说，个性化比流程完整更重要，以最小成本实现个性化诉求，是我的首要目标。对信息的挑剔感能培养人在内容上的品味。搭建完这套流程后，通过不断优化信息源和阅读转换方案，让我们更好地逃离垃圾信息，冲破信息茧房。

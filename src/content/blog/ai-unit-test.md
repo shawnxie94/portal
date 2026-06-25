@@ -283,7 +283,7 @@ class UserServiceSpec extends Specification {
 
 本小节基于 [JoyCoder](http://joycoder.jd.com)，是JD自研的专为应对企业级复杂任务而设计的智能编码工具。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202512101029448.png)
+![](/images/blog/ai-unit-test/202512101029448-a7f42a37.png)
 
 #### 场景一：辅助理解代码
 
@@ -1033,7 +1033,7 @@ mvn surefire-report:report
 
 （省略中间执行过程......）
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202512101459648.png)
+![](/images/blog/ai-unit-test/202512101459648-d5ddd340.png)
 
 - **统计覆盖率**
 ```bash

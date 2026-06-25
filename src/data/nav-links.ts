@@ -29,7 +29,7 @@ export const navLinks = [
   },
   {
     title: "肖恩技术周刊",
-    description: "技术和 AI 相关输入输出归档。",
+    description: "技术和 AI 相关输入输出。",
     url: "https://weekly.shawnxie.top/",
     category: "内容",
     tags: ["周刊", "写作"],

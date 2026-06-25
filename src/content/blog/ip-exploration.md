@@ -14,7 +14,7 @@ originalPath: "/blogs/talk/ip-exploration.html"
 
 
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251247185.png)
+![](/images/blog/ip-exploration/202501251247185-58c53d9b.png)
 
 我在MT、JD等互联网公司干了5年后端开发，磨炼了设计和实现复杂业务系统的能力。大规模互联网项目的经验不仅提高了我的技术洞察力，也丰富了我对互联网应用多样性的理解。但大公司同样也对我的发展有了一些限制，我不愿意走业务架构或者技术管理的路线，领导给我的规划却往往是这样，因为大多数的场景还是更重业务属性，这条路会容易些。但**与其还没有挣扎就接受命运，我更愿意尝试后死的明明白白**。
 
@@ -26,7 +26,7 @@ originalPath: "/blogs/talk/ip-exploration.html"
 
 说服自己只是第一步，肚子里没墨水也白瞎。其实去年我就萌生了这个想法，并于10月开始写技术博文，并把日常见闻和点滴想法进行记录。同时进行了高强度检索，了解其他个人IP都在干什么，哪些有借鉴意义。最近得到一个结论“**要在擅长的、感兴趣的和能满足大众需求的交集里做文章**”，这是完美副业的样子。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251248675.png)
+![](/images/blog/ip-exploration/202501251248675-a8093666.png)
 
 
 内容首先得从“**擅长**”出发，因为擅长才更容易出良品，好的内容是个人IP的核心竞争力。接着是“**感兴趣**”，只有做起来有乐趣的事情才容易长久，这是保证持续精进的原动力。最后是“**能满足大众需求**”，这一点决定了IP的价值，不能满足大众的需求则永远都是自娱自乐。
@@ -43,7 +43,7 @@ originalPath: "/blogs/talk/ip-exploration.html"
 
 合集查看**👉🏻** [肖恩技术周刊](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkwODY0ODQzOQ==&action=getalbum&album_id=3492416248238096386#wechat_redirect "肖恩技术周刊")
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202412302324792.png)
+![](/images/blog/5-years-summarize/202412302324792-6a00bb46.png)
 ### 主题二：技术提效
 
 **懒惰**是程序员的美德，背后体现了对效率极致的追求，大模型的出现进一步为提效提供了更多可能性。这个主题会持续收集**提效工具和方法**，并提供详细的使用说明，将技术用到实处。
@@ -82,7 +82,7 @@ originalPath: "/blogs/talk/ip-exploration.html"
 
 聊一些**个人经验、成长经历**和哪些事比较有意义。一些工作生活中的见解和观点，尽量就事论事，不悯天忧人和发无谓的牢骚。内容类似于“[工作五年小结 | 面对不确定性快速上升的外部环境，我们该如何寻求突破？](https://mp.weixin.qq.com/s?__biz=MzkwODY0ODQzOQ==&mid=2247484279&idx=1&sn=be672baa85c0179e61ff0af5a42c54cd&scene=21#wechat_redirect "工作五年小结 | 面对不确定性快速上升的外部环境，我们该如何寻求突破？")”这篇文章。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251250682.png)
+![](/images/blog/ip-exploration/202501251250682-ecbe6c70.png)
 
 ## 广结善缘
 

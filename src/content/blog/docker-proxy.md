@@ -14,7 +14,7 @@ Docker Hub 是一个容器注册表，专为开发人员和开源贡献者构建
 
 
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017430.png)
+![](/images/blog/docker-proxy/202411270017430-c97be850.png)
 
 好景不长，今年6月份各大高校和容器技术社区由于一些不可抗因素，纷纷关闭了镜像加速站点，这极大地影响了工作效率和开发进度。
 
@@ -24,40 +24,40 @@ Docker Hub 是一个容器注册表，专为开发人员和开源贡献者构建
 ### fork仓库 CF-Workers-docker.io
 将 [CF-Workers-docker.io](https://github.com/cmliu/CF-Workers-docker.io) fork到自己仓库。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017433.png)
+![](/images/blog/docker-proxy/202411270017433-eda519c9.png)
 
 ### 部署到Cloudflare的pages中
 - 创建pages应用
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017434.png)
+![](/images/blog/docker-proxy/202411270017434-72b8055c.png)
 
 - 连接GitHub
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017435.png)
+![](/images/blog/docker-proxy/202411270017435-5b3fa87b.png)
 
 - 选择存储库部署
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017436.png)
+![](/images/blog/docker-proxy/202411270017436-dfb6ab7a.png)
 
 - 等待部署完成
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017437.png)
+![](/images/blog/docker-proxy/202411270017437-7ea6974c.png)
 
 - 获取镜像代理域名
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017438.png)
+![](/images/blog/docker-proxy/202411270017438-48d5c093.png)
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017439.png)
+![](/images/blog/docker-proxy/202411270017439-cb76fd5b.png)
 
 - 自定义域名（可选）
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017440.png)
+![](/images/blog/docker-proxy/202411270017440-7a098ccf.png)
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017441.png)
+![](/images/blog/docker-proxy/202411270017441-d94a8fe3.png)
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017442.png)
+![](/images/blog/docker-proxy/202411270017442-d772220a.png)
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017443.png)
+![](/images/blog/docker-proxy/202411270017443-7db89e67.png)
 
 ## 如何配置镜像加速
 ### 官方镜像路径前加域名

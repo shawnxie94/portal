@@ -28,7 +28,7 @@ TFO [提案](https://conferences.sigcomm.org/co-next/2011/papers/1569470463.pdf)
 - 服务端发送 SYN + ACK 包，在 Options 的 Fast Open 选项中设置 cookie 的值
 - 客户端缓存服务端的 IP 和收到的 cookie 值
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202502101857971.png)
+![](/images/blog/tcp-fast-open/202502101857971-890e2d70.png)
 
 ### 后续连接建立
 - 当发送方再次连接同一个接收方时，可以在 SYN 报文中携带上次保存的 TFO Cookie，同时在 SYN 报文中附带应用层数据 (第一次握手时就直接发送数据)
@@ -104,7 +104,7 @@ curl --tcp-fastopen http://example.com
 ```
 接收方返回 SYN-ACK 报文的同时，附带一个随机生成的名为 TFO Cookie 的标识符给发送方。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202502101857975.png)
+![](/images/blog/tcp-fast-open/202502101857975-508dc3e4.png)
 
 #### 再次请求
 再次调用会携带Cookie简化握手流程，第一次握手时就可以直接发送数据。

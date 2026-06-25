@@ -1,253 +1,60 @@
 # 博客图片迁移报告
 
-生成时间：2026-06-24T14:11:20.791Z
+生成时间：2026-06-25T04:28:47.623Z
 
 ## 结果
 
-- 扫描文章：36 篇
-- 本轮新下载：3 张
+- 扫描文章：28 篇
+- 本轮新下载：17 张
 - 本轮复用本地文件：0 张
-- 本轮下载失败：237 张
-- 当前本地图片总数：185 张
-- 当前剩余远程图片引用：237 处
+- 本轮下载失败：44 张
+- 当前本地图片总数：346 张
+- 当前剩余远程图片引用：44 处
 - 代理模板：https://images.weserv.nl/?url={urlNoProtocol}
 
 ## 下载失败
 
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304344.png
 - `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/developer-hotspots-summary/picture/image.png
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304353.png
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232302643.png
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304354.png
 - `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304355.png
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/java-call-graph-diff/picture/impl.png
 - `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304359.png
 - `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304365.png
 - `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304360.png
-- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304363.png
-- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304354.png
-- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304353.png
-- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232302643.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304344.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/java-call-graph-diff/picture/impl.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304352.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304364.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304366.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304367.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304368.png
-- `2024-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304370.png
-- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611712.png
-- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611716.png
-- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611714.png
-- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611717.png
-- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611710.png
-- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611718.png
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304364.png
+- `2024-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304367.png
 - `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260113210300054.png
+- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611716.png
 - `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611713.png
-- `2026-3-16`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260316214509842.png
-- `2026-3-16`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260316214509843.png
-- `2026-3-16`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260316214509845.png
-- `2026-3-17`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317224312856.png
-- `2026-3-24`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260324223213604.png
-- `2026-3-26`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260326205822636.png
-- `2026-3-3`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260303195745390.png
-- `2026-3-3`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260303195745391.png
-- `2026-3-4`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260304211544032.png
-- `2026-3-4`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260304211544029.png
-- `2026-3-6`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260307001545335.png
-- `2026-3-6`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260307001545339.png
-- `2026-3-6`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260307001545338.png
-- `5-years-summarize`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251203901.png
-- `5-years-summarize`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501232304347.png
-- `5-years-summarize`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251157679.png
-- `5-years-summarize`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158538.png
-- `5-years-summarize`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251202624.png
+- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611717.png
+- `2025-end`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611718.png
+- `2025-end`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260211180611712.png
+- `5-years-summarize`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251202624.png
+- `5-years-summarize`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158538.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421736.png
 - `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421742.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421746.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421767.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421769.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421740.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421750.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421756.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421762.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421761.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421748.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421763.png
-- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421765.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181418745.png
 - `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421752.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181418745.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421736.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421738.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181358295.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501130005262.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421743.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421753.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421758.png
-- `ai-agent`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421766.png
-- `ai-article-database`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260123000703651.png
-- `ai-article-database`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260123000703647.png
-- `ai-article-database`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260123000703649.png
-- `ai-article-database`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260123002616682.png
-- `ai-article-database`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260123000703650.png
-- `ai-hotspot`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261129942.png
-- `ai-search`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270014100.png
-- `ai-unit-test`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202512101459648.png
-- `ai-unit-test`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202512101029448.png
-- `auto-lock`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251212133.png
-- `auto-lock`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251211407.png
-- `cg-diff`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261143252.png
-- `cg-diff`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501261144371.png
-- `cg-diff`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/java-call-graph-diff/picture/impl.png
-- `code-funny`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411302007587.png
-- `code-funny`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411302016029.png
-- `code-funny`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411302008811.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421756.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421761.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421762.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421765.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421766.png
+- `ai-agent`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501181421769.png
+- `ai-article-database`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260123000703649.png
 - `code-funny`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411302026027.png
-- `code-funny`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411302035861.png
-- `code-funny`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411302043906.png
-- `code-visualization-intro`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311465.png
-- `code-visualization-intro`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251311287.png
-- `compiler`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351358.png
-- `compiler`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358720.png
-- `compiler`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251351888.png
-- `compiler`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251348344.png
-- `compiler`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358622.png
-- `docker-proxy`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017442.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017430.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017433.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017434.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017435.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017436.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017437.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017438.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017439.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017440.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017441.png
-- `docker-proxy`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270017443.png
-- `how-llm-know-mcp-params`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505262033795.png
-- `how-llm-know-mcp-params`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505262033235.png
-- `how-llm-know-mcp-params`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505262040457.png
-- `ip-exploration`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251247185.png
-- `ip-exploration`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202412302324792.png
-- `ip-exploration`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251248675.png
-- `ip-exploration`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251250682.png
-- `kimi`: fetch failed - https://fastly.jsdelivr.net/gh/bucketio/img2@main/2024/10/11/1728661394008-55798098-3850-4b10-adab-fa5e32ffe191.png
-- `kimi`: fetch failed - https://fastly.jsdelivr.net/gh/bucketio/img5@main/2024/10/12/1728663283269-f77a2bcf-ee06-4080-8236-2ecfbef62e49.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img0@main/2024/10/11/1728653751927-a3043a57-b2d8-4ed0-9fe6-a3dcbc7efa56.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img12@main/2024/10/11/1728655092434-0b527764-9059-49b2-94c6-333200d56cd7.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img18@main/2024/10/11/1728655679168-66d76ae9-68d6-4dfa-9080-251f21ffd998.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img5@main/2024/10/11/1728656247843-80967bb2-f3be-4149-9f1e-eb577aae7aea.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img5@main/2024/10/11/1728657739857-e056914e-c3ae-4b06-8292-4712b204a2bf.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img14@main/2024/10/11/1728659145536-d20ab013-10cd-4f17-90c5-6c99fba59ccb.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img5@main/2024/10/11/1728659698339-ac1726cb-6170-4313-ab06-23ca05b920b8.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img1@main/2024/10/11/1728660032061-85b50d2c-8d50-4300-b5eb-bca2d6a5217e.png
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img16@main/2024/10/11/1728660483053-732aa9ed-ddc4-4457-9201-b5114a9b3a57.gif
-- `kimi`: The operation was aborted due to timeout - https://fastly.jsdelivr.net/gh/bucketio/img18@main/2024/10/11/1728660744143-52c8de18-0706-411a-95ef-0af09e3d6777.png
-- `mac-terminal`: fetch failed - https://pic-bed-1256249917.cos.ap-chengdu.myqcloud.com/uPic/iterm2-ai-003-20240614205616478.gif
-- `mac-terminal`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272055083.png
-- `mac-terminal`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272013222.png
-- `mac-terminal`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272030894.png
-- `mac-terminal`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272029765.png
-- `mac-terminal`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272009329.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271656646.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271704342.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271717934.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271716417.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271838726.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271841097.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271847191.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271851444.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271907948.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271939377.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411271942728.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272038502.png
-- `mac-terminal`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411272128581.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030266.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030267.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030268.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030271.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030272.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030273.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030274.png
-- `one-cmd-web-to-app`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411270030275.png
-- `picture-manage`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411232002552.png
-- `picture-manage`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411232018369.png
-- `picture-manage`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231953924.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231816214.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231814767.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231817239.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231819700.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231847843.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231928488.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231930473.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231931131.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231937398.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231940672.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231949714.png
-- `picture-manage`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202411231951700.png
-- `read-code-tools`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251334245.png
-- `read-code-tools`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251335890.png
-- `read-code-tools`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251334411.png
-- `read-code-tools`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251334441.png
-- `read-code-tools`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251335732.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251329061.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251329652.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251330987.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251330517.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251331414.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251331930.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251332499.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251332435.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251332494.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251333764.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251333496.png
-- `read-code-tools`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251333887.png
-- `read-flow-2026`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200718.png
-- `read-flow-2026`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200715.png
-- `read-flow-2026`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200716.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200704.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200700.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200705.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200706.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200707.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200708.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200709.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200710.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200711.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200712.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200713.png
-- `read-flow-2026`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20260317142200714.png
+- `compiler`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358720.png
+- `kimi`: fetch failed - https://fastly.jsdelivr.net/gh/bucketio/img5@main/2024/10/11/1728656247843-80967bb2-f3be-4149-9f1e-eb577aae7aea.png
+- `kimi`: fetch failed - https://fastly.jsdelivr.net/gh/bucketio/img18@main/2024/10/11/1728655679168-66d76ae9-68d6-4dfa-9080-251f21ffd998.png
+- `mac-terminal`: download failed with HTTP 400 - https://pic-bed-1256249917.cos.ap-chengdu.myqcloud.com/uPic/iterm2-ai-003-20240614205616478.gif
+- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101046200.png
+- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101055001.png
+- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101138241.png
+- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101202910.png
 - `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101311856.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101343885.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101201684.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101435952.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101409415.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101344308.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101411990.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101434539.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101421950.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101318012.png
 - `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101359797.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101340524.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101357126.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101403533.png
-- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505100947286.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101720464.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101046200.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101109934.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101131338.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101138241.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101201484.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101136358.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101055001.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101049740.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101202910.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101206927.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101319691.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101341409.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101404498.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101457371.png
-- `read-flow`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101424231.png
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251322057.gif
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251319865.png
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251319181.png
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251320148.png
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251320467.png
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251321241.png
-- `regex-vis`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251321250.png
-- `tcp-fast-open`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202502101857971.png
-- `tcp-fast-open`: The operation was aborted due to timeout - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202502101857975.png
+- `read-flow`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101457371.png
+- `regex-vis`: fetch failed - https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251320467.png

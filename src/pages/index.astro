@@ -10,7 +10,7 @@ import { profile, site } from "../data/profile";
 import { projects } from "../data/projects";
 import { tools } from "../data/tools";
 import { updates } from "../data/updates";
-import { entrySlug, isPublished, sortByDate } from "../lib/content";
+import { blogCardDescription, entrySlug, isPublished, sortByDate } from "../lib/content";
 
 const posts = sortByDate((await getCollection("blog")).filter(isPublished)).slice(0, 5);
 const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
@@ -53,7 +53,7 @@ const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
           <ArticleCard
             href={`/blog/${entrySlug(post)}/`}
             title={post.data.title}
-            description={post.data.description}
+            description={blogCardDescription(post)}
             date={post.data.pubDate}
             category={post.data.category}
           />

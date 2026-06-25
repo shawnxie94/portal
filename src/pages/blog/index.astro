@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import ArticleCard from "../../components/ArticleCard.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { entrySlug, groupBy, isPublished, sortByDate } from "../../lib/content";
+import { blogCardDescription, entrySlug, groupBy, isPublished, sortByDate } from "../../lib/content";
 
 const pageSize = 10;
 const posts = sortByDate((await getCollection("blog")).filter(isPublished));
@@ -12,13 +12,12 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
   .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "zh-CN"));
 ---
 
-<BaseLayout title="博客" description="技术文章、AI 实践、工具工作流和日常观察。">
-  <PageHeader eyebrow="Blog" title="博客" description="记录技术实践、AI 工具、产品实验和日常观察。" />
+<BaseLayout title="博客" description="记录所思所想。">
+  <PageHeader eyebrow="Blog" title="博客" description="记录所思所想。" />
   <div class="shell">
     <section class="section blog-filter-panel" aria-label="博客筛选">
-      <div class="filter-row">
+      <div class="filter-toolbar">
         <div class="filter-group">
-          <div class="filter-label">分类</div>
           <div class="filter-options" data-filter-group="category">
             <button class="filter-button" type="button" data-filter-reset="category" aria-pressed="true">全部</button>
             {categories.map((category) => (
@@ -28,12 +27,12 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
             ))}
           </div>
         </div>
-      </div>
-      <div class="filter-status" aria-live="polite">
-        <span data-filter-count>{posts.length}</span> 篇文章
-        <span data-active-tag hidden></span>
-        <span data-page-summary></span>
-        <button class="filter-clear" type="button" data-filter-clear hidden>清除筛选</button>
+        <div class="filter-actions">
+          <div class="filter-status" data-filter-status aria-live="polite" hidden>
+            <span data-active-tag hidden></span>
+          </div>
+          <button class="filter-clear" type="button" data-filter-clear hidden>清除筛选</button>
+        </div>
       </div>
     </section>
     <section class="section" data-page-size={pageSize}>
@@ -42,7 +41,7 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
           <ArticleCard
             href={`/blog/${entrySlug(post)}/`}
             title={post.data.title}
-            description={post.data.description}
+            description={blogCardDescription(post)}
             date={post.data.pubDate}
             category={post.data.category}
             tags={post.data.tags}
@@ -63,11 +62,10 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
   const articleCards = [...document.querySelectorAll("[data-category][data-tags]")];
   const categoryButtons = [...document.querySelectorAll("[data-filter-category]")];
   const categoryReset = document.querySelector("[data-filter-reset='category']");
+  const filterStatusNode = document.querySelector("[data-filter-status]");
   const clearButton = document.querySelector("[data-filter-clear]");
-  const countNode = document.querySelector("[data-filter-count]");
   const emptyNode = document.querySelector("[data-filter-empty]");
   const activeTagNode = document.querySelector("[data-active-tag]");
-  const pageSummaryNode = document.querySelector("[data-page-summary]");
   const pageSizeNode = document.querySelector("[data-page-size]");
   const paginationNode = document.querySelector("[data-pagination]");
   const pageListNode = document.querySelector("[data-page-list]");
@@ -85,7 +83,7 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
     };
   };
 
-  const writeState = (nextState) => {
+  const writeState = (nextState, options = {}) => {
     const params = new URLSearchParams(window.location.search);
     if (nextState.category) {
       params.set("category", nextState.category);
@@ -105,6 +103,9 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
     const query = params.toString();
     window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
     applyFilters();
+    if (options.scrollToTop) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const setPressed = (buttons, activeValue, attributeName, resetButton) => {
@@ -121,8 +122,8 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
 
     prevButton.disabled = currentPage <= 1;
     nextButton.disabled = currentPage >= pageCount;
-    prevButton.onclick = () => writeState({ ...state, page: Math.max(1, currentPage - 1) });
-    nextButton.onclick = () => writeState({ ...state, page: Math.min(pageCount, currentPage + 1) });
+    prevButton.onclick = () => writeState({ ...state, page: Math.max(1, currentPage - 1) }, { scrollToTop: true });
+    nextButton.onclick = () => writeState({ ...state, page: Math.min(pageCount, currentPage + 1) }, { scrollToTop: true });
 
     for (let page = 1; page <= pageCount; page += 1) {
       const button = document.createElement("button");
@@ -130,7 +131,7 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
       button.type = "button";
       button.textContent = String(page);
       button.setAttribute("aria-current", page === currentPage ? "page" : "false");
-      button.addEventListener("click", () => writeState({ ...state, page }));
+      button.addEventListener("click", () => writeState({ ...state, page }, { scrollToTop: true }));
       pageListNode.append(button);
     }
   };
@@ -160,16 +161,13 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
     });
 
     setPressed(categoryButtons, state.category, "data-filter-category", categoryReset);
-    if (countNode) countNode.textContent = String(visibleCount);
     if (emptyNode) emptyNode.hidden = visibleCount > 0;
     if (activeTagNode) {
       activeTagNode.hidden = !state.tag;
       activeTagNode.textContent = state.tag ? `标签：${state.tag}` : "";
     }
-    if (pageSummaryNode) {
-      pageSummaryNode.textContent = visibleCount > 0 ? `第 ${currentPage} / ${pageCount} 页` : "";
-    }
     if (clearButton) clearButton.hidden = !state.category && !state.tag;
+    if (filterStatusNode) filterStatusNode.hidden = !state.tag;
     renderPagination(state, currentPage, pageCount);
   }
 

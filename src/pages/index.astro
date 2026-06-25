@@ -5,17 +5,14 @@ import Badge from "../components/Badge.astro";
 import LinkCard from "../components/LinkCard.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { channels } from "../data/channels";
 import { profile, site } from "../data/profile";
 import { projects } from "../data/projects";
-import { tools } from "../data/tools";
 import { blogCardDescription, entrySlug, isPublished, sortByDate } from "../lib/content";
 import { buildUpdates } from "../lib/updates";
 
 const publishedPosts = (await getCollection("blog")).filter(isPublished);
-const posts = sortByDate([...publishedPosts]).slice(0, 5);
+const posts = sortByDate([...publishedPosts]).slice(0, 3);
 const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
-const featuredTools = tools.filter((tool) => tool.featured).slice(0, 3);
 const updates = buildUpdates(publishedPosts);
 ---
 
@@ -32,10 +29,11 @@ const updates = buildUpdates(publishedPosts);
       <div class="hero-actions">
         <a class="button-link" href="/blog/">阅读文章</a>
         <a class="button-link secondary" href="/projects/">查看项目</a>
+        <a class="button-link secondary" href="/about/">关于我</a>
       </div>
     </div>
-    <aside class="hero-panel" aria-label="最近动态">
-      <h2><a href="/now/">最近动态</a></h2>
+    <aside class="hero-panel" aria-label="最新动态">
+      <h2><a href="/now/">最新动态</a></h2>
       <div class="timeline-list">
         {updates.slice(0, 4).map((item) => (
           <a href={item.url}>
@@ -48,7 +46,15 @@ const updates = buildUpdates(publishedPosts);
   </section>
 
   <div class="shell">
-    <Section title="精选文章" note="按时间展示最近更新的内容，更多文章在博客页。" href="/blog/">
+    <Section title="个人项目" href="/projects/">
+      <div class="grid three">
+        {featuredProjects.map((project) => (
+          <LinkCard href={project.url} title={project.name} description={project.description} meta={project.tags.join(" / ")} />
+        ))}
+      </div>
+    </Section>
+
+    <Section title="最新文章" href="/blog/">
       <div class="article-list">
         {posts.map((post) => (
           <ArticleCard
@@ -58,30 +64,6 @@ const updates = buildUpdates(publishedPosts);
             date={post.data.pubDate}
             category={post.data.category}
           />
-        ))}
-      </div>
-    </Section>
-
-    <Section title="代表项目" note="当前主要维护的产品、内容项目和工程实验。" href="/projects/">
-      <div class="grid three">
-        {featuredProjects.map((project) => (
-          <LinkCard href={project.url} title={project.name} description={project.description} meta={project.tags.join(" / ")} />
-        ))}
-      </div>
-    </Section>
-
-    <Section title="工具入口" note="首期先搭建工具导航框架，具体交互工具按需逐步实现。" href="/tools/">
-      <div class="grid three">
-        {featuredTools.map((tool) => (
-          <LinkCard href={tool.path} title={tool.name} description={tool.description} meta={`${tool.priority} / ${tool.category}`} external={false} />
-        ))}
-      </div>
-    </Section>
-
-    <Section title="常用入口" note="自媒体、项目、订阅和资源入口集中在这里。">
-      <div class="grid three">
-        {channels.slice(0, 6).map((channel) => (
-          <LinkCard href={channel.url} title={channel.name} description={channel.description} meta={channel.type} />
         ))}
       </div>
     </Section>

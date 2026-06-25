@@ -8,8 +8,8 @@ const pageSize = 10;
 const updates = buildUpdates(await getCollection("blog"));
 ---
 
-<BaseLayout title="最近动态" description="按时间倒序记录本站更新、文章发布和近期项目进展。">
-  <PageHeader eyebrow="Now" title="最近动态" description="按时间倒序记录本站更新、文章发布和近期项目进展。" />
+<BaseLayout title="最新动态" description="看看最近又更新了啥。">
+  <PageHeader eyebrow="Now" title="最新动态" description="看看最近又更新了啥。" />
   <div class="shell">
     <section class="section" data-page-size={pageSize}>
       <div class="timeline-page">
@@ -25,7 +25,7 @@ const updates = buildUpdates(await getCollection("blog"));
           </article>
         ))}
       </div>
-      <nav class="pagination" data-pagination hidden aria-label="最近动态分页">
+      <nav class="pagination" data-pagination hidden aria-label="最新动态分页">
         <button class="pagination-button" type="button" data-page-prev>上一页</button>
         <div class="pagination-pages" data-page-list></div>
         <button class="pagination-button" type="button" data-page-next>下一页</button>

@@ -1,14 +1,17 @@
 ---
 const nav = [
-  { href: "/about/", label: "About" },
-  { href: "/blog/", label: "Blog" },
-  { href: "/projects/", label: "Projects" },
-  { href: "/tools/", label: "Tools" },
-  { href: "/nav/", label: "Nav" },
-  { href: "/aff/", label: "Aff" },
+  { href: "/", label: "主页" },
+  { href: "/blog/", label: "博客" },
+  { href: "/projects/", label: "项目" },
+  { href: "/tools/", label: "工具" },
+  { href: "/nav/", label: "导航" },
+  { href: "/aff/", label: "推广" },
+  { href: "/about/", label: "关于我" },
 ];
 
 const currentPath = Astro.url.pathname;
+
+const isCurrent = (href: string) => (href === "/" ? currentPath === "/" : currentPath.startsWith(href));
 ---
 
 <header class="site-header">
@@ -19,7 +22,7 @@ const currentPath = Astro.url.pathname;
     </a>
     <nav class="site-nav" aria-label="主导航">
       {nav.map((item) => (
-        <a href={item.href} aria-current={currentPath.startsWith(item.href) ? "page" : undefined}>
+        <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>
           {item.label}
         </a>
       ))}

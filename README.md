@@ -14,6 +14,18 @@ npm run dev
 npm run build
 ```
 
+## 写新文章
+
+使用脚本生成文章模板：
+
+```bash
+npm run new:post
+npm run new:post -- "文章标题"
+npm run new:post -- "文章标题" --open
+```
+
+脚本会在 `src/content/blog/` 下生成带日期前缀的 Markdown 文件，并填好基础 frontmatter。无标题时会生成当天的 `draft` 草稿；加 `--open` 会生成后自动用默认编辑器打开。新文章不需要写 `draft` 和 `originalPath`；只有暂不发布时才手动加 `draft: true`。
+
 ## 图片迁移
 
 旧文章已经迁移到 `src/content/blog/`。后续只需要处理文章内远程图片：

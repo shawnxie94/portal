@@ -8,6 +8,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "new:post": "node scripts/new-post.mjs",
     "images:download": "node scripts/download-blog-images.mjs"
   },
   "dependencies": {

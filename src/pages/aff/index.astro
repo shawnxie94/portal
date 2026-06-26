@@ -1,31 +1,146 @@
 ---
-import Badge from "../../components/Badge.astro";
-import LinkCard from "../../components/LinkCard.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { affDisclosure, affItems } from "../../data/aff";
+
+const affTypes = [...new Set(affItems.map((item) => item.type))];
 ---
 
 <BaseLayout title="推广" description="推广、订阅推荐和返利说明。">
-  <PageHeader eyebrow="Aff" title="推广" description="个人长期使用且高性价比的订阅产品，持续更新中…" />
+  <PageHeader eyebrow="Aff" title="推广" description="按类型整理我长期关注或使用过的产品，详情页包含截图、说明和跳转入口。" />
   <div class="shell">
     <section class="section">
       <div class="notice">{affDisclosure}</div>
     </section>
-    <section class="section grid three">
-      {affItems.map((item) => (
-        <a class="card" href={`/aff/${item.slug}/`}>
-          <div class="meta">
-            <span>{item.updatedAt}</span>
-            <Badge tone={item.affiliate ? "warning" : "default"}>{item.label}</Badge>
+
+    <div class="aff-groups">
+      {affTypes.map((type) => (
+        <section class="aff-group" aria-labelledby={`aff-${type}`}>
+          <div class="section-head">
+            <div class="aff-section-title">
+              <h2 id={`aff-${type}`}>{type}</h2>
+            </div>
           </div>
-          <h2>{item.name}</h2>
-          <p>{item.description}</p>
-          <div class="badge-row">
-            {item.tags.map((tag) => <Badge>{tag}</Badge>)}
+
+          <div class="aff-card-grid">
+            {affItems
+              .filter((item) => item.type === type)
+              .map((item) => (
+                <a class="aff-card" href={`/aff/${item.slug}/`}>
+                  <div class="aff-card-body">
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                    <div class="aff-tags">
+                      {item.tags.slice(0, 3).map((tag) => (
+                        <span><i aria-hidden="true">#</i><b>{tag}</b></span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              ))}
           </div>
-        </a>
+        </section>
       ))}
-    </section>
+    </div>
   </div>
 </BaseLayout>
+
+<style>
+  .aff-groups {
+    display: grid;
+    gap: 30px;
+    padding-bottom: 28px;
+  }
+
+  .aff-group {
+    display: grid;
+    gap: 14px;
+  }
+
+  .aff-section-title {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .aff-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .aff-card {
+    display: grid;
+    min-width: 0;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: background 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+  }
+
+  .aff-card:hover {
+    background: var(--surface-muted);
+    box-shadow: var(--shadow);
+    transform: translate(-2px, -2px);
+  }
+
+  .aff-card-body {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .aff-card h3 {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .aff-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .aff-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .aff-tags span {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    gap: 1px;
+    color: var(--subtle);
+    font-size: 0.8rem;
+    line-height: 24px;
+  }
+
+  .aff-tags i,
+  .aff-tags b {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    font-style: normal;
+    font-weight: 640;
+    line-height: 1;
+  }
+
+  @media (max-width: 940px) {
+    .aff-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 620px) {
+    .aff-card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

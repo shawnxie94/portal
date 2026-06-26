@@ -19,5 +19,5 @@ projects:
   - icon: link
     name: 订阅推荐
     desc: 机场、中转站...
-    link: /blogs/aff/aff.html
+    link: /aff/
 ---

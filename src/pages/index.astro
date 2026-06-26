@@ -54,7 +54,7 @@ const updates = buildUpdates(publishedPosts);
     <Section title="个人项目" href="/projects/">
       <div class="grid three">
         {featuredProjects.map((project) => (
-          <LinkCard href={project.url} title={project.name} description={project.description} meta={project.tags.join(" / ")} />
+          <LinkCard href={project.url} title={project.name} description={project.description} meta={project.tags.join(" / ")} showLinkType={false} />
         ))}
       </div>
     </Section>

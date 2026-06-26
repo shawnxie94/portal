@@ -1,6 +1,5 @@
 ---
 import Badge from "../../components/Badge.astro";
-import PageHeader from "../../components/PageHeader.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { affDisclosure, affItems } from "../../data/aff";
 
@@ -14,25 +13,139 @@ export function getStaticPaths() {
 const { item } = Astro.props;
 ---
 
-<BaseLayout title={item.name} description={item.description}>
-  <PageHeader eyebrow="Aff" title={item.name} description={item.description} />
+<BaseLayout title={item.name} description={item.description} image={item.image}>
   <div class="shell">
-    <section class="section">
-      <article class="card">
-        <div class="badge-row">
-          <Badge tone={item.affiliate ? "warning" : "default"}>{item.label}</Badge>
-          {item.tags.map((tag) => <Badge>{tag}</Badge>)}
+    <article class="aff-detail">
+      <header class="aff-hero">
+        <div class="aff-hero-main">
+          <p class="eyebrow">{item.type}</p>
+          <h1 class="page-title">{item.name}</h1>
+          <p class="page-description">{item.description}</p>
         </div>
-        <h2>推荐理由</h2>
-        <p>{item.reason}</p>
-        <h2>风险或限制</h2>
-        <p>{item.risk}</p>
-        <p class="meta">信息更新时间：{item.updatedAt}</p>
-        <a class="button-link" href={item.url}>查看相关页面</a>
-      </article>
-    </section>
-    <section class="section">
+
+        <aside class="aff-aside" aria-label={`${item.name} 跳转信息`}>
+          <dl>
+            <div>
+              <dt>类型</dt>
+              <dd>{item.type}</dd>
+            </div>
+            <div>
+              <dt>更新</dt>
+              <dd>{item.updatedAt}</dd>
+            </div>
+          </dl>
+          <a class="button-link" href={item.url} target="_blank" rel="noreferrer">跳转访问</a>
+        </aside>
+      </header>
+
+      <div class="badge-row aff-badges">
+        {item.tags.map((tag) => <Badge>{tag}</Badge>)}
+      </div>
+
       <div class="notice">{affDisclosure}</div>
-    </section>
+
+      <figure class="aff-shot">
+        <img src={item.image} alt={`${item.name} 截图`} />
+      </figure>
+    </article>
   </div>
 </BaseLayout>
+
+<style>
+  .aff-detail {
+    display: grid;
+    gap: 14px;
+    padding: 54px 0 28px;
+  }
+
+  .aff-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .aff-hero-main {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .aff-hero-main .page-description {
+    margin-top: 0;
+  }
+
+  .aff-badges {
+    margin-top: -2px;
+  }
+
+  .aff-shot {
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .aff-shot img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    background: var(--surface);
+  }
+
+  .aff-aside {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+    position: sticky;
+    top: 86px;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .aff-aside dl {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border: 1px solid var(--border);
+  }
+
+  .aff-aside dl div {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .aff-aside dl div:last-child {
+    border-bottom: 0;
+  }
+
+  .aff-aside dt,
+  .aff-aside dd {
+    margin: 0;
+    padding: 9px 10px;
+  }
+
+  .aff-aside dt {
+    color: var(--subtle);
+    border-right: 1px solid var(--border);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+  }
+
+  .aff-aside dd {
+    overflow-wrap: anywhere;
+    font-weight: 700;
+  }
+
+  @media (max-width: 700px) {
+    .aff-hero {
+      grid-template-columns: 1fr;
+    }
+
+    .aff-aside {
+      position: static;
+    }
+  }
+</style>

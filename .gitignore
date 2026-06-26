@@ -1,13 +1,12 @@
-# VuePress files no need
+# Dependencies and build output
 node_modules
-.cache
-.temp
 dist
 .astro
+
+# Local test and tool output
 .playwright-mcp
-.vuepress/.temp
-.vuepress/.cache
-.vuepress/dist
+output
+mcp-shell.log
 
 # Misc
 .DS_Store

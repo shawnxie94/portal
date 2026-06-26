@@ -1,29 +1,49 @@
 ---
-import Badge from "../components/Badge.astro";
-import LinkCard from "../components/LinkCard.astro";
 import PageHeader from "../components/PageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { projects } from "../data/projects";
+import githubStats from "../data/github-stats.json";
+import { projects } from "../data/projects.mjs";
+
+const projectsWithStats = projects.map((project) => ({
+  ...project,
+  stats: githubStats.repos[project.github] ?? project.stats,
+}));
 ---
 
 <BaseLayout title="项目" description="个人项目、开源项目、产品入口和内容项目。">
-  <PageHeader eyebrow="Projects" title="项目与产品" description="个人项目、开源项目、产品入口和内容项目。每个卡片保留状态、链接和标签。" />
+  <PageHeader eyebrow="Projects" title="项目" description="持续构建，意义自然浮现。" />
   <div class="shell">
-    <section class="section grid two">
-      {projects.map((project) => (
-        <article class="card">
-          <div class="meta">
-            <span>{project.status}</span>
-            {project.featured && <Badge>featured</Badge>}
+    <section class="project-list" aria-label="应用项目">
+      {projectsWithStats.map((project) => (
+        <article class="project-row">
+          <div class="project-main">
+            <div class="project-title-row">
+              <h2>{project.name}</h2>
+              <span>{project.status}</span>
+            </div>
+            <p>{project.description}</p>
+            <div class="project-tags" aria-label={`${project.name} 标签`}>
+              {project.tags.map((tag) => (
+                <span><i aria-hidden="true">#</i><b>{tag}</b></span>
+              ))}
+            </div>
           </div>
-          <h2>{project.name}</h2>
-          <p>{project.description}</p>
-          <div class="badge-row">
-            {project.tags.map((tag) => <Badge>{tag}</Badge>)}
-          </div>
-          <div class="hero-actions">
-            <a class="button-link secondary" href={project.url}>访问项目</a>
-            {"repo" in project && project.repo && <a class="button-link secondary" href={project.repo}>源码</a>}
+
+          <div class="project-side">
+            <dl class="project-stats" aria-label={`${project.name} 项目数据`}>
+              <div>
+                <dt>Stars</dt>
+                <dd>{project.stats.stars}</dd>
+              </div>
+              <div>
+                <dt>Lang</dt>
+                <dd>{project.stats.language}</dd>
+              </div>
+            </dl>
+            <div class="project-actions">
+              {project.url !== project.repo && <a class="button-link" href={project.url}>{project.urlLabel ?? "访问站点"}</a>}
+              <a class="button-link secondary" href={project.repo}>GitHub</a>
+            </div>
           </div>
         </article>
       ))}
@@ -32,10 +52,139 @@ import { projects } from "../data/projects";
 </BaseLayout>
 
 <style>
-  .hero-actions {
+  .project-list {
+    display: grid;
+    gap: 12px;
+    padding: 12px 0 28px;
+  }
+
+  .project-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.44fr);
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .project-main {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .project-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .project-title-row h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+
+  .project-title-row span {
+    color: var(--subtle);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+  }
+
+  .project-main p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .project-tags span {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    gap: 1px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 24px;
+  }
+
+  .project-tags i,
+  .project-tags b {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    font-style: normal;
+    font-weight: 640;
+    line-height: 1;
+  }
+
+  .project-side {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+  }
+
+  .project-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    border: 1px solid var(--border);
+  }
+
+  .project-stats div {
+    padding: 9px 10px;
+    border-right: 1px solid var(--border);
+  }
+
+  .project-stats div:last-child {
+    border-right: 0;
+  }
+
+  .project-stats dt {
+    color: var(--subtle);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+  }
+
+  .project-stats dd {
+    margin: 3px 0 0;
+    font-weight: 760;
+    line-height: 1.2;
+  }
+
+  .project-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: auto;
+  }
+
+  @media (max-width: 760px) {
+    .project-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .project-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .project-stats div {
+      border-right: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-stats div:last-child {
+      border-bottom: 0;
+    }
   }
 </style>

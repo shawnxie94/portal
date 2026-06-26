@@ -6,7 +6,7 @@ import LinkCard from "../components/LinkCard.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { profile, site } from "../data/profile";
-import { projects } from "../data/projects";
+import { projects } from "../data/projects.mjs";
 import { blogCardDescription, entrySlug, isPublished, sortByDate } from "../lib/content";
 import { buildUpdates } from "../lib/updates";
 
@@ -20,7 +20,12 @@ const updates = buildUpdates(publishedPosts);
   <section class="shell home-hero">
     <div class="hero-main">
       <p class="eyebrow">Personal Portal</p>
-      <h1>{profile.name}</h1>
+      <h1 class="terminal-name" aria-label="肖恩 / Shawn">
+        <span class="terminal-name__sizer" aria-hidden="true">Shawn</span>
+        <span class="terminal-name__line" aria-hidden="true">
+          <span class="terminal-name__text" data-terminal-name>{profile.name}</span><span class="terminal-name__cursor"></span>
+        </span>
+      </h1>
       <p class="hero-headline">{profile.headline}</p>
       <p>{profile.bio}</p>
       <div class="badge-row">
@@ -70,6 +75,43 @@ const updates = buildUpdates(publishedPosts);
   </div>
 </BaseLayout>
 
+<script>
+  const terminalName = document.querySelector("[data-terminal-name]");
+
+  if (terminalName instanceof HTMLElement) {
+    const words = ["肖恩", "Shawn"];
+    const typeDelay = 280;
+    const deleteDelay = 150;
+    const holdDelay = 1400;
+    let wordIndex = 0;
+    let characterIndex = words[wordIndex].length;
+    let isDeleting = true;
+
+    const writeName = () => {
+      const word = words[wordIndex];
+      terminalName.textContent = word.slice(0, characterIndex);
+
+      if (!isDeleting && characterIndex === word.length) {
+        isDeleting = true;
+        window.setTimeout(writeName, holdDelay);
+        return;
+      }
+
+      if (isDeleting && characterIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        window.setTimeout(writeName, typeDelay);
+        return;
+      }
+
+      characterIndex += isDeleting ? -1 : 1;
+      window.setTimeout(writeName, isDeleting ? deleteDelay : typeDelay);
+    };
+
+    window.setTimeout(writeName, holdDelay);
+  }
+</script>
+
 <style>
   .home-hero {
     display: grid;
@@ -87,8 +129,53 @@ const updates = buildUpdates(publishedPosts);
     font-size: clamp(3.2rem, 10vw, 7.2rem);
     line-height: 0.95;
     letter-spacing: 0;
-    text-transform: uppercase;
     text-shadow: 2px 0 0 rgba(0, 0, 0, 0.16), -2px 0 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .terminal-name {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+  }
+
+  .terminal-name__sizer {
+    visibility: hidden;
+  }
+
+  .terminal-name__line {
+    position: absolute;
+    inset: 0 auto auto 0;
+    display: inline-flex;
+    align-items: baseline;
+  }
+
+  .terminal-name__text {
+    display: inline-block;
+    min-width: 0;
+    text-transform: none;
+  }
+
+  .terminal-name__cursor {
+    display: inline-block;
+    width: 0.12em;
+    height: 0.78em;
+    margin-left: 0.08em;
+    background: currentColor;
+    transform: translateY(0.06em);
+    animation: terminal-cursor-blink 1s steps(1, end) infinite;
+  }
+
+  @keyframes terminal-cursor-blink {
+    0%,
+    48% {
+      opacity: 1;
+    }
+
+    49%,
+    100% {
+      opacity: 0;
+    }
   }
 
   .hero-main p {

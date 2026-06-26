@@ -1,0 +1,48 @@
+export const projects = [
+  {
+    name: "Lumina",
+    description: "信息管理工作台，覆盖内容采集、AI 解读、知识沉淀和复用。",
+    url: "https://lumina.shawnxie.top/",
+    repo: "https://github.com/shawnxie94/lumina",
+    github: "shawnxie94/lumina",
+    status: "active",
+    stats: {
+      stars: 96,
+      forks: 8,
+      language: "Python",
+    },
+    tags: ["AI", "信息管理"],
+    featured: true,
+  },
+  {
+    name: "Infinitum",
+    description: "基于 RSS 的资讯聚合工作台，用于订阅、筛选和追踪信息流。",
+    url: "https://infinitum.shawnxie.top/",
+    repo: "https://github.com/shawnxie94/infinitum",
+    github: "shawnxie94/infinitum",
+    status: "active",
+    stats: {
+      stars: 255,
+      forks: 17,
+      language: "TypeScript",
+    },
+    tags: ["RSS", "资讯聚合"],
+    featured: true,
+  },
+  {
+    name: "Readrops Lumina",
+    description: "Android RSS 阅读器，基于 Readrops 并集成 Lumina 采集能力。",
+    url: "https://github.com/shawnxie94/readrops-lumina/releases",
+    urlLabel: "下载安装",
+    repo: "https://github.com/shawnxie94/readrops-lumina",
+    github: "shawnxie94/readrops-lumina",
+    status: "active",
+    stats: {
+      stars: 5,
+      forks: 1,
+      language: "Kotlin",
+    },
+    tags: ["Android", "RSS"],
+    featured: true,
+  },
+];

@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-06-26T10:11:57.587Z",
+  "repos": {
+    "shawnxie94/lumina": {
+      "stars": 96,
+      "forks": 8,
+      "language": "Python"
+    },
+    "shawnxie94/infinitum": {
+      "stars": 255,
+      "forks": 17,
+      "language": "TypeScript"
+    },
+    "shawnxie94/readrops-lumina": {
+      "stars": 5,
+      "forks": 1,
+      "language": "Kotlin"
+    }
+  }
+}

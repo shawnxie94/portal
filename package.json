@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/update-github-stats.mjs && astro build",
     "preview": "astro preview",
     "new:post": "node scripts/new-post.mjs",
+    "stats:update": "node scripts/update-github-stats.mjs",
     "images:download": "node scripts/download-blog-images.mjs"
   },
   "dependencies": {

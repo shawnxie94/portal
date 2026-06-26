@@ -1,11 +1,21 @@
 ---
+import { getCollection } from "astro:content";
+import ArticleCard from "../components/ArticleCard.astro";
 import Badge from "../components/Badge.astro";
-import LinkCard from "../components/LinkCard.astro";
 import PageHeader from "../components/PageHeader.astro";
 import Section from "../components/Section.astro";
 import { channels } from "../data/channels";
 import { profile } from "../data/profile";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { blogCardDescription, entrySlug, isPublished, sortByDate } from "../lib/content";
+
+const growthTag = "个人成长";
+const growthPosts = sortByDate((await getCollection("blog")).filter(isPublished))
+  .filter((post) => post.data.tags.includes(growthTag))
+  .slice(0, 3);
+
+const growthHref = `/blog/?tag=${encodeURIComponent(growthTag)}`;
+const wechatChannel = channels.find((channel) => channel.name === "微信公众号");
 ---
 
 <BaseLayout title="关于" description={profile.bio}>
@@ -16,19 +26,278 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         {profile.focus.map((item) => <Badge>{item}</Badge>)}
       </div>
     </Section>
-    <Section title="渠道入口" note="这里保留主要公开渠道，微信公众号二维码通过外链打开。">
-      <div class="grid three">
-        {channels.map((channel) => (
-          <LinkCard href={channel.url} title={channel.name} description={channel.description} meta={channel.type} />
+
+    <Section title="了解我" href={growthHref} linkLabel="查看更多">
+      <div class="article-list">
+        {growthPosts.map((post) => (
+          <ArticleCard
+            href={`/blog/${entrySlug(post)}/`}
+            title={post.data.title}
+            description={blogCardDescription(post)}
+            date={post.data.pubDate}
+            category={post.data.category}
+            tags={post.data.tags}
+          />
         ))}
       </div>
     </Section>
-    <Section title="联系方式">
-      <div class="card">
-        <h3>Email</h3>
-        <p>适合项目交流、文章反馈和合作沟通。</p>
-        <a class="button-link secondary" href={profile.email}>发送邮件</a>
+
+    <Section title="更多渠道">
+      <div class="channel-grid">
+        {channels.map((channel) => (
+          channel.name === "微信公众号" ? (
+            <button class="channel-card" type="button" data-open-wechat>
+              <span class="channel-type">{channel.type}</span>
+              <strong>{channel.name}</strong>
+              <span>{channel.description}</span>
+            </button>
+          ) : (
+            <a class="channel-card" href={channel.url} target="_blank" rel="noreferrer">
+              <span class="channel-type">{channel.type}</span>
+              <strong>{channel.name}</strong>
+              <span>{channel.description}</span>
+            </a>
+          )
+        ))}
       </div>
     </Section>
   </div>
+
+  {wechatChannel && (
+    <dialog class="wechat-dialog" data-wechat-dialog aria-labelledby="wechat-dialog-title">
+      <div class="wechat-panel">
+        <button class="wechat-close" type="button" data-close-wechat aria-label="关闭">×</button>
+        <div class="wechat-copy">
+          <p class="eyebrow">WeChat</p>
+          <h2 id="wechat-dialog-title">{wechatChannel.name}</h2>
+          <p>{wechatChannel.description}</p>
+        </div>
+        <button class="wechat-image-button" type="button" data-open-wechat-image aria-label="全屏查看公众号二维码">
+          <img src={wechatChannel.url} alt="肖恩聊技术公众号二维码" loading="lazy" />
+        </button>
+      </div>
+    </dialog>
+  )}
+
+  {wechatChannel && (
+    <dialog class="image-dialog" data-image-dialog aria-label="公众号二维码全屏预览">
+      <button class="image-dialog-close" type="button" data-close-wechat-image aria-label="关闭全屏预览">×</button>
+      <img src={wechatChannel.url} alt="肖恩聊技术公众号二维码全屏预览" loading="lazy" />
+    </dialog>
+  )}
+
+  <script>
+    const wechatDialog = document.querySelector("[data-wechat-dialog]");
+    const imageDialog = document.querySelector("[data-image-dialog]");
+    const openWechatButtons = document.querySelectorAll("[data-open-wechat]");
+    const closeWechatButton = document.querySelector("[data-close-wechat]");
+    const openWechatImageButtons = document.querySelectorAll("[data-open-wechat-image]");
+    const closeWechatImageButton = document.querySelector("[data-close-wechat-image]");
+
+    const openWechat = () => {
+      if (!(wechatDialog instanceof HTMLDialogElement)) return;
+      if (typeof wechatDialog.showModal === "function") {
+        wechatDialog.showModal();
+      } else {
+        wechatDialog.setAttribute("open", "");
+      }
+    };
+
+    const closeWechat = () => {
+      if (!(wechatDialog instanceof HTMLDialogElement)) return;
+      wechatDialog.close();
+    };
+
+    const openWechatImage = () => {
+      if (!(imageDialog instanceof HTMLDialogElement)) return;
+      if (typeof imageDialog.showModal === "function") {
+        imageDialog.showModal();
+      } else {
+        imageDialog.setAttribute("open", "");
+      }
+    };
+
+    const closeWechatImage = () => {
+      if (!(imageDialog instanceof HTMLDialogElement)) return;
+      imageDialog.close();
+    };
+
+    openWechatButtons.forEach((button) => button.addEventListener("click", openWechat));
+    openWechatImageButtons.forEach((button) => button.addEventListener("click", openWechatImage));
+    closeWechatButton?.addEventListener("click", closeWechat);
+    closeWechatImageButton?.addEventListener("click", closeWechatImage);
+    wechatDialog?.addEventListener("click", (event) => {
+      if (event.target === wechatDialog) closeWechat();
+    });
+    imageDialog?.addEventListener("click", (event) => {
+      if (event.target === imageDialog) closeWechatImage();
+    });
+  </script>
 </BaseLayout>
+
+<style>
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .channel-card {
+    display: grid;
+    min-width: 0;
+    gap: 10px;
+    padding: 16px;
+    color: inherit;
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+  }
+
+  .channel-card:hover {
+    color: var(--text);
+    background: var(--surface-muted);
+    box-shadow: var(--shadow);
+    transform: translate(-2px, -2px);
+  }
+
+  .channel-card strong {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .channel-card span:last-child {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .channel-type {
+    color: var(--subtle);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+  }
+
+  .wechat-dialog {
+    width: min(100% - 32px, 560px);
+    padding: 0;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .wechat-dialog::backdrop {
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(6px);
+  }
+
+  .wechat-panel {
+    position: relative;
+    display: grid;
+    gap: 22px;
+    padding: 30px;
+  }
+
+  .wechat-copy h2,
+  .wechat-copy p {
+    margin: 0;
+  }
+
+  .wechat-copy h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .wechat-copy p:last-child {
+    margin-top: 8px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .wechat-image-button {
+    display: block;
+    width: min(100%, 420px);
+    margin-inline: auto;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: zoom-in;
+  }
+
+  .wechat-image-button:hover {
+    box-shadow: 4px 4px 0 var(--accent);
+    transform: translate(-1px, -1px);
+  }
+
+  .wechat-panel img {
+    display: block;
+    width: 100%;
+  }
+
+  .wechat-close,
+  .image-dialog-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  .wechat-close:hover,
+  .image-dialog-close:hover {
+    color: var(--surface);
+    background: var(--text);
+  }
+
+  .image-dialog {
+    width: min(100% - 32px, 1040px);
+    max-height: calc(100vh - 32px);
+    padding: 48px 24px 24px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .image-dialog::backdrop {
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(8px);
+  }
+
+  .image-dialog img {
+    display: block;
+    width: min(100%, 920px);
+    max-height: calc(100vh - 112px);
+    margin-inline: auto;
+    border: 1px solid var(--border);
+    object-fit: contain;
+  }
+
+  @media (max-width: 760px) {
+    .channel-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .wechat-panel {
+      padding: 22px;
+    }
+
+    .image-dialog {
+      padding: 46px 14px 14px;
+    }
+  }
+</style>

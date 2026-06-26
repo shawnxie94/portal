@@ -15,7 +15,7 @@ const projectsWithStats = projects.map((project) => ({
   <div class="shell">
     <section class="project-list" aria-label="应用项目">
       {projectsWithStats.map((project) => (
-        <article class="project-row">
+        <article class="project-row" id={project.slug}>
           <div class="project-main">
             <div class="project-title-row">
               <h2>{project.name}</h2>
@@ -41,7 +41,12 @@ const projectsWithStats = projects.map((project) => ({
               </div>
             </dl>
             <div class="project-actions">
-              {project.url !== project.repo && <a class="button-link" href={project.url}>{project.urlLabel ?? "访问站点"}</a>}
+              {project.articleUrl && <a class="button-link" href={project.articleUrl}>产品介绍</a>}
+              {project.url !== project.repo && (
+                <a class:list={["button-link", project.urlLabel !== "下载安装" && "secondary"]} href={project.url}>
+                  {project.urlLabel ?? "访问站点"}
+                </a>
+              )}
               <a class="button-link secondary" href={project.repo}>GitHub</a>
             </div>
           </div>
@@ -129,18 +134,21 @@ const projectsWithStats = projects.map((project) => ({
   .project-side {
     display: grid;
     align-content: start;
+    justify-items: end;
     gap: 12px;
   }
 
   .project-stats {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: fit-content;
+    grid-template-columns: repeat(2, minmax(118px, 118px));
     gap: 0;
     margin: 0;
     border: 1px solid var(--border);
   }
 
   .project-stats div {
+    min-width: 0;
     padding: 9px 10px;
     border-right: 1px solid var(--border);
   }
@@ -157,6 +165,7 @@ const projectsWithStats = projects.map((project) => ({
 
   .project-stats dd {
     margin: 3px 0 0;
+    overflow-wrap: anywhere;
     font-weight: 760;
     line-height: 1.2;
   }
@@ -164,12 +173,25 @@ const projectsWithStats = projects.map((project) => ({
   .project-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    width: min(100%, 324px);
     gap: 10px;
   }
 
   @media (max-width: 760px) {
     .project-row {
       grid-template-columns: 1fr;
+    }
+
+    .project-side,
+    .project-actions {
+      justify-items: stretch;
+      justify-content: flex-start;
+    }
+
+    .project-stats,
+    .project-actions {
+      width: 100%;
     }
   }
 

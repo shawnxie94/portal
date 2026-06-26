@@ -2,10 +2,12 @@
 import { getCollection } from "astro:content";
 import PageHeader from "../components/PageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { affItems } from "../data/aff";
+import { projects } from "../data/projects.mjs";
 import { buildUpdates } from "../lib/updates";
 
 const pageSize = 10;
-const updates = buildUpdates(await getCollection("blog"));
+const updates = buildUpdates({ posts: await getCollection("blog"), projects, affItems });
 ---
 
 <BaseLayout title="最新动态" description="看看最近又更新了啥。">

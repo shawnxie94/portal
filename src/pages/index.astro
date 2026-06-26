@@ -5,6 +5,7 @@ import Badge from "../components/Badge.astro";
 import LinkCard from "../components/LinkCard.astro";
 import Section from "../components/Section.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { affItems } from "../data/aff";
 import { profile, site } from "../data/profile";
 import { projects } from "../data/projects.mjs";
 import { blogCardDescription, entrySlug, isPublished, sortByDate } from "../lib/content";
@@ -13,7 +14,7 @@ import { buildUpdates } from "../lib/updates";
 const publishedPosts = (await getCollection("blog")).filter(isPublished);
 const posts = sortByDate([...publishedPosts]).slice(0, 3);
 const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
-const updates = buildUpdates(publishedPosts);
+const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
 ---
 
 <BaseLayout title={site.title} description={site.description}>
@@ -42,7 +43,10 @@ const updates = buildUpdates(publishedPosts);
       <div class="timeline-list">
         {updates.slice(0, 4).map((item) => (
           <a href={item.url}>
-            <time datetime={item.date}>{item.date}</time>
+            <span class="timeline-meta">
+              <time datetime={item.date}>{item.date}</time>
+              <span>{item.type}</span>
+            </span>
             <strong>{item.title}</strong>
           </a>
         ))}
@@ -258,9 +262,26 @@ const updates = buildUpdates(publishedPosts);
     transform: translateX(3px);
   }
 
-  .timeline-list time {
+  .timeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
     color: var(--subtle);
     font-size: 0.82rem;
+  }
+
+  .timeline-meta span {
+    padding: 1px 5px;
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-size: 0.72rem;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .timeline-list time {
+    color: var(--subtle);
   }
 
   .timeline-list strong {

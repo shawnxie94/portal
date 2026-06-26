@@ -13,6 +13,6 @@ export const profile = {
   location: "China",
   avatar: "/image.png",
   email: "mailto:xiexiao064@gmail.com",
-  bio: "汇总个人博客、项目、工作流和工具等。质量优先，持续提供有价值的技术内容。",
+  bio: "在AI浪潮下保持活人感，持续生产有价值的技术内容。",
   focus: ["AI Agent", "效率工作流", "独立开发", "内容创作"],
 };

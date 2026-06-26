@@ -182,11 +182,21 @@ img {
   text-transform: uppercase;
 }
 
-.site-nav a:hover,
-.site-nav a[aria-current="page"] {
+.site-nav a:hover {
   color: var(--accent-strong);
   background: var(--accent-soft);
   border-color: var(--border);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--surface);
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+.site-nav a[aria-current="page"]:hover {
+  color: var(--surface);
+  background: var(--accent-strong);
 }
 
 .site-footer {

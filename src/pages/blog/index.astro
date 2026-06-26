@@ -12,7 +12,7 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
   .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "zh-CN"));
 ---
 
-<BaseLayout title="博客" description="记录所思所想。">
+<BaseLayout title="博客" description="肖恩的技术博客，记录 AI 工具、工程效率、独立开发、信息管理、编程实践和个人成长文章。">
   <PageHeader eyebrow="Blog" title="博客" description="记录所思所想。" />
   <div class="shell">
     <section class="section blog-filter-panel" aria-label="博客筛选">

@@ -2,12 +2,32 @@
 import PageHeader from "../../components/PageHeader.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { affDisclosure, affItems } from "../../data/aff";
+import { site } from "../../data/profile";
 
 const affTypeOrder = ["大模型服务", "机场", "云服务"];
 const affTypes = affTypeOrder.filter((type) => affItems.some((item) => item.type === type));
+const affJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "肖恩的推广推荐",
+  description: "按大模型服务、机场、云服务分类整理的推广和订阅推荐。",
+  url: new URL("/aff/", site.url).toString(),
+  itemListElement: affItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: new URL(`/aff/${item.slug}/`, site.url).toString(),
+    item: {
+      "@type": "Product",
+      name: item.name,
+      description: item.description,
+      category: item.type,
+      image: new URL(item.image, site.url).toString(),
+    },
+  })),
+};
 ---
 
-<BaseLayout title="推广" description="推广、订阅推荐和返利说明。">
+<BaseLayout title="推广" description="肖恩整理的推广和订阅推荐，按大模型服务、机场、云服务分类展示产品说明、截图、跳转入口和返利声明。" jsonLd={affJsonLd}>
   <PageHeader eyebrow="Aff" title="推广" description="按类型整理我长期关注或使用过的产品，详情页包含截图、说明和跳转入口。" />
   <div class="shell">
     <section class="section">

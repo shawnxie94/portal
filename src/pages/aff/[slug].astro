@@ -2,6 +2,7 @@
 import Badge from "../../components/Badge.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { affDisclosure, affItems } from "../../data/aff";
+import { site } from "../../data/profile";
 
 export function getStaticPaths() {
   return affItems.map((item) => ({
@@ -11,9 +12,27 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: item.name,
+  description: item.description,
+  image: new URL(item.image, site.url).toString(),
+  url: new URL(`/aff/${item.slug}/`, site.url).toString(),
+  category: item.type,
+  brand: {
+    "@type": "Brand",
+    name: item.name,
+  },
+  additionalProperty: item.tags.map((tag) => ({
+    "@type": "PropertyValue",
+    name: "标签",
+    value: tag,
+  })),
+};
 ---
 
-<BaseLayout title={item.name} description={item.description} image={item.image}>
+<BaseLayout title={item.name} description={item.description} image={item.image} jsonLd={productJsonLd}>
   <div class="shell">
     <article class="aff-detail">
       <header class="aff-hero">

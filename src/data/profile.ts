@@ -1,7 +1,7 @@
 export const site = {
   name: "肖恩聊技术",
   title: "肖恩聊技术",
-  description: "旧时代的程序员，新时代的构建者",
+  description: "肖恩的个人技术门户，记录 AI、工程效率、独立开发、信息管理和程序员个人成长。",
   url: "https://shawnxie.top",
   repo: "https://github.com/shawnxie94/suibi",
 };

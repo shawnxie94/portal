@@ -10,7 +10,7 @@ const pageSize = 10;
 const updates = buildUpdates({ posts: await getCollection("blog"), projects, affItems });
 ---
 
-<BaseLayout title="最新动态" description="看看最近又更新了啥。">
+<BaseLayout title="最新动态" description="肖恩聊技术的最新内容动态，聚合近期文章、应用项目、产品更新和推广推荐。">
   <PageHeader eyebrow="Now" title="最新动态" description="看看最近又更新了啥。" />
   <div class="shell">
     <section class="section" data-page-size={pageSize}>

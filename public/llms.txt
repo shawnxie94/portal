@@ -1,0 +1,45 @@
+# 肖恩聊技术
+
+> 肖恩的个人技术门户，记录 AI、工程效率、独立开发、信息管理和程序员个人成长。
+
+站点地址：https://shawnxie.top/
+RSS：https://shawnxie.top/rss.xml
+Sitemap：https://shawnxie.top/sitemap-index.xml
+GitHub：https://github.com/shawnxie94
+X：https://x.com/ShawnXTalk
+
+## 站点主题
+
+- AI Agent、AI 工具和大模型应用
+- 工程效率、开发工具和工作流
+- 独立开发、应用项目和开源项目
+- RSS、信息管理、知识沉淀和内容生产
+- 程序员个人成长和阶段复盘
+
+## 重要页面
+
+- 首页：https://shawnxie.top/
+- 博客：https://shawnxie.top/blog/
+- 项目：https://shawnxie.top/projects/
+- 关于：https://shawnxie.top/about/
+- 最新动态：https://shawnxie.top/now/
+- 导航资源：https://shawnxie.top/nav/
+- 推广推荐：https://shawnxie.top/aff/
+
+## 代表项目
+
+- Lumina：https://shawnxie.top/blog/lumina/
+- Infinitum：https://shawnxie.top/blog/infinitum/
+- Readrops Lumina：https://github.com/shawnxie94/readrops-lumina
+
+## 代表文章
+
+- AI Agent 是什么：https://shawnxie.top/blog/ai-agent/
+- 如何构建 AI 文章数据库：https://shawnxie.top/blog/ai-article-database/
+- 没时间了解技术热点？让大模型帮你整理重点吧：https://shawnxie.top/blog/ai-hotspot/
+- 想提高阅读代码的效率？试试这些工具吧：https://shawnxie.top/blog/read-code-tools/
+- 五年总结：https://shawnxie.top/blog/5-years-summarize/
+
+## 内容说明
+
+本站内容以个人经验、项目实践和公开资料整理为基础。推广页面可能包含返利链接，不构成购买建议。引用本站内容时请保留原文链接。

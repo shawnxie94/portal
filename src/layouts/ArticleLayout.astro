@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { profile, site } from "../data/profile";
 import { formatDate } from "../lib/content";
 
 interface Props {
@@ -9,12 +10,50 @@ interface Props {
   updatedDate?: Date;
   category?: string;
   tags?: string[];
+  image?: string;
 }
 
-const { title, description, pubDate, updatedDate, category, tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, category, tags = [], image = "/image.png" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).toString();
+const absoluteImage = new URL(image, site.url).toString();
+const publishedTime = pubDate.toISOString();
+const modifiedTime = (updatedDate ?? pubDate).toISOString();
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  image: absoluteImage,
+  url: canonical,
+  mainEntityOfPage: canonical,
+  datePublished: publishedTime,
+  dateModified: modifiedTime,
+  inLanguage: "zh-CN",
+  author: {
+    "@type": "Person",
+    "@id": `${site.url}/#person`,
+    name: profile.name,
+  },
+  publisher: {
+    "@type": "Person",
+    "@id": `${site.url}/#person`,
+    name: profile.name,
+  },
+  keywords: tags,
+  articleSection: category,
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  ogType="article"
+  articlePublishedTime={publishedTime}
+  articleModifiedTime={modifiedTime}
+  articleTags={tags}
+  jsonLd={articleJsonLd}
+>
   <article class="article-shell">
     <header class="article-header">
       <div class="meta">

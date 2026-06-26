@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
-import { entrySlug, isPublished } from "../../lib/content";
+import { blogCardDescription, entrySlug, isPublished } from "../../lib/content";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog")).filter(isPublished);
@@ -13,11 +13,12 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const description = blogCardDescription(post);
 ---
 
 <ArticleLayout
   title={post.data.title}
-  description={post.data.description}
+  description={description}
   pubDate={post.data.pubDate}
   updatedDate={post.data.updatedDate}
   category={post.data.category}

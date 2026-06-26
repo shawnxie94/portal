@@ -2,15 +2,38 @@
 import PageHeader from "../components/PageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import githubStats from "../data/github-stats.json";
+import { site } from "../data/profile";
 import { projects } from "../data/projects.mjs";
 
 const projectsWithStats = projects.map((project) => ({
   ...project,
   stats: githubStats.repos[project.github] ?? project.stats,
 }));
+const projectsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "肖恩的应用项目",
+  description: "肖恩持续构建的应用项目、开源项目和产品介绍。",
+  url: new URL("/projects/", site.url).toString(),
+  itemListElement: projectsWithStats.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: new URL(`/projects/#${project.slug}`, site.url).toString(),
+    item: {
+      "@type": "SoftwareApplication",
+      name: project.name,
+      description: project.description,
+      url: project.url,
+      codeRepository: project.repo,
+      programmingLanguage: project.stats.language,
+      applicationCategory: "DeveloperApplication",
+      keywords: project.tags.join(", "),
+    },
+  })),
+};
 ---
 
-<BaseLayout title="项目" description="个人项目、开源项目、产品入口和内容项目。">
+<BaseLayout title="项目" description="肖恩持续构建的应用项目、开源项目和产品入口，包含 Lumina、Infinitum、Readrops Lumina 等项目的能力说明、源码和产品介绍。" jsonLd={projectsJsonLd}>
   <PageHeader eyebrow="Projects" title="项目" description="持续构建，意义自然浮现。" />
   <div class="shell">
     <section class="project-list" aria-label="应用项目">

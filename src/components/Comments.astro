@@ -1,0 +1,33 @@
+---
+const repo = "shawnxie94/portal";
+const repoId = "R_kgDOMsmo_w";
+const category = "Announcements";
+const categoryId = "DIC_kwDOMsmo_84CmWI9";
+---
+
+<section class="comments" aria-labelledby="comments-title">
+  <div class="comments-header">
+    <p class="eyebrow">Discussion</p>
+    <h2 id="comments-title">评论</h2>
+  </div>
+  <div class="giscus"></div>
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo={repo}
+    data-repo-id={repoId}
+    data-category={category}
+    data-category-id={categoryId}
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  <noscript>评论区需要启用 JavaScript 后显示。</noscript>
+</section>

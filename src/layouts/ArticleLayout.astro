@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Comments from "../components/Comments.astro";
 import { profile, site } from "../data/profile";
 import { formatDate } from "../lib/content";
 
@@ -71,5 +72,6 @@ const articleJsonLd = {
     <div class="article-content">
       <slot />
     </div>
+    <Comments />
   </article>
 </BaseLayout>

@@ -725,6 +725,49 @@ img {
   border-radius: var(--radius);
 }
 
+.comments {
+  margin: 64px 0 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.comments-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.comments-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.comments .eyebrow {
+  margin: 0;
+  color: var(--subtle);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.comments .giscus,
+.comments .giscus-frame {
+  width: 100%;
+}
+
+.comments noscript {
+  display: block;
+  padding: 14px 16px;
+  color: var(--muted);
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
 .notice {
   padding: 14px 16px;
   color: var(--warning);

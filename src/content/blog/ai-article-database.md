@@ -1,6 +1,6 @@
 ---
 title: "AI结对编程实战：打造智能文章知识库全记录（附9条心得）"
-description: "在 《肖恩技术周刊25年总结》 https //weekly.shawnxie.top/collection/2025.html 的来年规划中有一项是提升周刊的 全流程自动化 。终极目标是让个人只聚焦于阅读和笔记，剩下的交给工具，让它自"
+description: "记录一次用 Trae、OpenCode 和 GLM-4.7 结对开发智能文章知识库的全过程，复盘需求、架构、实现和 AI 编程心得。"
 pubDate: 2026-01-23
 category: "AI探索"
 tags:

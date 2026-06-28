@@ -1,6 +1,6 @@
 ---
 title: "编译器前端&中端基础知识"
-description: "编译器 https //en.wikipedia.org/wiki/Compiler ：将用编程语言 源语言 编写的计算机代码翻译成另一种语言 目标语言 的计算机程序。 编译程序以高级程序源代码作为输入，以汇编语言或机器语言表示的目标程"
+description: "系统梳理编译器前端和中端基础，覆盖词法分析、语法分析、语义分析、中间代码表示以及 LLVM 优化流程。"
 pubDate: 2024-03-26
 category: "技术随笔"
 tags:

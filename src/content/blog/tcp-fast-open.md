@@ -1,6 +1,6 @@
 ---
 title: "TCP Fast Open"
-description: "面试中问到 TCP 相关知识时一般会问到三次握手和四次挥手，内容大家一定回答过很多次并熟记于心了。传统的 TCP 建立连接时需要三次握手，并且握手时只发送简单的 SYN 和 ACK 报文（部分优化的网络协议栈可以在第三次握手时直接发送数"
+description: "从三次握手的延迟问题切入，讲解 TCP Fast Open 的 Cookie 机制、优缺点、Linux 开启方式和抓包验证过程。"
 pubDate: 2025-02-10
 category: "技术随笔"
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "代码可视化(Code Visualization)"
-description: "Code visualization is the process of creating graphical representations of source code to help understand and analyze "
+description: "从代码理解、变更影响评估和遗留系统重构三个场景出发，说明代码可视化的价值和常见实现思路。"
 pubDate: 2023-10-11
 category: "技术随笔"
 tags:

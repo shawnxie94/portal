@@ -1,6 +1,6 @@
 ---
 title: "自建Docker镜像代理加速"
-description: "Docker Hub 是一个容器注册表，专为开发人员和开源贡献者构建，用于查找、使用和共享其容器镜像。但从2023年5月中旬，hub.docker.com “不知” 何种原因国内均无法正常访问了，好在国内各大高校和容器技术社区提供了加速"
+description: "记录通过 Cloudflare Pages 自建 Docker Hub 镜像代理的步骤，包含仓库部署、镜像路径改写和 Docker 加速配置。"
 pubDate: 2024-09-05
 category: "技术提效"
 tags:

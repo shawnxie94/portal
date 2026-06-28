@@ -1,6 +1,6 @@
 ---
 title: "打造更好用的Mac终端：iTerm2 + zsh + OhMyZsh"
-description: "Mac 自带的终端很简陋，缺少很多必要的功能，用户体验较差。但一个好用的终端将直接给开发人员的工作效率带来极大提升，毕竟很多操作是直接在命令行上执行的。笔者对终端有几个基本的诉求： 好看的界面 ，并包含一些 关键信息 ，如：用户名、文件"
+description: "一步步配置更顺手的 Mac 终端环境，覆盖 Homebrew、iTerm2、zsh、Oh My Zsh 和常用主题插件。"
 pubDate: 2024-11-28
 category: "技术提效"
 tags:

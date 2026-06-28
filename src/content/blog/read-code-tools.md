@@ -1,6 +1,6 @@
 ---
 title: "想提高阅读代码的效率？试试这些工具吧！"
-description: "程序员间有句名言——“Talk is cheap, show me the code！”源码的确相较于言语更接近程序真实的状态，包含了更多的一手信息。因此，无论是刚开始学习代码的小白还是久经沙场的代码大神，不管是学习优秀的开源项目还是做"
+description: "对比 Source Insight、Understand 和 Sourcetrail 三类代码阅读工具，说明它们在可视化、检索和分析中的适用场景。"
 pubDate: 2024-01-04
 category: "技术提效"
 tags:

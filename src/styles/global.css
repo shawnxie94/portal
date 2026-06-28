@@ -556,13 +556,16 @@ img {
 
 .article-card p {
   display: -webkit-box;
-  min-height: 3.44em;
+  max-height: calc(1.72em * 2);
+  min-height: 0;
   overflow: hidden;
   margin: 0;
   color: var(--muted);
   line-height: 1.72;
+  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .article-card time {

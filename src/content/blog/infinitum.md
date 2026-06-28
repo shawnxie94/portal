@@ -1,6 +1,6 @@
 ---
 title: "Infinitum：懒人阅读方案 2.0，让信息聚合真正跑起来"
-description: "前文 \"信息过载时代，我的漏斗式阅读工作流\" https //mp.weixin.qq.com/s/ZZzD5m9D1DNEGaK5pSZHrg 中，我详细描述了信息处理的漏斗式工作流：从信息源的广泛采集，到聚合池的稳定汇聚，再到预处理"
+description: "介绍 Infinitum 如何把漏斗式阅读工作流产品化，覆盖智能采集、AI 分析、事件聚合、日报生成、公开 Feed 和互动能力。"
 pubDate: 2026-05-05
 category: "个人产品"
 tags:

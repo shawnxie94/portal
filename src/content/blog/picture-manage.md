@@ -1,6 +1,6 @@
 ---
 title: "文章图片自动管理方案：Github + PicGo + jsDelivr + Obsidian"
-description: "笔者在 我的内容创作最强搭子——Kimi https //mp.weixin.qq.com/s/HDUjesD7Qs5o9qm3bPs ZA 中介绍了周刊创作时素材收集和整理的基本思路，这之后便会进行文章撰写。 写作在电脑本地进行，采用"
+description: "记录用 GitHub、PicGo、jsDelivr 和 Obsidian 搭建文章图片自动上传与管理流程，降低写作中的图片维护成本。"
 pubDate: 2024-11-23
 category: "技术提效"
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "AI Agent初体验：变革正悄然发生"
-description: "2022年12月OpenAI推出ChatGPT，经过2023一整年迭代和各方势力追赶，在24年迎来了集体的爆发。各式各样的工具层出不穷，从最开始的聊天机器人，到AI写作工具、AI图像工具、AI视频工具、AI幻灯片工具和AI编程工具等等。"
+description: "从大模型和智能体概念出发，体验搜索、问答、本地知识库和编程智能体，观察 AI Agent 对工作方式的潜在改变。"
 pubDate: 2025-01-18
 category: "AI探索"
 tags:

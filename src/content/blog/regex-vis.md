@@ -1,6 +1,6 @@
 ---
 title: "看不懂正则表达式？试试可视化工具吧！"
-description: "正则表达式 https //zh.wikipedia.org/zh cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F 是一种用来匹配字符串的强有力工具。它的设计思想是用一种描述性的语言来给"
+description: "介绍 regex-vis 正则可视化工具的使用方式和基本原理，并通过邮箱、域名、IP、URL、HTML 标签等案例辅助理解。"
 pubDate: 2024-05-21
 category: "技术提效"
 tags:

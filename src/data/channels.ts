@@ -7,7 +7,7 @@ export const channels = [
   },
   {
     name: "微信公众号",
-    url: "https://cdn.jsdelivr.net/gh/shawnxie94/images/images/20241103221454.png",
+    url: "/images/profile/20241103221454-9f58489a.png",
     type: "media",
     description: "原创技术文章推送",
   },

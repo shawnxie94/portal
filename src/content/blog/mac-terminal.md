@@ -273,8 +273,6 @@ brew install fzf
 ## 结语
 上述配置后就能获得一个基本好用的终端了，但也只是基本好用，因为在AI时代，终端也需要与时俱进。iTerm2提供了与OpenAI的集成方法，但功能仅仅是用大模型辅助生成命令，能提供的帮助比较有限。
 
-![](https://pic-bed-1256249917.cos.ap-chengdu.myqcloud.com/uPic/iterm2-ai-003-20240614205616478.gif)
-
 其他比较火的AI终端有[warp](https://www.warp.dev)，但由于笔者还没有深入试用，下次再分享吧。warp官方做了与ITerm2的功能对比，可以先看看[iterm2-vs-warp](https://www.warp.dev/compare-terminal-tools/iterm2-vs-warp)。
 
 ![](/images/blog/mac-terminal/202411272128581-bb002d5c.png)

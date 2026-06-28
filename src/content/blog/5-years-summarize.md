@@ -65,7 +65,7 @@ originalPath: "/blogs/talk/5-years-summarize.html"
 
 #### 持续学习
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251158538.png)
+![](/images/blog/5-years-summarize/202501251158538-47ecb9b4.png)
 
 
 为什么需要持续学习，说白了是为了适应社会发展和保持个人竞争力，只出不进，我们将很快达到能力瓶颈。
@@ -108,7 +108,7 @@ originalPath: "/blogs/talk/5-years-summarize.html"
 
 “**复利是世界第八大奇迹**”，谣传是爱因斯坦所说，但无据可查。不过不管是谁说的，复利本身带来的效果是可观的，下面是一个简单的复利公式（F为收益，P为本金，i为利率，n为时间）。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251202624.png)
+![](/images/blog/5-years-summarize/202501251202624-0a1cb68f.png)
 
 
 根据公式我们只需要每天比昨天的自己进步**0.1%**，那么一年后的个人能力将比一年前的自己提升**44.03%**（1*(1+0.001)^365-1），虽然这是理想数据，但足以说明持续学习的效果是可观的。

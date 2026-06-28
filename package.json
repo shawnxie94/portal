@@ -6,11 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/update-github-stats.mjs && astro build",
+    "build": "npm run images:check && node scripts/update-github-stats.mjs && astro build",
     "preview": "astro preview",
     "new:post": "node scripts/new-post.mjs",
     "stats:update": "node scripts/update-github-stats.mjs",
-    "images:download": "node scripts/download-blog-images.mjs"
+    "images:download": "node scripts/download-blog-images.mjs",
+    "images:normalize": "node scripts/normalize-blog-images.mjs",
+    "images:check": "node scripts/check-blog-images.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

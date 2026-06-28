@@ -476,7 +476,7 @@ opt -O2 fun1.bc -o fun1-O2.bc
 opt -S -O2 fun1.ll -o fun1-O2.ll
 ```
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251358720.png)
+![](/images/blog/compiler/202501251358720-5e908da4.png)
 
 在 LLVM 内部，优化工作是通过一个个的 Pass（遍）来实现的，它支持三种类型的 Pass：
 - 分析型的 Pass（Analysis Passes），只是做分析，产生一些分析结果用于后序操作；

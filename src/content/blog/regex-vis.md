@@ -50,7 +50,7 @@ originalPath: "/blogs/tools/regex-vis.html"
 ((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))
 ```
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202501251320467.png)
+![](/images/blog/regex-vis/202501251320467-b3b52c1e.png)
 
 #### ④ [URL](https://regex-vis.com/?r=%5Ehttps%3F%3A%5C%2F%5C%2F%28www%5C.%29%3F%5B-a-zA-Z0-9%40%3A%25._%5C%2B%7E%23%3D%5D%7B2%2C256%7D%5C.%5Ba-z%5D%7B2%2C6%7D%5Cb%28%5B-a-zA-Z0-9%40%3A%25_%5C%2B.%7E%23%28%29%3F%26%2F%2F%3D%5D*%29%24&e=0)
 ```

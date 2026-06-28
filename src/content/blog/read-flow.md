@@ -39,7 +39,7 @@ originalPath: "/blogs/tools/read-flow.html"
 
 推荐使用阿里云、腾讯云和UCloud等云服务器，也可以使用自己的电脑。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101046200.png)
+![](/images/blog/read-flow/202505101046200-f192fc7b.png)
 
 #### 安装宝塔面板
 
@@ -60,7 +60,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 ```
 - 宝塔面板主页
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101055001.png)
+![](/images/blog/read-flow/202505101055001-9e326238.png)
 
 #### 安装MySQL
 
@@ -95,7 +95,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 如果网页提供了订阅源，则会在页面右下角显示数字，点击后可查看订阅源详情。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101138241.png)
+![](/images/blog/read-flow/202505101138241-0dcc3c72.png)
 
 #### 无RSS订阅
 
@@ -111,7 +111,7 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 
 - 新增Docker编排模版
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101202910.png)
+![](/images/blog/read-flow/202505101202910-672e323e.png)
 
 模版内容填入：
 ```yaml
@@ -147,7 +147,7 @@ services:
 
 a. 配置微信读书账号
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101311856.png)
+![](/images/blog/read-flow/202505101311856-58ab3778.png)
 
 b. 添加公众号源
 
@@ -222,7 +222,7 @@ services:
 
 - 添加Docker容器编排
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101359797.png)
+![](/images/blog/read-flow/202505101359797-d7a03a41.png)
 
 - FreshRSS配置
 
@@ -240,7 +240,7 @@ b. 自动刷新
 
 默认未开启自动刷新，这对懒人来说不太友好，可通过配置宝塔面板定时任务实现定时刷新。
 
-![](https://cdn.jsdelivr.net/gh/shawnxie94/images/images/202505101457371.png)
+![](/images/blog/read-flow/202505101457371-72f8d660.png)
 
 ```bash
 docker exec freshrss php /var/www/FreshRSS/app/actualize_script.php

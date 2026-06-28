@@ -28,7 +28,7 @@ originalPath: "/blogs/ai/kimi.html"
 ## 内容创作v1.0
 有了这次不错的体验后，后续使用Kimi的就更频繁了，但也仅仅停留在简单的文本解读上。直到有一天笔者突然问了Kimi这么一个问题（至于为什么问这个问题就不得而知了）：
 
-![](https://fastly.jsdelivr.net/gh/bucketio/img18@main/2024/10/11/1728655679168-66d76ae9-68d6-4dfa-9080-251f21ffd998.png)
+![](/images/blog/kimi/1728655679168-66d76ae9-68d6-4dfa-9080-251f21ffd998-45c23d69.png)
 
 回答的第一条是“**知识与学习**”。但学习的方式有很多种，对笔者而言了解新技术和新热点是保持职业热爱很重要的方式。但日常工作已经占用了大量的时间，根本就没有时间搜集并学习新知识。
 
@@ -36,7 +36,7 @@ originalPath: "/blogs/ai/kimi.html"
 
 于是做了第一次尝试，实现了一个自动抓取热点并总结的小工具，实现思路见下图。内容回顾戳👉🏻 [没时间了解技术热点？让大模型帮你整理重点吧！](https://mp.weixin.qq.com/s/qelnn3DWsOic0_5iXMKrJw)
 
-![](https://fastly.jsdelivr.net/gh/bucketio/img5@main/2024/10/11/1728656247843-80967bb2-f3be-4149-9f1e-eb577aae7aea.png)
+![](/images/blog/kimi/1728656247843-80967bb2-f3be-4149-9f1e-eb577aae7aea-db83e71f.png)
 
 不过这一版工具有一个缺陷，就是当时Kimi的API不支持搜索功能（目前已支持，戳👉🏻[Kimi API 支持联网搜索增强了！](https://mp.weixin.qq.com/s/BWVAAvqnGum3iIg93pJhuA)），于是笔者自己手搓了一个页面检索和内容解析工具，但由于没有处理噪音整体效果比较一般。
 

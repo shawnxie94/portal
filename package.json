@@ -6,21 +6,26 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run images:check && node scripts/update-github-stats.mjs && astro build",
+    "build": "npm run content:check && npm run images:check && astro build",
     "preview": "astro preview",
+    "check": "astro check",
+    "validate": "npm run content:check && npm run images:check && npm run check && astro build",
     "new:post": "node scripts/new-post.mjs",
     "stats:update": "node scripts/update-github-stats.mjs",
-    "images:download": "node scripts/download-blog-images.mjs",
-    "images:normalize": "node scripts/normalize-blog-images.mjs",
+    "content:check": "node scripts/check-content-dates.mjs",
+    "images:download": "node scripts/download-blog-images.mjs && npm run images:compress",
+    "images:normalize": "node scripts/normalize-blog-images.mjs && npm run images:compress",
+    "images:compress": "node scripts/compress-blog-images.mjs",
     "images:check": "node scripts/check-blog-images.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.15.5",
+    "astro": "^7.0.3",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "mermaid": "^11.12.2"
+    "@astrojs/check": "^0.9.9",
+    "sharp": "^0.35.2"
   }
 }

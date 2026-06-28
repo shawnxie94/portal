@@ -58,7 +58,7 @@ const categories = [...groupBy(posts, (post) => post.data.category ?? "未分类
   </div>
 </BaseLayout>
 
-<script>
+<script is:inline>
   const articleCards = [...document.querySelectorAll("[data-category][data-tags]")];
   const categoryButtons = [...document.querySelectorAll("[data-filter-category]")];
   const categoryReset = document.querySelector("[data-filter-reset='category']");

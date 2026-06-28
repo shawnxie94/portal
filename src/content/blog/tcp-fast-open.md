@@ -99,7 +99,7 @@ sysctl net.inet.tcp.fastopen
 ![](/images/blog/tcp-fast-open/202502101857974-564a68ad.png)
 #### 首次请求
 执行调用（curl 7.49及以后的版本支持 TFO）。
-``` Bash
+```bash
 curl --tcp-fastopen http://example.com
 ```
 接收方返回 SYN-ACK 报文的同时，附带一个随机生成的名为 TFO Cookie 的标识符给发送方。

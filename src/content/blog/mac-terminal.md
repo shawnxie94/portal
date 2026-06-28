@@ -107,7 +107,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 - **别名配置**
 
 oh my zsh内置了很多命令缩写别名，可执行aliases命令展示所有的别名（很多和git相关）。
-``` Bash
+```bash
 # 获取所有别名
 aliases
 
@@ -234,7 +234,7 @@ gbm='git branch --move'
 **④ zsh-autosuggestions**
 
 三方插件，**自动补全**插件，根据历史命令和当前输入内容，自动推荐可能的命令。安装命令：
-``` Bash
+```bash
 brew install zsh-autosuggestions
 # 编辑文件
 vim ~/.zshrc

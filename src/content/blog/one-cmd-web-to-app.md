@@ -67,7 +67,7 @@ pake https://www.shawnxie.top/ --name Shawn-Weekly
 命令参数详细说明可以参考[README_CN](https://github.com/tw93/Pake/blob/master/bin/README_CN.md)。
 
 注：Pake底层使用的是Tauri，环境一定要按照[要求](https://tauri.app/zh-cn/v1/guides/getting-started/prerequisites/#%E7%AE%A1%E7%90%86-rust-%E5%AE%89%E8%A3%85)安装，不然会出现一些报错。如果按照下面命令安装后还有问题，可以在Issue里找一下解决方法。
-``` Bash
+```bash
 # MAC环境安装
 # 安装 CLang 和 macOS 开发依赖项
 xcode-select --install

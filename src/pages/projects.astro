@@ -5,9 +5,16 @@ import githubStats from "../data/github-stats.json";
 import { site } from "../data/profile";
 import { projects } from "../data/projects.mjs";
 
+type ProjectStats = {
+  stars: number;
+  forks: number;
+  language: string;
+};
+
+const githubRepos = githubStats.repos as Record<string, ProjectStats>;
 const projectsWithStats = projects.map((project) => ({
   ...project,
-  stats: githubStats.repos[project.github] ?? project.stats,
+  stats: githubRepos[project.github] ?? project.stats,
 }));
 const projectsJsonLd = {
   "@context": "https://schema.org",

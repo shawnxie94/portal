@@ -10,7 +10,7 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} noIndex>
   <PageHeader eyebrow="Tool" title={title} description={description} />
   <div class="shell">
     <slot />

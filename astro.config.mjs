@@ -4,7 +4,14 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://shawnxie.top",
   output: "static",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => {
+        const pathname = new URL(page, "https://shawnxie.top").pathname;
+        return !pathname.startsWith("/nav/") && !pathname.startsWith("/tools/");
+      },
+    }),
+  ],
   markdown: {
     shikiConfig: {
       theme: "github-light",

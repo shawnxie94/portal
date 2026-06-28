@@ -91,7 +91,7 @@ const serializedJsonLd = JSON.stringify([...baseJsonLd, ...pageJsonLd]).replace(
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={absoluteImage} />
     <meta name="theme-color" content="#ffffff" />
-    <script type="application/ld+json" set:html={serializedJsonLd} />
+    <script is:inline type="application/ld+json" set:html={serializedJsonLd} />
   </head>
   <body>
     <a class="skip-link" href="#content">跳到正文</a>

@@ -92,5 +92,5 @@ export function excerptFromMarkdown(markdown: string, maxLength = excerptMaxLeng
 
 export function blogCardDescription(entry: BlogEntry, maxLength = excerptMaxLength) {
   const manualDescription = entry.data.description?.trim();
-  return manualDescription || excerptFromMarkdown(entry.body, maxLength) || "";
+  return manualDescription || (entry.body ? excerptFromMarkdown(entry.body, maxLength) : "") || "";
 }

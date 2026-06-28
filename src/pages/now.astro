@@ -58,7 +58,7 @@ const updates = buildUpdates({ posts: await getCollection("blog"), projects, aff
   }
 </style>
 
-<script>
+<script is:inline>
   const timelineItems = [...document.querySelectorAll("[data-timeline-item]")];
   const pageSizeNode = document.querySelector("[data-page-size]");
   const paginationNode = document.querySelector("[data-pagination]");

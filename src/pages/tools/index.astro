@@ -1,5 +1,4 @@
 ---
-import Badge from "../../components/Badge.astro";
 import LinkCard from "../../components/LinkCard.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import Section from "../../components/Section.astro";
@@ -14,7 +13,7 @@ for (const tool of tools) {
 }
 ---
 
-<BaseLayout title="工具" description="肖恩聊技术的轻量工具集合，规划 JSON、Base64、URL、时间戳、图片和 PDF 等本地优先的效率工具。">
+<BaseLayout title="工具" description="肖恩聊技术的轻量工具集合，规划 JSON、Base64、URL、时间戳、图片和 PDF 等本地优先的效率工具。" noIndex>
   <PageHeader eyebrow="Tools" title="工具集合" description="首期先提供工具分类、状态标识和独立工具页框架。具体交互工具后续按需加载，不影响首页和博客性能。" />
   <div class="shell">
     {[...groups.entries()].map(([category, items]) => (

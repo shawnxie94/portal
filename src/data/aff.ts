@@ -51,18 +51,6 @@ export const affItems = [
     risk: "模型可用性、倍率、活动折扣和服务稳定性可能变化，生产用途需谨慎评估。",
   },
   {
-    slug: "right-code",
-    name: "Right Code",
-    type: "大模型服务",
-    description: "面向 AI Agent 工具的大模型中转平台，覆盖 Codex、Claude Code、OpenCode 等使用场景。",
-    url: "https://www.right.codes/register?aff=d9785f7f",
-    image: "/images/blog/aff/20260330140025743-6ff5dbf4.png",
-    updatedAt: "2026-03-30",
-    tags: ["AI Agent", "中转站", "开发工具"],
-    reason: "对接 Agent 类开发工具时更省配置成本，适合需要统一入口的开发者。",
-    risk: "工具兼容性、模型路由和限额策略可能调整，正式迁移前建议保留备用方案。",
-  },
-  {
     slug: "siliconflow",
     name: "硅基流动",
     type: "大模型服务",

@@ -259,27 +259,32 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
     border-left: 1px solid var(--border);
   }
 
-  .hero-socials a {
+  .hero-socials a,
+  .hero-socials button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     color: var(--muted);
     background: transparent;
     border: 0;
+    padding: 0;
+    font: inherit;
     text-decoration: none;
+    cursor: pointer;
     transition: color 140ms ease, transform 140ms ease;
   }
 
-  .hero-socials a:hover {
+  .hero-socials a:hover,
+  .hero-socials button:hover {
     color: var(--text);
     transform: translateY(-1px);
   }
 
   .hero-socials svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     fill: currentColor;
   }
 

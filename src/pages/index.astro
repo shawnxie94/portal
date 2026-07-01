@@ -36,6 +36,17 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
         <a class="button-link" href="/blog/">阅读文章</a>
         <a class="button-link secondary" href="/projects/">查看项目</a>
         <a class="button-link secondary" href="/about/">关于我</a>
+        <div class="hero-socials" aria-label="其他渠道">
+          <a href="https://github.com/shawnxie94" aria-label="GitHub" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.04 1.53 1.04.9 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 6.01c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+          <a href="https://x.com/ShawnXTalk" aria-label="X" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.62 10.63 20.03 3h-1.52l-5.56 6.62L8.5 3H3.38l6.72 10-6.72 8h1.52l5.88-7 4.7 7h5.13l-6.99-10.37Zm-2.08 2.48-.68-.98-5.42-7.94h2.33l4.37 6.4.68.98 5.69 8.34h-2.33l-4.64-6.8Z"/></svg>
+          </a>
+          <a href="/rss.xml" aria-label="RSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.6 17.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3.8 9.6c5.85 0 10.6 4.75 10.6 10.6h-2.55a8.05 8.05 0 0 0-8.05-8.05V9.6Zm0-6.4c9.39 0 17 7.61 17 17h-2.55c0-7.98-6.47-14.45-14.45-14.45V3.2Z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <aside class="hero-panel" aria-label="最新动态">
@@ -204,8 +215,43 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
   .hero-actions {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
     margin-top: 22px;
+  }
+
+  .hero-socials {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 4px;
+    padding-left: 10px;
+    border-left: 1px solid var(--border);
+  }
+
+  .hero-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: color 140ms ease, background 140ms ease, transform 140ms ease;
+  }
+
+  .hero-socials a:hover {
+    color: var(--text);
+    background: var(--surface-muted);
+    transform: translate(-1px, -1px);
+  }
+
+  .hero-socials svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
   }
 
   .hero-panel {

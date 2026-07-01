@@ -100,6 +100,13 @@ const projectsJsonLd = {
     padding: 18px;
     border: 1px solid var(--border);
     background: var(--surface);
+    transition: background 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+  }
+
+  .project-row:hover {
+    background: var(--surface-muted);
+    box-shadow: var(--shadow);
+    transform: translate(-2px, -2px);
   }
 
   .project-main {

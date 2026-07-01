@@ -3,6 +3,13 @@ const repo = "shawnxie94/portal";
 const repoId = "R_kgDOMsmo_w";
 const category = "Announcements";
 const categoryId = "DIC_kwDOMsmo_84CmWI9";
+
+interface Props {
+  discussionTerm?: string;
+}
+
+const { discussionTerm } = Astro.props;
+const mapping = discussionTerm ? "specific" : "pathname";
 ---
 
 <section class="comments" aria-labelledby="comments-title">
@@ -18,7 +25,8 @@ const categoryId = "DIC_kwDOMsmo_84CmWI9";
     data-repo-id={repoId}
     data-category={category}
     data-category-id={categoryId}
-    data-mapping="pathname"
+    data-mapping={mapping}
+    data-term={discussionTerm}
     data-strict="1"
     data-reactions-enabled="1"
     data-emit-metadata="0"

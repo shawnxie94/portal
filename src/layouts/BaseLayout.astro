@@ -100,5 +100,84 @@ const serializedJsonLd = JSON.stringify([...baseJsonLd, ...pageJsonLd]).replace(
       <slot />
     </main>
     <SiteFooter />
+    <dialog class="image-lightbox" data-image-lightbox aria-label="图片大图预览">
+      <button class="image-lightbox-close" type="button" data-image-lightbox-close aria-label="关闭图片预览">×</button>
+      <figure>
+        <img data-image-lightbox-image alt="" />
+        <figcaption data-image-lightbox-caption hidden></figcaption>
+      </figure>
+    </dialog>
+    <script>
+      const lightbox = document.querySelector("[data-image-lightbox]");
+      const lightboxImage = document.querySelector("[data-image-lightbox-image]");
+      const lightboxCaption = document.querySelector("[data-image-lightbox-caption]");
+      const lightboxClose = document.querySelector("[data-image-lightbox-close]");
+      const contentRoot = document.querySelector("#content");
+
+      const canPreviewImage = (image: HTMLImageElement) => {
+        if (!image.currentSrc && !image.src) return false;
+        if (image.dataset.lightbox === "false") return false;
+        if (image.closest("a, button, dialog")) return false;
+        if (image.getAttribute("aria-hidden") === "true") return false;
+        return true;
+      };
+
+      const setupImagePreviewTargets = () => {
+        contentRoot?.querySelectorAll("img").forEach((image) => {
+          if (!(image instanceof HTMLImageElement) || !canPreviewImage(image)) return;
+          image.dataset.lightbox = "true";
+          image.tabIndex = image.tabIndex >= 0 ? image.tabIndex : 0;
+          image.setAttribute("role", "button");
+          image.setAttribute("aria-label", image.alt ? `查看大图：${image.alt}` : "查看大图");
+        });
+      };
+
+      const openLightbox = (image: HTMLImageElement) => {
+        if (!(lightbox instanceof HTMLDialogElement) || !(lightboxImage instanceof HTMLImageElement)) return;
+
+        const caption = image.alt.trim();
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = caption || "图片大图预览";
+
+        if (lightboxCaption instanceof HTMLElement) {
+          lightboxCaption.textContent = caption;
+          lightboxCaption.hidden = !caption;
+        }
+
+        if (typeof lightbox.showModal === "function") {
+          lightbox.showModal();
+        } else {
+          lightbox.setAttribute("open", "");
+        }
+      };
+
+      const closeLightbox = () => {
+        if (!(lightbox instanceof HTMLDialogElement)) return;
+        lightbox.close();
+      };
+
+      setupImagePreviewTargets();
+
+      contentRoot?.addEventListener("click", (event) => {
+        const image = event.target instanceof Element ? event.target.closest("img") : null;
+        if (!(image instanceof HTMLImageElement) || !canPreviewImage(image)) return;
+        openLightbox(image);
+      });
+
+      contentRoot?.addEventListener("keydown", (event) => {
+        if (!(event instanceof KeyboardEvent)) return;
+        if (event.key !== "Enter" && event.key !== " ") return;
+        if (!(event.target instanceof HTMLImageElement) || !canPreviewImage(event.target)) return;
+        event.preventDefault();
+        openLightbox(event.target);
+      });
+
+      lightbox?.addEventListener("click", (event) => {
+        if (event.target === lightboxImage || event.target === lightboxClose) return;
+        closeLightbox();
+      });
+
+      lightboxClose?.addEventListener("click", closeLightbox);
+    </script>
   </body>
 </html>

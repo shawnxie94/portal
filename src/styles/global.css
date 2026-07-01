@@ -92,6 +92,10 @@ img {
   height: auto;
 }
 
+img[data-lightbox="true"] {
+  cursor: zoom-in;
+}
+
 [hidden] {
   display: none !important;
 }
@@ -777,6 +781,85 @@ img {
   line-height: 1.7;
 }
 
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100dvw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  color: #f7f7f7;
+  background: #111111;
+  border: 0;
+  border-radius: 0;
+  cursor: zoom-out;
+  overflow: hidden;
+}
+
+.image-lightbox::backdrop {
+  background: #111111;
+}
+
+.image-lightbox figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 24px;
+}
+
+.image-lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 72px);
+  object-fit: contain;
+  border: 0;
+  cursor: zoom-out;
+}
+
+.image-lightbox figcaption {
+  max-width: min(820px, 100%);
+  min-height: 24px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #f7f7f7;
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 760;
+  line-height: 1;
+}
+
+.image-lightbox-close:hover {
+  color: #111111;
+  background: #ffffff;
+}
+
+body:has(.image-lightbox[open]) {
+  overflow: hidden;
+}
+
 @media (max-width: 860px) {
   .header-inner,
   .footer-inner,
@@ -830,5 +913,18 @@ img {
 
   .page-title {
     font-size: 2.2rem;
+  }
+
+  .image-lightbox {
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  .image-lightbox figure {
+    padding: 12px;
+  }
+
+  .image-lightbox img {
+    max-height: calc(100dvh - 64px);
   }
 }

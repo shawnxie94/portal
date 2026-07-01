@@ -12,9 +12,10 @@ interface Props {
   category?: string;
   tags?: string[];
   image?: string;
+  originalPath?: string;
 }
 
-const { title, description, pubDate, updatedDate, category, tags = [], image = "/image.png" } = Astro.props;
+const { title, description, pubDate, updatedDate, category, tags = [], image = "/image.png", originalPath } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
 const absoluteImage = new URL(image, site.url).toString();
 const publishedTime = pubDate.toISOString();
@@ -72,6 +73,6 @@ const articleJsonLd = {
     <div class="article-content">
       <slot />
     </div>
-    <Comments />
+    <Comments discussionTerm={originalPath} />
   </article>
 </BaseLayout>

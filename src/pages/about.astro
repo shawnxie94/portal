@@ -46,7 +46,7 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
       <div class="channel-grid">
         {channels.map((channel) => (
           channel.name === "微信公众号" ? (
-            <button class="channel-card" type="button" data-open-wechat>
+            <button class="channel-card" type="button" data-open-wechat-image>
               <span class="channel-type">{channel.type}</span>
               <strong>{channel.name}</strong>
               <span>{channel.description}</span>
@@ -64,22 +64,6 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
   </div>
 
   {wechatChannel && (
-    <dialog class="wechat-dialog" data-wechat-dialog aria-labelledby="wechat-dialog-title">
-      <div class="wechat-panel">
-        <button class="wechat-close" type="button" data-close-wechat aria-label="关闭">×</button>
-        <div class="wechat-copy">
-          <p class="eyebrow">WeChat</p>
-          <h2 id="wechat-dialog-title">{wechatChannel.name}</h2>
-          <p>{wechatChannel.description}</p>
-        </div>
-        <button class="wechat-image-button" type="button" data-open-wechat-image aria-label="全屏查看公众号二维码">
-          <img src={wechatChannel.url} alt="肖恩聊技术公众号二维码" loading="lazy" />
-        </button>
-      </div>
-    </dialog>
-  )}
-
-  {wechatChannel && (
     <dialog class="image-dialog" data-image-dialog aria-label="公众号二维码全屏预览">
       <button class="image-dialog-close" type="button" data-close-wechat-image aria-label="关闭全屏预览">×</button>
       <img src={wechatChannel.url} alt="肖恩聊技术公众号二维码全屏预览" loading="lazy" />
@@ -87,26 +71,9 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
   )}
 
   <script>
-    const wechatDialog = document.querySelector("[data-wechat-dialog]");
     const imageDialog = document.querySelector("[data-image-dialog]");
-    const openWechatButtons = document.querySelectorAll("[data-open-wechat]");
-    const closeWechatButton = document.querySelector("[data-close-wechat]");
     const openWechatImageButtons = document.querySelectorAll("[data-open-wechat-image]");
     const closeWechatImageButton = document.querySelector("[data-close-wechat-image]");
-
-    const openWechat = () => {
-      if (!(wechatDialog instanceof HTMLDialogElement)) return;
-      if (typeof wechatDialog.showModal === "function") {
-        wechatDialog.showModal();
-      } else {
-        wechatDialog.setAttribute("open", "");
-      }
-    };
-
-    const closeWechat = () => {
-      if (!(wechatDialog instanceof HTMLDialogElement)) return;
-      wechatDialog.close();
-    };
 
     const openWechatImage = () => {
       if (!(imageDialog instanceof HTMLDialogElement)) return;
@@ -122,13 +89,8 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
       imageDialog.close();
     };
 
-    openWechatButtons.forEach((button) => button.addEventListener("click", openWechat));
     openWechatImageButtons.forEach((button) => button.addEventListener("click", openWechatImage));
-    closeWechatButton?.addEventListener("click", closeWechat);
     closeWechatImageButton?.addEventListener("click", closeWechatImage);
-    wechatDialog?.addEventListener("click", (event) => {
-      if (event.target === wechatDialog) closeWechat();
-    });
     imageDialog?.addEventListener("click", (event) => {
       if (event.target === imageDialog) closeWechatImage();
     });
@@ -180,66 +142,6 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
     text-transform: uppercase;
   }
 
-  .wechat-dialog {
-    width: min(100% - 32px, 560px);
-    padding: 0;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-  }
-
-  .wechat-dialog::backdrop {
-    background: rgba(255, 255, 255, 0.74);
-    backdrop-filter: blur(6px);
-  }
-
-  .wechat-panel {
-    position: relative;
-    display: grid;
-    gap: 22px;
-    padding: 30px;
-  }
-
-  .wechat-copy h2,
-  .wechat-copy p {
-    margin: 0;
-  }
-
-  .wechat-copy h2 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
-
-  .wechat-copy p:last-child {
-    margin-top: 8px;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  .wechat-image-button {
-    display: block;
-    width: min(100%, 420px);
-    margin-inline: auto;
-    padding: 0;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    cursor: zoom-in;
-  }
-
-  .wechat-image-button:hover {
-    box-shadow: 4px 4px 0 var(--accent);
-    transform: translate(-1px, -1px);
-  }
-
-  .wechat-panel img {
-    display: block;
-    width: 100%;
-  }
-
-  .wechat-close,
   .image-dialog-close {
     position: absolute;
     top: 12px;
@@ -256,35 +158,63 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
     cursor: pointer;
   }
 
-  .wechat-close:hover,
   .image-dialog-close:hover {
     color: var(--surface);
     background: var(--text);
   }
 
   .image-dialog {
-    width: min(100% - 32px, 1040px);
-    max-height: calc(100vh - 32px);
-    padding: 48px 24px 24px;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    position: fixed;
+    inset: 0;
+    width: 100dvw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 24px;
+    color: #f7f7f7;
+    background: #111111;
+    border: 0;
+    border-radius: 0;
+    cursor: zoom-out;
+    overflow: hidden;
+  }
+
+  .image-dialog[open] {
+    display: grid;
+    place-items: center;
   }
 
   .image-dialog::backdrop {
-    background: rgba(255, 255, 255, 0.86);
-    backdrop-filter: blur(8px);
+    background: #111111;
   }
 
   .image-dialog img {
     display: block;
-    width: min(100%, 920px);
-    max-height: calc(100vh - 112px);
-    margin-inline: auto;
-    border: 1px solid var(--border);
+    width: min(920px, calc(100dvw - 48px));
+    max-height: calc(100dvh - 48px);
+    border: 0;
     object-fit: contain;
+    cursor: zoom-out;
+  }
+
+  .image-dialog-close {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    color: #f7f7f7;
+    background: rgba(0, 0, 0, 0.58);
+    border-color: rgba(255, 255, 255, 0.42);
+  }
+
+  .image-dialog-close:hover {
+    color: #111111;
+    background: #ffffff;
+  }
+
+  body:has(.image-dialog[open]) {
+    overflow: hidden;
   }
 
   @media (max-width: 760px) {
@@ -292,12 +222,13 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
       grid-template-columns: 1fr;
     }
 
-    .wechat-panel {
-      padding: 22px;
+    .image-dialog {
+      padding: 12px;
     }
 
-    .image-dialog {
-      padding: 46px 14px 14px;
+    .image-dialog img {
+      width: min(920px, calc(100dvw - 24px));
+      max-height: calc(100dvh - 24px);
     }
   }
 </style>

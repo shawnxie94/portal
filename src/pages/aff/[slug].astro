@@ -16,21 +16,12 @@ const { item } = Astro.props;
 const plainDescription = stripMarkdownLinks(item.description);
 const productJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "WebPage",
   name: item.name,
   description: plainDescription,
   image: new URL(item.image, site.url).toString(),
   url: new URL(`/aff/${item.slug}/`, site.url).toString(),
-  category: item.type,
-  brand: {
-    "@type": "Brand",
-    name: item.name,
-  },
-  additionalProperty: item.tags.map((tag) => ({
-    "@type": "PropertyValue",
-    name: "标签",
-    value: tag,
-  })),
+  keywords: item.tags.join(", "),
 };
 ---
 

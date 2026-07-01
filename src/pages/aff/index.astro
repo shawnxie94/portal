@@ -18,10 +18,9 @@ const affJsonLd = {
     position: index + 1,
     url: new URL(`/aff/${item.slug}/`, site.url).toString(),
     item: {
-      "@type": "Product",
+      "@type": "WebPage",
       name: item.name,
       description: stripMarkdownLinks(item.description),
-      category: item.type,
       image: new URL(item.image, site.url).toString(),
     },
   })),

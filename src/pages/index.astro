@@ -18,14 +18,6 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
 ---
 
 <BaseLayout title={site.title} description={site.description}>
-  <dialog class="wechat-dialog" id="wechat-qrcode" aria-labelledby="wechat-qrcode-title">
-    <div class="wechat-dialog__inner">
-      <h2 id="wechat-qrcode-title">微信公众号</h2>
-      <p>扫码关注「肖恩聊技术」</p>
-      <img src="/images/profile/20241103221454-9f58489a.png" alt="微信公众号二维码" width="220" height="220" />
-      <button type="button" class="wechat-dialog__close" data-wechat-close aria-label="关闭">×</button>
-    </div>
-  </dialog>
   <section class="shell home-hero">
     <div class="hero-main">
       <p class="eyebrow">Personal Portal</p>
@@ -63,8 +55,9 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
     </div>
     <aside class="hero-panel" aria-label="最新动态">
       <h2><a href="/now/">最新动态</a></h2>
+      <div class="hero-panel-scroll">
       <div class="timeline-list">
-        {updates.slice(0, 4).map((item) => (
+        {updates.slice(0, 6).map((item) => (
           <a href={item.url}>
             <span class="timeline-meta">
               <time datetime={item.date}>{item.date}</time>
@@ -73,6 +66,7 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
             <strong>{item.title}</strong>
           </a>
         ))}
+      </div>
       </div>
     </aside>
   </section>
@@ -138,22 +132,39 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
     window.setTimeout(writeName, holdDelay);
   }
 
+  const heroPanel = document.querySelector(".hero-panel");
+  const heroActions = document.querySelector(".hero-actions");
+  if (heroPanel instanceof HTMLElement && heroActions instanceof HTMLElement) {
+    const fitPanel = () => {
+      if (window.matchMedia("(max-width: 860px)").matches) {
+        heroPanel.style.maxHeight = "";
+        return;
+      }
+      const actionsRect = heroActions.getBoundingClientRect();
+      const panelRect = heroPanel.getBoundingClientRect();
+      const limit = actionsRect.bottom - panelRect.top - 4;
+      heroPanel.style.maxHeight = `${Math.max(160, limit)}px`;
+    };
+    fitPanel();
+    window.addEventListener("resize", fitPanel);
+    if (typeof ResizeObserver !== "undefined") {
+      new ResizeObserver(fitPanel).observe(heroActions);
+    }
+  }
+
   const wechatTrigger = document.querySelector("[data-wechat-trigger]");
-  const wechatDialog = document.getElementById("wechat-qrcode");
-  if (wechatTrigger instanceof HTMLElement && wechatDialog instanceof HTMLDialogElement) {
+  if (wechatTrigger instanceof HTMLElement) {
     wechatTrigger.addEventListener("click", () => {
-      if (typeof wechatDialog.showModal === "function") {
-        wechatDialog.showModal();
-      } else {
-        wechatDialog.setAttribute("open", "");
+      const open = (window as unknown as { openLightbox?: (content: { src: string; alt?: string; title?: string; subtitle?: string }) => void }).openLightbox;
+      if (typeof open === "function") {
+        open({
+          src: "/images/profile/20241103221454-9f58489a.png",
+          alt: "微信公众号二维码",
+          title: "微信公众号",
+          subtitle: "扫码关注「肖恩聊技术」",
+        });
       }
     });
-    wechatDialog.addEventListener("click", (event) => {
-      if (event.target === wechatDialog || (event.target instanceof HTMLElement && event.target.dataset.wechatClose !== undefined)) {
-        wechatDialog.close();
-      }
-    });
-    wechatDialog.querySelector("[data-wechat-close]")?.addEventListener("click", () => wechatDialog.close());
   }
 </script>
 
@@ -166,7 +177,6 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
   }
 
   .hero-main {
-    padding-top: 24px;
   }
 
   .hero-main h1 {
@@ -305,66 +315,10 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
     border: 0;
   }
 
-  .wechat-dialog {
-    padding: 0;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    color: var(--text);
-  }
-
-  .wechat-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.55);
-  }
-
-  .wechat-dialog__inner {
-    position: relative;
-    display: grid;
-    justify-items: center;
-    gap: 10px;
-    padding: 22px 28px 24px;
-  }
-
-  .wechat-dialog__inner h2 {
-    margin: 0;
-    font-size: 1.05rem;
-  }
-
-  .wechat-dialog__inner p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-
-  .wechat-dialog__inner img {
-    display: block;
-    width: 220px;
-    height: 220px;
-    background: #fff;
-    padding: 8px;
-    border: 1px solid var(--border);
-  }
-
-  .wechat-dialog__close {
-    position: absolute;
-    top: 6px;
-    right: 8px;
-    width: 28px;
-    height: 28px;
-    padding: 0;
-    color: var(--muted);
-    background: transparent;
-    border: 0;
-    font-size: 1.4rem;
-    line-height: 1;
-    cursor: pointer;
-  }
-
-  .wechat-dialog__close:hover {
-    color: var(--text);
-  }
-
   .hero-panel {
     align-self: start;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     background:
       linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
@@ -374,6 +328,15 @@ const updates = buildUpdates({ posts: publishedPosts, projects, affItems });
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
+  }
+
+  .hero-panel-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 0 -20px;
+    padding: 0 20px;
   }
 
   .hero-panel h2 {

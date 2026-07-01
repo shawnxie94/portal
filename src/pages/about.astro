@@ -63,36 +63,21 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
     </Section>
   </div>
 
-  {wechatChannel && (
-    <dialog class="image-dialog" data-image-dialog aria-label="公众号二维码全屏预览">
-      <button class="image-dialog-close" type="button" data-close-wechat-image aria-label="关闭全屏预览">×</button>
-      <img src={wechatChannel.url} alt="肖恩聊技术公众号二维码全屏预览" loading="lazy" />
-    </dialog>
-  )}
-
-  <script>
-    const imageDialog = document.querySelector("[data-image-dialog]");
+  <script define:vars={{ wechatSrc: wechatChannel?.url ?? "" }}>
     const openWechatImageButtons = document.querySelectorAll("[data-open-wechat-image]");
-    const closeWechatImageButton = document.querySelector("[data-close-wechat-image]");
 
-    const openWechatImage = () => {
-      if (!(imageDialog instanceof HTMLDialogElement)) return;
-      if (typeof imageDialog.showModal === "function") {
-        imageDialog.showModal();
-      } else {
-        imageDialog.setAttribute("open", "");
-      }
-    };
-
-    const closeWechatImage = () => {
-      if (!(imageDialog instanceof HTMLDialogElement)) return;
-      imageDialog.close();
-    };
-
-    openWechatImageButtons.forEach((button) => button.addEventListener("click", openWechatImage));
-    closeWechatImageButton?.addEventListener("click", closeWechatImage);
-    imageDialog?.addEventListener("click", (event) => {
-      if (event.target === imageDialog) closeWechatImage();
+    openWechatImageButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const open = window.openLightbox;
+        if (typeof open === "function" && wechatSrc) {
+          open({
+            src: wechatSrc,
+            alt: "肖恩聊技术公众号二维码",
+            title: "微信公众号",
+            subtitle: "扫码关注「肖恩聊技术」",
+          });
+        }
+      });
     });
   </script>
 </BaseLayout>
@@ -140,81 +125,6 @@ const wechatChannel = channels.find((channel) => channel.name === "微信公众�
     color: var(--subtle);
     font-size: 0.82rem;
     text-transform: uppercase;
-  }
-
-  .image-dialog-close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    cursor: pointer;
-  }
-
-  .image-dialog-close:hover {
-    color: var(--surface);
-    background: var(--text);
-  }
-
-  .image-dialog {
-    position: fixed;
-    inset: 0;
-    width: 100dvw;
-    height: 100dvh;
-    max-width: none;
-    max-height: none;
-    margin: 0;
-    padding: 24px;
-    color: #f7f7f7;
-    background: #111111;
-    border: 0;
-    border-radius: 0;
-    cursor: zoom-out;
-    overflow: hidden;
-  }
-
-  .image-dialog[open] {
-    display: grid;
-    place-items: center;
-  }
-
-  .image-dialog::backdrop {
-    background: #111111;
-  }
-
-  .image-dialog img {
-    display: block;
-    width: min(920px, calc(100dvw - 48px));
-    max-height: calc(100dvh - 48px);
-    border: 0;
-    object-fit: contain;
-    cursor: zoom-out;
-  }
-
-  .image-dialog-close {
-    top: 10px;
-    right: 10px;
-    width: 36px;
-    height: 36px;
-    color: #f7f7f7;
-    background: rgba(0, 0, 0, 0.58);
-    border-color: rgba(255, 255, 255, 0.42);
-  }
-
-  .image-dialog-close:hover {
-    color: #111111;
-    background: #ffffff;
-  }
-
-  body:has(.image-dialog[open]) {
-    overflow: hidden;
   }
 
   @media (max-width: 760px) {

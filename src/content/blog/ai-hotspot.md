@@ -8,7 +8,7 @@ tags:
   - "智能体"
   - "自动化"
 draft: false
-originalPath: "/blogs/ai/ai-hotspot.html"
+originalPath: "blogs/ai/ai-hotspot"
 ---
 
 **提问：技术人的精神食粮是什么❓**

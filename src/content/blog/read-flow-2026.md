@@ -8,7 +8,7 @@ tags:
   - "自动化"
   - "阅读"
 draft: false
-originalPath: "/blogs/tools/read-flow-2026.html"
+originalPath: "blogs/tools/read-flow-2026"
 ---
 
 ![](/images/blog/read-flow-2026/20260317142200700-f788c80a.png)

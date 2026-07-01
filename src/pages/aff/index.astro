@@ -2,6 +2,7 @@
 import PageHeader from "../../components/PageHeader.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { affDisclosure, affItems } from "../../data/aff";
+import { renderMarkdownLinks, stripMarkdownLinks } from "../../lib/markdown";
 import { site } from "../../data/profile";
 
 const affTypeOrder = ["大模型服务", "机场", "云服务"];
@@ -19,7 +20,7 @@ const affJsonLd = {
     item: {
       "@type": "Product",
       name: item.name,
-      description: item.description,
+      description: stripMarkdownLinks(item.description),
       category: item.type,
       image: new URL(item.image, site.url).toString(),
     },
@@ -28,7 +29,7 @@ const affJsonLd = {
 ---
 
 <BaseLayout title="推广" description="肖恩整理的推广和订阅推荐，按大模型服务、机场、云服务分类展示产品说明、截图、跳转入口和返利声明。" jsonLd={affJsonLd}>
-  <PageHeader eyebrow="Aff" title="推广" description="按类型整理我长期关注或使用过的产品，详情页包含截图、说明和跳转入口。" />
+  <PageHeader eyebrow="Aff" title="推广" description="分享个人长期使用产品，更偏好高性价比。" />
   <div class="shell">
     <section class="section">
       <div class="notice">{affDisclosure}</div>
@@ -47,17 +48,17 @@ const affJsonLd = {
             {affItems
               .filter((item) => item.type === type)
               .map((item) => (
-                <a class="aff-card" href={`/aff/${item.slug}/`}>
+                <article class="aff-card">
                   <div class="aff-card-body">
-                    <h3>{item.name}</h3>
-                    <p>{item.description}</p>
+                    <h3><a href={`/aff/${item.slug}/`}>{item.name}</a></h3>
+                    <p set:html={renderMarkdownLinks(item.description)} />
                     <div class="aff-tags">
                       {item.tags.slice(0, 3).map((tag) => (
                         <span><i aria-hidden="true">#</i><b>{tag}</b></span>
                       ))}
                     </div>
                   </div>
-                </a>
+                </article>
               ))}
           </div>
         </section>
@@ -120,10 +121,27 @@ const affJsonLd = {
     line-height: 1.35;
   }
 
+  .aff-card h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .aff-card h3 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   .aff-card p {
     margin: 0;
     color: var(--muted);
     line-height: 1.65;
+  }
+
+  .aff-card p a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .aff-tags {

@@ -2,6 +2,7 @@
 import Badge from "../../components/Badge.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { affDisclosure, affItems } from "../../data/aff";
+import { renderMarkdownLinks, stripMarkdownLinks } from "../../lib/markdown";
 import { site } from "../../data/profile";
 
 export function getStaticPaths() {
@@ -12,11 +13,12 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+const plainDescription = stripMarkdownLinks(item.description);
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: item.name,
-  description: item.description,
+  description: plainDescription,
   image: new URL(item.image, site.url).toString(),
   url: new URL(`/aff/${item.slug}/`, site.url).toString(),
   category: item.type,
@@ -32,14 +34,14 @@ const productJsonLd = {
 };
 ---
 
-<BaseLayout title={item.name} description={item.description} image={item.image} jsonLd={productJsonLd}>
+<BaseLayout title={item.name} description={plainDescription} image={item.image} jsonLd={productJsonLd}>
   <div class="shell">
     <article class="aff-detail">
       <header class="aff-hero">
         <div class="aff-hero-main">
           <p class="eyebrow">{item.type}</p>
           <h1 class="page-title">{item.name}</h1>
-          <p class="page-description">{item.description}</p>
+          <p class="page-description" set:html={renderMarkdownLinks(item.description)} />
         </div>
 
         <aside class="aff-aside" aria-label={`${item.name} 跳转信息`}>
@@ -92,6 +94,13 @@ const productJsonLd = {
 
   .aff-hero-main .page-description {
     margin-top: 0;
+  }
+
+  .aff-hero-main .page-description a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .aff-badges {

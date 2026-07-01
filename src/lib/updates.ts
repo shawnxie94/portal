@@ -1,5 +1,6 @@
 import type { BlogEntry } from "./content";
 import { blogCardDescription, entrySlug, isPublished } from "./content";
+import { stripMarkdownLinks } from "./markdown";
 
 export interface UpdateItem {
   date: string;
@@ -102,7 +103,7 @@ function buildAffUpdates(affItems: AffUpdateSource[] = []): SortableUpdateItem[]
   return affItems.map((item) => ({
     date: dateKey(item.updatedAt),
     title: item.name,
-    description: `${item.type}：${compactText(item.description, 72)}`,
+    description: `${item.type}：${compactText(stripMarkdownLinks(item.description), 72)}`,
     url: `/aff/${item.slug}/`,
     type: "推广",
     sortTime: toTime(item.updatedAt),

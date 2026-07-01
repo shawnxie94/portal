@@ -3,6 +3,16 @@ export const affDisclosure =
 
 export const affItems = [
   {
+    slug: "typeless",
+    name: "Typeless",
+    type: "效率",
+    description: "智能的 AI 语音转录应用，比打字快4倍。将语音作为主要输入方式能极大提升与Agent沟通效率，让你不再是那个瓶颈！",
+    url: "https://www.typeless.com/?via=shawnxie",
+    image: "/images/blog/aff/20260701210000000-typeless.png",
+    updatedAt: "2026-07-01",
+    tags: ["AI 语音", "效率工具", "Agent 协作"],
+  },
+  {
     slug: "ucloud",
     name: "UCloud",
     type: "云服务",
@@ -11,8 +21,6 @@ export const affItems = [
     image: "/images/blog/aff/20260402130707975-cb5dfd19.png",
     updatedAt: "2026-03-30",
     tags: ["云主机", "香港节点", "个人项目"],
-    reason: "个人长期使用过，境外主机性能和稳定性比较适合轻量服务、演示站和个人工具。",
-    risk: "价格、活动库存、节点质量会随时间变化，购买前需要重新确认配置和续费价格。",
   },
   {
     slug: "forest",
@@ -23,8 +31,6 @@ export const affItems = [
     image: "/images/blog/aff/20260330140025740-00961fe5.png",
     updatedAt: "2026-03-30",
     tags: ["网络工具", "订阅", "备用链路"],
-    reason: "长期使用体验较稳定，适合需要多平台客户端和持续可用性的个人用户。",
-    risk: "网络服务稳定性受线路、地区和政策影响明显，建议先小额测试。",
   },
   {
     slug: "pokemon",
@@ -35,8 +41,6 @@ export const affItems = [
     image: "/images/blog/aff/20260330140025742-5c4e9d97.png",
     updatedAt: "2026-03-30",
     tags: ["免费套餐", "网络工具", "低频使用"],
-    reason: "免费套餐门槛低，适合先验证节点和客户端体验。",
-    risk: "免费额度、套餐价格和活动规则可能调整，下单前需要查看最新公告。",
   },
   {
     slug: "krill-ai",
@@ -47,8 +51,6 @@ export const affItems = [
     image: "/images/blog/aff/20260618164842575-8d272688.png",
     updatedAt: "2026-06-18",
     tags: ["AI API", "中转站", "成本优化"],
-    reason: "适合尝试不同模型和工具接入，尤其关注套餐价格和折扣活动时。",
-    risk: "模型可用性、倍率、活动折扣和服务稳定性可能变化，生产用途需谨慎评估。",
   },
   {
     slug: "minimax-token-plan",
@@ -59,8 +61,6 @@ export const affItems = [
     image: "/images/blog/aff/20260701120000000-bc0e5305.png",
     updatedAt: "2026-07-01",
     tags: ["Coding", "1M 上下文", "原生多模态", "订阅套餐"],
-    reason: "MiniMax 属于国内头部大模型厂商，Token Plan 的综合价格和能力覆盖都比较适合日常开发、长上下文处理和多模态创作。",
-    risk: "套餐价格、额度规则、模型能力和活动权益可能调整，订阅前需要确认官方页面的最新说明。",
   },
   {
     slug: "siliconflow",
@@ -71,7 +71,5 @@ export const affItems = [
     image: "/images/blog/aff/20260529000616189-a132ba65.jpg",
     updatedAt: "2026-05-29",
     tags: ["AI API", "多模态", "按量计费"],
-    reason: "平台能力覆盖面广，适合需要稳定大模型 API 和多模态能力的项目。",
-    risk: "按量计费需要注意预算控制，不同模型的价格、速度和可用性差异较大。",
   },
 ];

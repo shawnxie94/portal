@@ -5,13 +5,13 @@ import { affDisclosure, affItems } from "../../data/aff";
 import { renderMarkdownLinks, stripMarkdownLinks } from "../../lib/markdown";
 import { site } from "../../data/profile";
 
-const affTypeOrder = ["大模型服务", "机场", "云服务"];
+const affTypeOrder = ["大模型服务", "机场", "效率", "云服务"];
 const affTypes = affTypeOrder.filter((type) => affItems.some((item) => item.type === type));
 const affJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "肖恩的推广推荐",
-  description: "按大模型服务、机场、云服务分类整理的推广和订阅推荐。",
+  description: "按大模型服务、机场、效率、云服务分类整理的推广和订阅推荐。",
   url: new URL("/aff/", site.url).toString(),
   itemListElement: affItems.map((item, index) => ({
     "@type": "ListItem",
@@ -28,7 +28,7 @@ const affJsonLd = {
 };
 ---
 
-<BaseLayout title="推广" description="肖恩整理的推广和订阅推荐，按大模型服务、机场、云服务分类展示产品说明、截图、跳转入口和返利声明。" jsonLd={affJsonLd}>
+<BaseLayout title="推广" description="肖恩整理的推广和订阅推荐，按大模型服务、机场、效率、云服务分类展示产品说明、截图、跳转入口和返利声明。" jsonLd={affJsonLd}>
   <PageHeader eyebrow="Aff" title="推广" description="分享个人长期使用产品，更偏好高性价比。" />
   <div class="shell">
     <section class="section">

@@ -132,24 +132,56 @@ const serializedJsonLd = JSON.stringify([...baseJsonLd, ...pageJsonLd]).replace(
         });
       };
 
-      const openLightbox = (image: HTMLImageElement) => {
-        if (!(lightbox instanceof HTMLDialogElement) || !(lightboxImage instanceof HTMLImageElement)) return;
+      interface LightboxContent {
+        src: string;
+        alt?: string;
+        title?: string;
+        subtitle?: string;
+      }
 
-        const caption = image.alt.trim();
-        lightboxImage.src = image.currentSrc || image.src;
-        lightboxImage.alt = caption || "图片大图预览";
-
-        if (lightboxCaption instanceof HTMLElement) {
-          lightboxCaption.textContent = caption;
-          lightboxCaption.hidden = !caption;
+      const renderCaption = (title: string, subtitle: string) => {
+        if (!(lightboxCaption instanceof HTMLElement)) return;
+        if (!title && !subtitle) {
+          lightboxCaption.textContent = "";
+          lightboxCaption.hidden = true;
+          return;
         }
+        lightboxCaption.replaceChildren();
+        if (title) {
+          const titleEl = document.createElement("strong");
+          titleEl.textContent = title;
+          lightboxCaption.appendChild(titleEl);
+        }
+        if (subtitle) {
+          const subEl = document.createElement("span");
+          subEl.textContent = subtitle;
+          lightboxCaption.appendChild(subEl);
+        }
+        lightboxCaption.hidden = false;
+      };
 
+      const openLightboxContent = ({ src, alt, title, subtitle }: LightboxContent) => {
+        if (!(lightbox instanceof HTMLDialogElement) || !(lightboxImage instanceof HTMLImageElement)) return;
+        lightboxImage.src = src;
+        lightboxImage.alt = alt || title || "图片大图预览";
+        renderCaption(title ?? "", subtitle ?? "");
         if (typeof lightbox.showModal === "function") {
           lightbox.showModal();
         } else {
           lightbox.setAttribute("open", "");
         }
       };
+
+      const openLightbox = (image: HTMLImageElement) => {
+        const caption = image.alt.trim();
+        openLightboxContent({
+          src: image.currentSrc || image.src,
+          alt: caption || undefined,
+          title: caption || undefined,
+        });
+      };
+
+      (window as unknown as { openLightbox: typeof openLightboxContent }).openLightbox = openLightboxContent;
 
       const closeLightbox = () => {
         if (!(lightbox instanceof HTMLDialogElement)) return;

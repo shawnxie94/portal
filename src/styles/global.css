@@ -831,6 +831,18 @@ img[data-lightbox="true"] {
   text-align: center;
 }
 
+.image-lightbox figcaption strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 680;
+}
+
+.image-lightbox figcaption span {
+  display: block;
+  margin-top: 2px;
+}
+
 .image-lightbox-close {
   position: absolute;
   top: 10px;
